@@ -318,35 +318,128 @@ nav {
 }
 
 /* === 8. PROTOCOL STEPS — 3x2 grid === */
-.steps {
+/* Section subtitle */
+.section-sub {
+  font-size: 17px;
+  color: #999;
+  max-width: 680px;
+  margin: -16px auto 48px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.section-dark .section-sub {
+  color: #888;
+}
+
+/* Protocol mode cards */
+.protocol-modes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
 }
 
-.step {
-  padding: 32px 0;
+.protocol-mode {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: border-color 0.3s, background 0.3s;
 }
 
-.step-num {
-  font-size: 44px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.08);
-  margin-bottom: 16px;
-  line-height: 1;
-  letter-spacing: -0.02em;
+.protocol-mode:hover {
+  border-color: rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
 }
 
-.step h3 {
-  font-size: 19px;
+.mode-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.mode-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.protocol-mode h3 {
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 12px;
   color: #fafafa;
+  margin-bottom: 6px;
 }
 
-.step p {
+.mode-context {
+  font-size: 13px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+.protocol-mode p {
   font-size: 15px;
   color: #999;
+  line-height: 1.65;
+}
+
+.mode-params {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.mode-params span {
+  font-size: 12px;
+  color: #777;
+  background: rgba(255,255,255,0.05);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Session flow (8 steps) */
+.session-steps {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.session-step {
+  display: flex;
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  align-items: flex-start;
+}
+
+.session-step:last-child {
+  border-bottom: none;
+}
+
+.session-step .step-num {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.06);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  width: 52px;
+  text-align: right;
+}
+
+.step-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.step-body p {
+  font-size: 15px;
+  color: #666;
   line-height: 1.65;
 }
 
@@ -1049,7 +1142,7 @@ footer {
     gap: 24px;
   }
 
-  .steps {
+  .protocol-modes {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1140,8 +1233,17 @@ footer {
     font-size: 22px;
   }
 
-  .steps {
+  .protocol-modes {
     grid-template-columns: 1fr;
+  }
+
+  .session-step {
+    gap: 16px;
+  }
+
+  .session-step .step-num {
+    font-size: 28px;
+    width: 36px;
   }
 
   .advantages {
