@@ -108,6 +108,272 @@
     </div>
   </section>
 
+  <!-- MACHINE VISUAL + LIVE DEMO -->
+  <section class="section" id="demo">
+    <div class="container">
+      <p class="section-tag">The Machine</p>
+      <h2>See it in action.</h2>
+      <p class="demo-intro">Click through a real stretching session. Watch how the cables, sensors, and AI work together in real time.</p>
+
+      <div class="demo-wrap">
+        <!-- LEFT: Machine SVG -->
+        <div class="machine-visual">
+          <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" class="machine-svg" id="machineSvg">
+            <!-- Frame -->
+            <rect x="60" y="40" width="380" height="520" rx="8" fill="none" stroke="#222" stroke-width="4"/>
+            <!-- Top crossbar -->
+            <line x1="60" y1="80" x2="440" y2="80" stroke="#222" stroke-width="3"/>
+            <!-- Bottom crossbar -->
+            <line x1="60" y1="520" x2="440" y2="520" stroke="#222" stroke-width="3"/>
+            <!-- Vertical supports -->
+            <line x1="130" y1="40" x2="130" y2="560" stroke="#333" stroke-width="2" stroke-dasharray="4 4"/>
+            <line x1="370" y1="40" x2="370" y2="560" stroke="#333" stroke-width="2" stroke-dasharray="4 4"/>
+
+            <!-- Motor housings -->
+            <rect x="64" y="55" width="50" height="30" rx="4" fill="#333" class="motor motor-tl"/>
+            <rect x="386" y="55" width="50" height="30" rx="4" fill="#333" class="motor motor-tr"/>
+            <rect x="64" y="492" width="50" height="30" rx="4" fill="#333" class="motor motor-bl"/>
+            <rect x="386" y="492" width="50" height="30" rx="4" fill="#333" class="motor motor-br"/>
+
+            <!-- Motor labels -->
+            <text x="89" y="74" fill="#888" font-size="8" text-anchor="middle" font-family="Inter">M1</text>
+            <text x="411" y="74" fill="#888" font-size="8" text-anchor="middle" font-family="Inter">M2</text>
+            <text x="89" y="511" fill="#888" font-size="8" text-anchor="middle" font-family="Inter">M3</text>
+            <text x="411" y="511" fill="#888" font-size="8" text-anchor="middle" font-family="Inter">M4</text>
+
+            <!-- Cables (animated) -->
+            <line id="cable-tl" x1="114" y1="70" x2="200" y2="220" stroke="#0a0a0a" stroke-width="2" class="cable" opacity="0.3"/>
+            <line id="cable-tr" x1="386" y1="70" x2="300" y2="220" stroke="#0a0a0a" stroke-width="2" class="cable" opacity="0.3"/>
+            <line id="cable-bl" x1="114" y1="507" x2="200" y2="430" stroke="#0a0a0a" stroke-width="2" class="cable" opacity="0.3"/>
+            <line id="cable-br" x1="386" y1="507" x2="300" y2="430" stroke="#0a0a0a" stroke-width="2" class="cable" opacity="0.3"/>
+
+            <!-- Load cell indicators on cables -->
+            <circle id="lc-tl" cx="157" cy="145" r="6" fill="none" stroke="#666" stroke-width="1.5" class="load-cell"/>
+            <circle id="lc-tr" cx="343" cy="145" r="6" fill="none" stroke="#666" stroke-width="1.5" class="load-cell"/>
+            <circle id="lc-bl" cx="157" cy="468" r="6" fill="none" stroke="#666" stroke-width="1.5" class="load-cell"/>
+            <circle id="lc-br" cx="343" cy="468" r="6" fill="none" stroke="#666" stroke-width="1.5" class="load-cell"/>
+
+            <!-- Person silhouette -->
+            <g id="person" class="person">
+              <!-- Head -->
+              <circle cx="250" cy="180" r="22" fill="none" stroke="#555" stroke-width="2.5"/>
+              <!-- Torso -->
+              <line x1="250" y1="202" x2="250" y2="330" stroke="#555" stroke-width="2.5"/>
+              <!-- Arms -->
+              <line id="arm-l" x1="250" y1="240" x2="195" y2="220" stroke="#555" stroke-width="2.5" class="limb"/>
+              <line id="arm-r" x1="250" y1="240" x2="305" y2="220" stroke="#555" stroke-width="2.5" class="limb"/>
+              <!-- Legs -->
+              <line id="leg-l" x1="250" y1="330" x2="205" y2="435" stroke="#555" stroke-width="2.5" class="limb"/>
+              <line id="leg-r" x1="250" y1="330" x2="295" y2="435" stroke="#555" stroke-width="2.5" class="limb"/>
+              <!-- Cuffs -->
+              <circle id="cuff-wl" cx="195" cy="220" r="8" fill="none" stroke="#555" stroke-width="1.5" class="cuff"/>
+              <circle id="cuff-wr" cx="305" cy="220" r="8" fill="none" stroke="#555" stroke-width="1.5" class="cuff"/>
+              <circle id="cuff-al" cx="205" cy="435" r="8" fill="none" stroke="#555" stroke-width="1.5" class="cuff"/>
+              <circle id="cuff-ar" cx="295" cy="435" r="8" fill="none" stroke="#555" stroke-width="1.5" class="cuff"/>
+            </g>
+
+            <!-- Touchscreen -->
+            <rect x="425" y="230" width="50" height="70" rx="4" fill="#111" stroke="#333" stroke-width="1.5" class="touchscreen"/>
+            <rect x="430" y="238" width="40" height="50" rx="2" fill="#1a1a2e" class="screen-display"/>
+            <text x="450" y="258" fill="#4ade80" font-size="7" text-anchor="middle" font-family="Inter" id="screen-text-1">READY</text>
+            <text x="450" y="272" fill="#888" font-size="6" text-anchor="middle" font-family="Inter" id="screen-text-2">Tap to start</text>
+            <text x="450" y="282" fill="#888" font-size="6" text-anchor="middle" font-family="Inter" id="screen-text-3"></text>
+
+            <!-- Camera -->
+            <rect x="232" y="44" width="36" height="18" rx="3" fill="#222" stroke="#444" stroke-width="1"/>
+            <circle cx="250" cy="53" r="5" fill="#111" stroke="#4ade80" stroke-width="1" class="camera-lens"/>
+            <text x="250" y="35" fill="#666" font-size="7" text-anchor="middle" font-family="Inter">DEPTH CAM</text>
+
+            <!-- E-Stop button -->
+            <circle cx="75" cy="300" r="14" fill="#dc2626" stroke="#991b1b" stroke-width="2" class="estop"/>
+            <text x="75" y="304" fill="#fff" font-size="7" text-anchor="middle" font-weight="700" font-family="Inter">E</text>
+            <text x="75" y="325" fill="#888" font-size="6" text-anchor="middle" font-family="Inter">E-STOP</text>
+
+            <!-- Force readings overlay -->
+            <g id="force-readings" opacity="0">
+              <text id="force-tl" x="145" y="135" fill="#4ade80" font-size="9" font-weight="600" text-anchor="middle" font-family="Inter">0 lb</text>
+              <text id="force-tr" x="355" y="135" fill="#4ade80" font-size="9" font-weight="600" text-anchor="middle" font-family="Inter">0 lb</text>
+              <text id="force-bl" x="145" y="458" fill="#4ade80" font-size="9" font-weight="600" text-anchor="middle" font-family="Inter">0 lb</text>
+              <text id="force-br" x="355" y="458" fill="#4ade80" font-size="9" font-weight="600" text-anchor="middle" font-family="Inter">0 lb</text>
+            </g>
+
+            <!-- ROM angle indicator -->
+            <g id="rom-indicator" opacity="0" transform="translate(250, 330)">
+              <path d="M 0,0 L -30,60" stroke="#facc15" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+              <path id="rom-arc" d="" stroke="#facc15" stroke-width="2" fill="none"/>
+              <text id="rom-angle" x="0" y="75" fill="#facc15" font-size="11" font-weight="600" text-anchor="middle" font-family="Inter"></text>
+            </g>
+
+            <!-- Frame labels -->
+            <text x="250" y="575" fill="#888" font-size="9" text-anchor="middle" font-family="Inter">7 ft x 5 ft x 4 ft — Open Frame Design</text>
+          </svg>
+        </div>
+
+        <!-- RIGHT: Demo Controls + Data -->
+        <div class="demo-panel">
+          <!-- Step indicator -->
+          <div class="demo-steps-indicator">
+            <div class="demo-step-dot active" data-step="0"></div>
+            <div class="demo-step-line"></div>
+            <div class="demo-step-dot" data-step="1"></div>
+            <div class="demo-step-line"></div>
+            <div class="demo-step-dot" data-step="2"></div>
+            <div class="demo-step-line"></div>
+            <div class="demo-step-dot" data-step="3"></div>
+            <div class="demo-step-line"></div>
+            <div class="demo-step-dot" data-step="4"></div>
+          </div>
+
+          <!-- Step content panels -->
+          <div class="demo-step-content active" id="demoStep0">
+            <div class="demo-step-badge">Idle</div>
+            <h3>Machine Ready</h3>
+            <p>The Vitruvian frame stands open. Four motorized cable systems are at rest. The depth camera and load cells are in standby mode, waiting for the next athlete.</p>
+            <div class="demo-data-grid">
+              <div class="demo-datum">
+                <span class="datum-label">Status</span>
+                <span class="datum-val" style="color:#4ade80">Standby</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Cable Tension</span>
+                <span class="datum-val">0 lb</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Sessions Today</span>
+                <span class="datum-val">14</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-step-content" id="demoStep1">
+            <div class="demo-step-badge">Step 1</div>
+            <h3>Athlete Scans In</h3>
+            <p>The touchscreen activates. The athlete taps their phone or the screen — the machine loads their profile, previous ROM data, and today's stretch plan.</p>
+            <div class="demo-data-grid">
+              <div class="demo-datum">
+                <span class="datum-label">Athlete</span>
+                <span class="datum-val">Profile Loaded</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Last Session</span>
+                <span class="datum-val">3 days ago</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Target</span>
+                <span class="datum-val">Hamstrings +2&deg;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-step-content" id="demoStep2">
+            <div class="demo-step-badge">Step 2</div>
+            <h3>Cables Clip In</h3>
+            <p>Padded cuffs attach to wrists and ankles via carabiners. Each cable performs a gentle test pull to confirm the connection. Load cells come online at 100Hz.</p>
+            <div class="demo-data-grid">
+              <div class="demo-datum">
+                <span class="datum-label">Cuffs</span>
+                <span class="datum-val" style="color:#4ade80">4/4 Connected</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Load Cells</span>
+                <span class="datum-val" style="color:#4ade80">100 Hz Active</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Camera</span>
+                <span class="datum-val" style="color:#4ade80">Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-step-content" id="demoStep3">
+            <div class="demo-step-badge">Step 3</div>
+            <h3>Active Stretch</h3>
+            <p>Motors apply progressive tension. The PID loop adjusts force 100 times per second. The depth camera tracks joint angles in real time. Watch the cables tighten and force readings climb.</p>
+            <div class="demo-data-grid">
+              <div class="demo-datum">
+                <span class="datum-label">L. Hamstring Force</span>
+                <span class="datum-val" id="live-force" style="color:#4ade80">0.0 lb</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">ROM Angle</span>
+                <span class="datum-val" id="live-rom" style="color:#facc15">72&deg;</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Hold Time</span>
+                <span class="datum-val" id="live-hold">0s / 30s</span>
+              </div>
+            </div>
+            <!-- Live force gauge -->
+            <div class="force-gauge">
+              <div class="gauge-label">Cable Tension</div>
+              <div class="gauge-track">
+                <div class="gauge-fill" id="gaugeForce" style="width:0%"></div>
+                <div class="gauge-limit" style="left:85%"></div>
+              </div>
+              <div class="gauge-scale">
+                <span>0 lb</span>
+                <span>15 lb</span>
+                <span class="gauge-cap">30 lb cap</span>
+              </div>
+            </div>
+            <!-- ROM gauge -->
+            <div class="force-gauge" style="margin-top:16px">
+              <div class="gauge-label">Range of Motion</div>
+              <div class="gauge-track gauge-track-rom">
+                <div class="gauge-fill gauge-fill-rom" id="gaugeRom" style="width:0%"></div>
+                <div class="gauge-target" id="gaugeTarget" style="left:80%"></div>
+              </div>
+              <div class="gauge-scale">
+                <span>0&deg;</span>
+                <span>45&deg;</span>
+                <span>90&deg;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-step-content" id="demoStep4">
+            <div class="demo-step-badge">Complete</div>
+            <h3>Session Summary</h3>
+            <p>12 stretches completed in 11 minutes. The machine releases all tension, cables retract, and your progress data syncs to the cloud.</p>
+            <div class="demo-data-grid">
+              <div class="demo-datum">
+                <span class="datum-label">ROM Gained</span>
+                <span class="datum-val" style="color:#4ade80">+2.3&deg; avg</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Peak Force</span>
+                <span class="datum-val">12.8 lb</span>
+              </div>
+              <div class="demo-datum">
+                <span class="datum-label">Duration</span>
+                <span class="datum-val">11:24</span>
+              </div>
+            </div>
+            <div class="session-chart">
+              <div class="chart-title">ROM Progress (Last 8 Sessions)</div>
+              <div class="chart-bars">
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:45%"></div><span>68&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:50%"></div><span>70&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:55%"></div><span>71&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:60%"></div><span>72&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:63%"></div><span>73&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:68%"></div><span>74&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:73%"></div><span>75&deg;</span></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:80%"></div><span class="chart-bar-current">76&deg;</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="demo-nav">
+            <button class="btn btn-secondary demo-btn" id="demoPrev" disabled>Back</button>
+            <button class="btn btn-primary demo-btn" id="demoNext">Start Demo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ADVANTAGES -->
   <section class="section" id="why">
     <div class="container">
@@ -276,6 +542,186 @@
       input.disabled = true;
       btn.disabled = true;
     }
+
+    // === INTERACTIVE DEMO ===
+    (function() {
+      let currentStep = 0;
+      const totalSteps = 5;
+      let stretchAnim = null;
+
+      const prevBtn = document.getElementById('demoPrev');
+      const nextBtn = document.getElementById('demoNext');
+      const dots = document.querySelectorAll('.demo-step-dot');
+
+      const cables = {
+        tl: document.getElementById('cable-tl'),
+        tr: document.getElementById('cable-tr'),
+        bl: document.getElementById('cable-bl'),
+        br: document.getElementById('cable-br')
+      };
+      const cuffs = document.querySelectorAll('.cuff');
+      const loadCells = document.querySelectorAll('.load-cell');
+      const forceReadings = document.getElementById('force-readings');
+      const romIndicator = document.getElementById('rom-indicator');
+      const screenText1 = document.getElementById('screen-text-1');
+      const screenText2 = document.getElementById('screen-text-2');
+      const screenText3 = document.getElementById('screen-text-3');
+      const cameraLens = document.querySelector('.camera-lens');
+
+      function showStep(step) {
+        document.querySelectorAll('.demo-step-content').forEach(el => el.classList.remove('active'));
+        document.getElementById('demoStep' + step).classList.add('active');
+
+        dots.forEach((d, i) => {
+          d.classList.toggle('active', i <= step);
+          d.classList.toggle('current', i === step);
+        });
+
+        prevBtn.disabled = step === 0;
+        nextBtn.textContent = step === 0 ? 'Start Demo' : step === totalSteps - 1 ? 'Reset Demo' : 'Next Step';
+
+        if (stretchAnim) { clearInterval(stretchAnim); stretchAnim = null; }
+
+        applyVisualState(step);
+      }
+
+      function applyVisualState(step) {
+        Object.values(cables).forEach(c => { c.style.opacity = '0.3'; c.style.stroke = '#0a0a0a'; c.style.strokeWidth = '2'; });
+        cuffs.forEach(c => { c.style.stroke = '#555'; c.style.fill = 'none'; });
+        loadCells.forEach(c => { c.style.stroke = '#666'; c.style.fill = 'none'; });
+        forceReadings.style.opacity = '0';
+        romIndicator.style.opacity = '0';
+        cameraLens.style.stroke = '#4ade80';
+        document.querySelectorAll('.motor').forEach(m => m.style.fill = '#333');
+
+        document.getElementById('arm-l').setAttribute('x2', '195');
+        document.getElementById('arm-l').setAttribute('y2', '220');
+        document.getElementById('arm-r').setAttribute('x2', '305');
+        document.getElementById('arm-r').setAttribute('y2', '220');
+        document.getElementById('leg-l').setAttribute('x2', '205');
+        document.getElementById('leg-l').setAttribute('y2', '435');
+        document.getElementById('leg-r').setAttribute('x2', '295');
+        document.getElementById('leg-r').setAttribute('y2', '435');
+
+        cables.tl.setAttribute('x2', '200'); cables.tl.setAttribute('y2', '220');
+        cables.tr.setAttribute('x2', '300'); cables.tr.setAttribute('y2', '220');
+        cables.bl.setAttribute('x2', '200'); cables.bl.setAttribute('y2', '430');
+        cables.br.setAttribute('x2', '300'); cables.br.setAttribute('y2', '430');
+
+        if (step === 0) {
+          screenText1.textContent = 'READY';
+          screenText1.style.fill = '#4ade80';
+          screenText2.textContent = 'Tap to start';
+          screenText3.textContent = '';
+        }
+
+        if (step === 1) {
+          screenText1.textContent = 'WELCOME';
+          screenText1.style.fill = '#60a5fa';
+          screenText2.textContent = 'Profile loaded';
+          screenText3.textContent = 'Plan: Hamstrings';
+          cameraLens.style.stroke = '#60a5fa';
+        }
+
+        if (step >= 2) {
+          cuffs.forEach(c => { c.style.stroke = '#4ade80'; c.style.fill = 'rgba(74,222,128,0.15)'; });
+          Object.values(cables).forEach(c => { c.style.opacity = '0.7'; });
+          loadCells.forEach(c => { c.style.stroke = '#4ade80'; c.style.fill = 'rgba(74,222,128,0.15)'; });
+          screenText1.textContent = step === 2 ? 'CONNECTED' : 'STRETCHING';
+          screenText1.style.fill = '#4ade80';
+          screenText2.textContent = step === 2 ? '4/4 cuffs OK' : 'Hamstring L';
+          screenText3.textContent = step === 2 ? 'Ready to go' : '';
+        }
+
+        if (step === 3) {
+          forceReadings.style.opacity = '1';
+          romIndicator.style.opacity = '1';
+          document.querySelectorAll('.motor').forEach(m => m.style.fill = '#1a5c2e');
+          Object.values(cables).forEach(c => { c.style.stroke = '#4ade80'; c.style.strokeWidth = '2.5'; c.style.opacity = '1'; });
+
+          let tick = 0;
+          const maxTicks = 300;
+          stretchAnim = setInterval(() => {
+            tick++;
+            const progress = Math.min(tick / maxTicks, 1);
+
+            const force = (12.3 * progress).toFixed(1);
+            document.getElementById('force-tl').textContent = (force * 0.4).toFixed(1) + ' lb';
+            document.getElementById('force-tr').textContent = (force * 0.3).toFixed(1) + ' lb';
+            document.getElementById('force-bl').textContent = force + ' lb';
+            document.getElementById('force-br').textContent = (force * 0.95).toFixed(1) + ' lb';
+
+            const rom = (72 + 4 * progress).toFixed(1);
+            document.getElementById('rom-angle').textContent = rom + '\u00B0';
+            document.getElementById('live-force').textContent = force + ' lb';
+            document.getElementById('live-rom').innerHTML = rom + '&deg;';
+
+            const holdSec = Math.floor(30 * progress);
+            document.getElementById('live-hold').textContent = holdSec + 's / 30s';
+
+            document.getElementById('gaugeForce').style.width = (progress * 41) + '%';
+            document.getElementById('gaugeRom').style.width = (rom / 90 * 100) + '%';
+
+            screenText2.textContent = 'Force: ' + force + ' lb';
+            screenText3.textContent = 'ROM: ' + rom + '\u00B0';
+
+            const legSpread = progress * 20;
+            document.getElementById('leg-l').setAttribute('x2', String(205 - legSpread));
+            document.getElementById('leg-r').setAttribute('x2', String(295 + legSpread));
+            cables.bl.setAttribute('x2', String(200 - legSpread));
+            cables.br.setAttribute('x2', String(300 + legSpread));
+
+            const armSpread = progress * 10;
+            document.getElementById('arm-l').setAttribute('x2', String(195 - armSpread));
+            document.getElementById('arm-r').setAttribute('x2', String(305 + armSpread));
+            cables.tl.setAttribute('x2', String(200 - armSpread));
+            cables.tr.setAttribute('x2', String(300 + armSpread));
+
+            const pulse = Math.sin(tick * 0.3) * 0.15 + 0.85;
+            loadCells.forEach(c => { c.style.opacity = String(pulse); });
+
+            if (tick >= maxTicks) {
+              clearInterval(stretchAnim);
+              stretchAnim = null;
+            }
+          }, 100);
+        }
+
+        if (step === 4) {
+          screenText1.textContent = 'COMPLETE';
+          screenText1.style.fill = '#facc15';
+          screenText2.textContent = '+2.3\u00B0 gained';
+          screenText3.textContent = '11:24 total';
+          cuffs.forEach(c => { c.style.stroke = '#facc15'; c.style.fill = 'rgba(250,204,21,0.15)'; });
+          Object.values(cables).forEach(c => { c.style.opacity = '0.2'; c.style.stroke = '#0a0a0a'; });
+        }
+      }
+
+      nextBtn.addEventListener('click', () => {
+        if (currentStep === totalSteps - 1) {
+          currentStep = 0;
+        } else {
+          currentStep++;
+        }
+        showStep(currentStep);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      });
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          currentStep = parseInt(dot.dataset.step);
+          showStep(currentStep);
+        });
+      });
+
+      showStep(0);
+    })();
   </script>
 </body>
 </html>
