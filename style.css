@@ -4,7 +4,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #0a0a0a;
-  background: #fafafa;
+  background: #f0f0f0;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -19,7 +19,7 @@ img { max-width: 100%; }
 /* === NAV === */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(250,250,250,0.85);
+  background: rgba(240,240,240,0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
@@ -40,7 +40,7 @@ nav {
 .hero {
   min-height: 100vh; display: flex; align-items: center;
   padding: 120px 24px 80px;
-  background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+  background: #f0f0f0;
   text-align: center;
 }
 .hero-content {
@@ -244,7 +244,7 @@ th.highlight { color: #fff !important; }
 .form-note { font-size: 13px; color: #444; margin-top: 16px; text-align: center; }
 
 /* === FOOTER === */
-footer { padding: 40px 0; border-top: 1px solid #eee; }
+footer { padding: 40px 0; border-top: 1px solid #ddd; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; }
 .footer-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; letter-spacing: 0.12em; font-size: 12px; color: #888; }
 .footer-logo img { width: 28px; height: 28px; object-fit: contain; }
