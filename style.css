@@ -317,6 +317,79 @@ nav {
   line-height: 1.65;
 }
 
+/* === WHAT THIS IS NOT === */
+.not-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.not-item {
+  padding: 28px 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+
+.not-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+
+.not-item p {
+  font-size: 15px;
+  color: #999;
+  line-height: 1.65;
+}
+
+/* === WHY IT MATTERS === */
+.value-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.value-item {
+  display: flex;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  align-items: flex-start;
+}
+
+.value-item:last-child {
+  border-bottom: none;
+}
+
+.value-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.value-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.value-body p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.65;
+}
+
 /* === 8. PROTOCOL STEPS — 3x2 grid === */
 /* Section subtitle */
 .section-sub {
@@ -1421,6 +1494,10 @@ footer {
   .two-col {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .not-grid {
+    grid-template-columns: 1fr;
   }
 
   .protocol-modes {
