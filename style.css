@@ -2373,3 +2373,94 @@ footer {
     aspect-ratio: 1 / 1;
   }
 }
+
+/* =============================================================
+   IMAGE-BASED DEMO
+   ============================================================= */
+
+.demo-img-wrap {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+
+.demo-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.demo-img-wrap.detail-img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.demo-img-caption {
+  margin-top: 16px;
+}
+
+.caption-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.caption-specs span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* Session image overlay */
+.session-img {
+  position: relative;
+}
+
+.session-img-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.session-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  padding: 6px 14px;
+  background: rgba(18, 21, 26, 0.85);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.session-live-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulseGlow 1.4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .caption-specs {
+    gap: 6px;
+  }
+  .caption-specs span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
