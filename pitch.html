@@ -226,6 +226,54 @@
       padding-top: 12px;
     }
 
+    /* Flywheel */
+    .flywheel-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 40px; }
+    .flywheel-wrap { position: relative; width: 100%; max-width: 360px; margin: 0 auto; }
+    .flywheel-svg { width: 100%; height: auto; }
+    .flywheel-chains { display: flex; flex-direction: column; gap: 16px; }
+    .flywheel-chain {
+      font-size: 15px; color: #ccc; line-height: 1.7;
+    }
+    .flywheel-chain strong { color: #e0e0e0; }
+    .flywheel-chain .arrow { color: #4ade80; margin: 0 4px; }
+    .flywheel-booster {
+      margin-top: 8px; padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 15px; color: #ccc;
+    }
+    .flywheel-booster strong { color: #facc15; }
+
+    /* Bar chart */
+    .bar-chart-wrap { display: flex; align-items: flex-end; gap: 24px; justify-content: center; height: 220px; margin-top: 20px; }
+    .bar-group { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; max-width: 80px; }
+    .bar-stack { width: 100%; display: flex; flex-direction: column; justify-content: flex-end; height: 200px; }
+    .bar-seg {
+      width: 100%;
+      border-radius: 3px 3px 0 0;
+      min-height: 2px;
+    }
+    .bar-seg + .bar-seg { border-radius: 0; }
+    .bar-seg:last-child { border-radius: 0 0 3px 3px; }
+    .bar-seg:first-child { border-radius: 3px 3px 0 0; }
+    .bar-label { font-size: 12px; color: #888; font-weight: 600; }
+    .bar-value { font-size: 11px; color: #ccc; font-weight: 700; }
+    .bar-chart-axis {
+      display: flex; justify-content: center; gap: 24px;
+      margin-top: 12px;
+    }
+    .bar-chart-legend {
+      display: flex; gap: 20px; justify-content: center; margin-top: 16px;
+    }
+    .bar-chart-legend span { font-size: 12px; color: #888; display: flex; align-items: center; gap: 6px; }
+    .bar-chart-legend .swatch { width: 12px; height: 12px; border-radius: 3px; }
+
+    /* Capital allocation pie (reuse donut styles) */
+    .capital-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 32px; }
+    .capital-summary {
+      font-size: 16px; font-style: italic; color: #999; text-align: center;
+      margin-top: 32px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.7;
+    }
+
     /* Slide logo watermark */
     .slide-logo {
       position: absolute;
@@ -355,6 +403,9 @@
       .quadrant-wrap { max-width: 100%; }
       .donut-wrap { gap: 32px; }
       .arrow-list li { font-size: 15px; }
+      .flywheel-layout { grid-template-columns: 1fr; }
+      .capital-layout { grid-template-columns: 1fr; }
+      .bar-chart-wrap { gap: 16px; }
     }
   </style>
 </head>
@@ -869,7 +920,162 @@
   <span class="slide-num">12</span>
 </div>
 
-<!-- ==================== SLIDE 13: THE ASK ==================== -->
+<!-- ==================== SLIDE 13: FLYWHEEL ==================== -->
+<div class="slide">
+  <div class="slide-inner">
+    <p class="slide-tag">Growth Engine</p>
+    <h2>Vitruvian Flywheel: Compounding data advantage.</h2>
+    <div class="flywheel-layout">
+      <div class="flywheel-wrap">
+        <svg class="flywheel-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer ring segments -->
+          <!-- Segment 1: Athletes (top-right) -->
+          <path d="M150,30 A120,120 0 0,1 253.9,90" fill="none" stroke="#4ade80" stroke-width="28" stroke-linecap="round"/>
+          <!-- Segment 2: Facilities (bottom-right to bottom-left) -->
+          <path d="M265,130 A120,120 0 0,1 100,265" fill="none" stroke="#888" stroke-width="28" stroke-linecap="round"/>
+          <!-- Segment 3: Data (top-left) -->
+          <path d="M60,235 A120,120 0 0,1 120,35" fill="none" stroke="#555" stroke-width="28" stroke-linecap="round"/>
+          <!-- Arrows -->
+          <polygon points="253,84 270,100 248,100" fill="#4ade80"/>
+          <polygon points="95,262 85,242 108,250" fill="#888"/>
+          <polygon points="124,35 114,55 135,50" fill="#555"/>
+          <!-- Center labels -->
+          <text x="150" y="155" text-anchor="middle" fill="#fafafa" font-size="14" font-weight="700" font-family="Inter, sans-serif">VITRUVIAN</text>
+        </svg>
+        <!-- Labels around the flywheel -->
+        <div style="position:absolute; top:-8px; right:-10px; font-size:14px; color:#4ade80; font-weight:600; text-align:center; line-height:1.4;">
+          Athletes <span style="color:#4ade80;">→</span> <em style="font-weight:400; color:#ccc;">Sessions, Data</em>
+        </div>
+        <div style="position:absolute; bottom:-8px; left:50%; transform:translateX(-50%); font-size:14px; color:#888; font-weight:600; text-align:center; line-height:1.4;">
+          Facilities <span style="color:#888;">→</span> <em style="font-weight:400; color:#ccc;">Adoption, Revenue</em>
+        </div>
+        <div style="position:absolute; top:40%; left:-20px; font-size:14px; color:#999; font-weight:600; text-align:center; line-height:1.4;">
+          Data <span style="color:#999;">→</span> <em style="font-weight:400; color:#ccc;">Insights,<br>Protocols</em>
+        </div>
+      </div>
+      <div class="flywheel-chains">
+        <div class="flywheel-chain">
+          <strong>Athletes:</strong> Sessions <span class="arrow">→</span> Data <span class="arrow">→</span> Better Protocols <span class="arrow">→</span> Better Outcomes <span class="arrow">→</span> Retention
+        </div>
+        <div class="flywheel-chain">
+          <strong>Facilities:</strong> Adoption <span class="arrow">→</span> Results <span class="arrow">→</span> Reputation <span class="arrow">→</span> Referrals <span class="arrow">→</span> More Facilities
+        </div>
+        <div class="flywheel-chain">
+          <strong>Data:</strong> Volume <span class="arrow">→</span> Accuracy <span class="arrow">→</span> Prediction <span class="arrow">→</span> Injury Prevention <span class="arrow">→</span> Value
+        </div>
+        <div class="flywheel-booster">
+          <strong>Booster:</strong> Every prevented injury is a case study that sells the next 10 machines.
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="" class="slide-logo">
+  <span class="slide-num">13</span>
+</div>
+
+<!-- ==================== SLIDE 14: CAPITAL REQUIREMENTS ==================== -->
+<div class="slide">
+  <div class="slide-inner">
+    <p class="slide-tag">Capital Requirements</p>
+    <h2>Prototype to market: $150K investment.</h2>
+    <div class="capital-layout">
+      <div>
+        <svg class="donut-svg" viewBox="0 0 42 42" style="width:260px; height:260px; margin:0 auto; display:block;">
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="5"/>
+          <!-- Engineering & Prototype 40% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#4ade80" stroke-width="5"
+            stroke-dasharray="40 60" stroke-dashoffset="25" stroke-linecap="round"/>
+          <!-- Sensor & Software 25% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#888" stroke-width="5"
+            stroke-dasharray="25 75" stroke-dashoffset="85" stroke-linecap="round"/>
+          <!-- Patent & Legal 15% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#facc15" stroke-width="5"
+            stroke-dasharray="15 85" stroke-dashoffset="60" stroke-linecap="round"/>
+          <!-- Beta & Validation 10% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#666" stroke-width="5"
+            stroke-dasharray="10 90" stroke-dashoffset="45" stroke-linecap="round"/>
+          <!-- Runway 10% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#333" stroke-width="5"
+            stroke-dasharray="10 90" stroke-dashoffset="35" stroke-linecap="round"/>
+        </svg>
+        <ul class="donut-legend" style="margin-top:20px;">
+          <li><span class="swatch" style="background:#4ade80;"></span>Engineering & Prototype — 40%</li>
+          <li><span class="swatch" style="background:#888;"></span>Sensor & Software — 25%</li>
+          <li><span class="swatch" style="background:#facc15;"></span>Patent & Legal — 15%</li>
+          <li><span class="swatch" style="background:#666;"></span>Beta & Validation — 10%</li>
+          <li><span class="swatch" style="background:#333;"></span>Runway & Contingency — 10%</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#666; margin-bottom:12px; text-align:center;">ARR Projection by Installed Units</p>
+        <div class="bar-chart-legend">
+          <span><span class="swatch" style="background:#666;"></span>Hardware only</span>
+          <span><span class="swatch" style="background:#4ade80;"></span>Hardware + SaaS</span>
+        </div>
+        <div class="bar-chart-wrap">
+          <!-- 10 units -->
+          <div class="bar-group">
+            <div class="bar-value">$260K</div>
+            <div class="bar-stack">
+              <div style="flex-grow:0; height:8%;">
+                <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
+              </div>
+              <div style="flex-grow:0; height:14%;">
+                <div class="bar-seg" style="background:#666; height:100%;"></div>
+              </div>
+            </div>
+            <div class="bar-label">10</div>
+          </div>
+          <!-- 25 units -->
+          <div class="bar-group">
+            <div class="bar-value">$650K</div>
+            <div class="bar-stack">
+              <div style="flex-grow:0; height:18%;">
+                <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
+              </div>
+              <div style="flex-grow:0; height:35%;">
+                <div class="bar-seg" style="background:#666; height:100%;"></div>
+              </div>
+            </div>
+            <div class="bar-label">25</div>
+          </div>
+          <!-- 50 units -->
+          <div class="bar-group">
+            <div class="bar-value">$1.3M</div>
+            <div class="bar-stack">
+              <div style="flex-grow:0; height:35%;">
+                <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
+              </div>
+              <div style="flex-grow:0; height:36%;">
+                <div class="bar-seg" style="background:#666; height:100%;"></div>
+              </div>
+            </div>
+            <div class="bar-label">50</div>
+          </div>
+          <!-- 100 units -->
+          <div class="bar-group">
+            <div class="bar-value">$2.6M</div>
+            <div class="bar-stack">
+              <div style="flex-grow:0; height:55%;">
+                <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
+              </div>
+              <div style="flex-grow:0; height:45%;">
+                <div class="bar-seg" style="background:#666; height:100%;"></div>
+              </div>
+            </div>
+            <div class="bar-label">100</div>
+          </div>
+        </div>
+        <p style="font-size:11px; color:#555; text-align:center; margin-top:8px;">Active Units Installed</p>
+      </div>
+    </div>
+    <p class="capital-summary">With $150K invested, Vitruvian can build a working prototype, file provisional patents, and validate with 3–5 beta facilities <span class="arrow" style="color:#4ade80;">→</span> path to $650K–$2.6M ARR within 24 months of first sale.</p>
+  </div>
+  <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="" class="slide-logo">
+  <span class="slide-num">14</span>
+</div>
+
+<!-- ==================== SLIDE 15: THE ASK ==================== -->
 <div class="slide">
   <div class="slide-inner">
     <p class="slide-tag">The Ask</p>
@@ -949,10 +1155,10 @@
     </div>
   </div>
   <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="" class="slide-logo">
-  <span class="slide-num">13</span>
+  <span class="slide-num">15</span>
 </div>
 
-<!-- ==================== SLIDE 14: CLOSE ==================== -->
+<!-- ==================== SLIDE 16: CLOSE ==================== -->
 <div class="slide" style="min-height:60vh;">
   <div class="slide-inner" style="text-align:center;">
     <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="Vitruvian" class="title-logo">
