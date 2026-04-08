@@ -109,8 +109,91 @@
     .cta-box h3 { font-size: 22px; color: #fafafa; margin-bottom: 8px; }
     .cta-box p { margin: 0 auto; font-size: 15px; }
 
+    /* NDA Gate */
+    .nda-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #0a0c10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease;
+    }
+    .nda-gate.dismissed {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .nda-box {
+      max-width: 560px;
+      width: 100%;
+      padding: 48px 40px;
+      text-align: center;
+    }
+    .nda-box img {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      margin-bottom: 24px;
+    }
+    .nda-box h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .nda-box p {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .nda-text {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 24px;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.75;
+      color: #888;
+      max-height: 220px;
+      overflow-y: auto;
+      margin-bottom: 24px;
+    }
+    .nda-text strong { color: #ccc; }
+    .nda-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+    .nda-check input { width: 18px; height: 18px; accent-color: #4ade80; cursor: pointer; }
+    .nda-check label { font-size: 14px; color: #ccc; cursor: pointer; user-select: none; }
+    .nda-btn {
+      display: inline-block;
+      padding: 14px 40px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: inherit;
+      background: #4ade80;
+      color: #0a0c10;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      opacity: 0.3;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+    .nda-btn.enabled {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nda-btn.enabled:hover {
+      background: #22c55e;
+    }
+
     /* Print */
     @media print {
+      .nda-gate { display: none !important; }
       .slide { min-height: auto; page-break-after: always; padding: 40px; }
       body { background: #fff; color: #222; }
       .card { border-color: #ddd; }
@@ -123,10 +206,37 @@
       .grid-2 { grid-template-columns: 1fr; }
       .slide { padding: 40px 24px; }
       .stat-big { font-size: 36px; }
+      .nda-box { padding: 32px 24px; }
     }
   </style>
 </head>
 <body>
+
+<!-- ==================== NDA GATE ==================== -->
+<div class="nda-gate" id="ndaGate">
+  <div class="nda-box">
+    <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="Vitruvian">
+    <h2>Confidential Material</h2>
+    <p style="font-size:15px; color:#888;">This document contains proprietary information about Vitruvian, including product design, technical specifications, intellectual property, and business strategy. Please review and accept the terms below before proceeding.</p>
+    <div class="nda-text">
+      <strong>Non-Disclosure Agreement</strong><br><br>
+      By accessing this document, you ("Recipient") agree to the following terms:<br><br>
+      <strong>1. Confidentiality.</strong> All information contained in this document — including but not limited to product designs, technical specifications, engineering details, patent claims, market analysis, pricing, and business strategy — is confidential and proprietary to Vitruvian ("Disclosing Party").<br><br>
+      <strong>2. Non-Disclosure.</strong> Recipient agrees not to disclose, publish, or disseminate any confidential information to any third party without prior written consent from the Disclosing Party.<br><br>
+      <strong>3. Non-Use.</strong> Recipient agrees not to use any confidential information for any purpose other than evaluating a potential business relationship with Vitruvian.<br><br>
+      <strong>4. No Copies.</strong> Recipient shall not copy, reproduce, or distribute this document or any portion thereof without written permission.<br><br>
+      <strong>5. Return of Materials.</strong> Upon request, Recipient shall return or destroy all copies of confidential materials.<br><br>
+      <strong>6. Duration.</strong> This agreement remains in effect for a period of two (2) years from the date of acceptance.<br><br>
+      <strong>7. No License.</strong> Nothing in this document grants any license or rights to any intellectual property owned by Vitruvian.<br><br>
+      This NDA is governed by the laws of the State of Delaware. By checking the box below, you acknowledge that you have read, understand, and agree to be bound by these terms.
+    </div>
+    <div class="nda-check">
+      <input type="checkbox" id="ndaCheckbox">
+      <label for="ndaCheckbox">I have read and agree to the Non-Disclosure Agreement</label>
+    </div>
+    <button class="nda-btn" id="ndaBtn">View Pitch Deck</button>
+  </div>
+</div>
 
 <!-- ==================== SLIDE 1: TITLE ==================== -->
 <div class="slide">
@@ -460,42 +570,81 @@
 
 <!-- ==================== SLIDE 11: THE ASK ==================== -->
 <div class="slide">
-  <div class="slide-inner" style="text-align:center;">
+  <div class="slide-inner">
     <p class="slide-tag">The Ask</p>
-    <h2>We're looking for beta partners.</h2>
-    <p class="large" style="margin:0 auto 40px;">Vitruvian is in prototype development. We're seeking 3–5 professional or collegiate training rooms to co-develop the first production unit.</p>
-    <div class="grid-3" style="margin-top:32px;">
-      <div class="card" style="text-align:center;">
-        <h3>What you provide</h3>
+    <h2>Two partners to make this real.</h2>
+    <p class="large" style="margin-bottom:40px;">The product is designed. The IP is mapped. The market is validated. Now we need the right people to build it and bring it to market.</p>
+
+    <div class="grid-2" style="margin-top:32px;">
+      <div class="card" style="border-color:rgba(74,222,128,0.2);">
+        <p class="slide-tag" style="margin-bottom:12px;">Partner 1</p>
+        <h2 style="font-size:28px; margin-bottom:12px;">Sports Industry Partner</h2>
+        <p style="font-size:15px;">Someone with deep relationships in professional and collegiate athletics. We need a partner who can open doors to NFL, NBA, MLS, and D1 training rooms — not cold outreach, but warm introductions to heads of performance, directors of sports medicine, and team decision-makers.</p>
+        <div class="divider"></div>
+        <h3 style="font-size:15px;">What this partner brings:</h3>
         <ul>
-          <li>Training room floor space</li>
-          <li>Athletes willing to test</li>
-          <li>Staff feedback on protocols</li>
-          <li>Real-world validation data</li>
+          <li>Existing relationships with pro/college performance staffs</li>
+          <li>Credibility in the sports medicine and athletic training space</li>
+          <li>Access to 3–5 beta facilities for prototype validation</li>
+          <li>Distribution channel knowledge for sports technology products</li>
+          <li>Understanding of procurement cycles and budget structures</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-color:rgba(250,204,21,0.2);">
+        <p class="slide-tag" style="color:#facc15; margin-bottom:12px;">Partner 2</p>
+        <h2 style="font-size:28px; margin-bottom:12px;">Engineering Partner</h2>
+        <p style="font-size:15px;">Someone who can take this from design to physical prototype. We need a mechanical and electrical engineer (or team) who has built motorized cable systems, embedded control loops, and sensor-integrated hardware before. Someone who can make the damn thing.</p>
+        <div class="divider"></div>
+        <h3 style="font-size:15px;">What this partner brings:</h3>
+        <ul>
+          <li>Mechanical engineering — aluminum frame, cable routing, gearbox integration</li>
+          <li>Electrical engineering — BLDC motor control, load cell integration, embedded systems</li>
+          <li>Software — PID control loops, RealSense depth camera integration, real-time UI</li>
+          <li>Prototyping experience — from CAD to physical build</li>
+          <li>Manufacturing knowledge — DFM, BOM costing, supplier relationships</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider" style="margin:40px 0;"></div>
+
+    <div class="grid-3">
+      <div class="card" style="text-align:center;">
+        <h3>What's done</h3>
+        <ul>
+          <li>Full product design and specification</li>
+          <li>Stretch protocol library (V1 + V2)</li>
+          <li>Patent claims drafted</li>
+          <li>Market analysis and competitive map</li>
+          <li>Brand identity and marketing site</li>
         </ul>
       </div>
       <div class="card" style="text-align:center;">
-        <h3>What you get</h3>
+        <h3>What's needed</h3>
         <ul>
-          <li>First access to the platform</li>
-          <li>Preferred pricing at launch</li>
-          <li>Input on feature development</li>
-          <li>Co-authorship on validation studies</li>
+          <li>Physical prototype (mechanical + electrical)</li>
+          <li>Embedded control software</li>
+          <li>Beta facility partnerships</li>
+          <li>Provisional patent filing</li>
+          <li>Validation study with real athletes</li>
         </ul>
       </div>
       <div class="card" style="text-align:center;">
         <h3>Timeline</h3>
         <ul>
-          <li>Q3 2026: Prototype in-facility</li>
-          <li>Q4 2026: Beta testing phase</li>
-          <li>Q1 2027: Validation study</li>
-          <li>Q2 2027: Production orders</li>
+          <li>Q3 2026: Partners confirmed</li>
+          <li>Q4 2026: Prototype built</li>
+          <li>Q1 2027: In-facility beta</li>
+          <li>Q2 2027: Validation data</li>
+          <li>Q3 2027: Production orders</li>
         </ul>
       </div>
     </div>
+
     <div class="cta-box">
-      <h3>Ready to talk?</h3>
-      <p>If you run a collegiate, professional, or Olympic training room — let's talk.</p>
+      <h3>If either of these is you — let's talk.</h3>
+      <p>This is a real product with a real market gap. We need the right partners to build it and bring it to the people who need it.</p>
     </div>
   </div>
   <span class="slide-num">11</span>
@@ -511,5 +660,26 @@
   </div>
 </div>
 
+<script>
+  (function() {
+    var gate = document.getElementById('ndaGate');
+    var checkbox = document.getElementById('ndaCheckbox');
+    var btn = document.getElementById('ndaBtn');
+
+    checkbox.addEventListener('change', function() {
+      btn.classList.toggle('enabled', checkbox.checked);
+    });
+
+    btn.addEventListener('click', function() {
+      if (!checkbox.checked) return;
+      gate.classList.add('dismissed');
+      document.body.style.overflow = '';
+      setTimeout(function() { gate.style.display = 'none'; }, 600);
+    });
+
+    // Prevent scrolling while NDA is showing
+    document.body.style.overflow = 'hidden';
+  })();
+</script>
 </body>
 </html>
