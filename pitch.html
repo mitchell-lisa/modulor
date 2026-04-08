@@ -274,6 +274,37 @@
       margin-top: 32px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.7;
     }
 
+    /* Capital allocation detail */
+    .capital-detail { margin-top: 32px; }
+    .capital-category { margin-bottom: 2px; }
+    .capital-category-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+    }
+    .capital-category-header h3 { font-size: 14px; margin: 0; }
+    .capital-category-header .cat-amount { font-size: 14px; font-weight: 700; color: #4ade80; }
+    .capital-category-header .cat-pct { font-size: 12px; color: #666; margin-left: 6px; }
+    .capital-line {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 5px 16px;
+      font-size: 12px;
+    }
+    .capital-line .line-desc { color: #777; }
+    .capital-line .line-cost { color: #aaa; font-weight: 600; white-space: nowrap; margin-left: 12px; }
+    .capital-total {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px;
+      margin-top: 8px;
+      background: rgba(74,222,128,0.06);
+      border: 1px solid rgba(74,222,128,0.15);
+      border-radius: 8px;
+      font-size: 17px; font-weight: 700; color: #fafafa;
+    }
+    .capital-total .total-amount { color: #4ade80; font-size: 20px; }
+
     /* Slide logo watermark */
     .slide-logo {
       position: absolute;
@@ -405,6 +436,7 @@
       .arrow-list li { font-size: 15px; }
       .flywheel-layout { grid-template-columns: 1fr; }
       .capital-layout { grid-template-columns: 1fr; }
+      .capital-detail > div { grid-template-columns: 1fr !important; }
       .bar-chart-wrap { gap: 16px; }
     }
   </style>
@@ -977,50 +1009,59 @@
 <div class="slide">
   <div class="slide-inner">
     <p class="slide-tag">Capital Requirements</p>
-    <h2>Prototype to market: $150K investment.</h2>
+    <h2>Raising $300K SAFE @ $4M cap.</h2>
+    <p style="margin-bottom:8px; font-size:15px; color:#888;">Every dollar mapped. Every line justified. This gets us from design to validated prototype with beta data.</p>
+
     <div class="capital-layout">
+      <!-- Left: Pie chart + legend -->
       <div>
         <svg class="donut-svg" viewBox="0 0 42 42" style="width:260px; height:260px; margin:0 auto; display:block;">
           <circle cx="21" cy="21" r="15.915" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="5"/>
-          <!-- Engineering & Prototype 40% -->
+          <!-- Engineering & Prototype 30% -->
           <circle cx="21" cy="21" r="15.915" fill="none" stroke="#4ade80" stroke-width="5"
-            stroke-dasharray="40 60" stroke-dashoffset="25" stroke-linecap="round"/>
-          <!-- Sensor & Software 25% -->
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#888" stroke-width="5"
-            stroke-dasharray="25 75" stroke-dashoffset="85" stroke-linecap="round"/>
-          <!-- Patent & Legal 15% -->
+            stroke-dasharray="30 70" stroke-dashoffset="25" stroke-linecap="round"/>
+          <!-- AI, Sensors & Software 27% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#3b82f6" stroke-width="5"
+            stroke-dasharray="27 73" stroke-dashoffset="95" stroke-linecap="round"/>
+          <!-- Patent & Legal 12% -->
           <circle cx="21" cy="21" r="15.915" fill="none" stroke="#facc15" stroke-width="5"
-            stroke-dasharray="15 85" stroke-dashoffset="60" stroke-linecap="round"/>
+            stroke-dasharray="12 88" stroke-dashoffset="68" stroke-linecap="round"/>
+          <!-- Business Formation 8% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#888" stroke-width="5"
+            stroke-dasharray="8 92" stroke-dashoffset="56" stroke-linecap="round"/>
           <!-- Beta & Validation 10% -->
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#666" stroke-width="5"
-            stroke-dasharray="10 90" stroke-dashoffset="45" stroke-linecap="round"/>
-          <!-- Runway 10% -->
-          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#333" stroke-width="5"
-            stroke-dasharray="10 90" stroke-dashoffset="35" stroke-linecap="round"/>
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#a78bfa" stroke-width="5"
+            stroke-dasharray="10 90" stroke-dashoffset="48" stroke-linecap="round"/>
+          <!-- Contingency 13% -->
+          <circle cx="21" cy="21" r="15.915" fill="none" stroke="#444" stroke-width="5"
+            stroke-dasharray="13 87" stroke-dashoffset="38" stroke-linecap="round"/>
         </svg>
         <ul class="donut-legend" style="margin-top:20px;">
-          <li><span class="swatch" style="background:#4ade80;"></span>Engineering & Prototype — 40%</li>
-          <li><span class="swatch" style="background:#888;"></span>Sensor & Software — 25%</li>
-          <li><span class="swatch" style="background:#facc15;"></span>Patent & Legal — 15%</li>
-          <li><span class="swatch" style="background:#666;"></span>Beta & Validation — 10%</li>
-          <li><span class="swatch" style="background:#333;"></span>Runway & Contingency — 10%</li>
+          <li><span class="swatch" style="background:#4ade80;"></span>Engineering & Prototype — 30% ($90K)</li>
+          <li><span class="swatch" style="background:#3b82f6;"></span>AI, Sensors & Software — 27% ($80K)</li>
+          <li><span class="swatch" style="background:#facc15;"></span>Patent & Legal — 12% ($35K)</li>
+          <li><span class="swatch" style="background:#888;"></span>Business Formation — 8% ($25K)</li>
+          <li><span class="swatch" style="background:#a78bfa;"></span>Beta & Validation — 10% ($30K)</li>
+          <li><span class="swatch" style="background:#444;"></span>Contingency — 13% ($40K)</li>
         </ul>
       </div>
+
+      <!-- Right: ARR projection bar chart -->
       <div>
         <p style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#666; margin-bottom:12px; text-align:center;">ARR Projection by Installed Units</p>
         <div class="bar-chart-legend">
-          <span><span class="swatch" style="background:#666;"></span>Hardware only</span>
-          <span><span class="swatch" style="background:#4ade80;"></span>Hardware + SaaS</span>
+          <span><span class="swatch" style="background:#666;"></span>Hardware</span>
+          <span><span class="swatch" style="background:#4ade80;"></span>SaaS ($6K/yr/unit)</span>
         </div>
         <div class="bar-chart-wrap">
           <!-- 10 units -->
           <div class="bar-group">
             <div class="bar-value">$260K</div>
             <div class="bar-stack">
-              <div style="flex-grow:0; height:8%;">
+              <div style="flex-grow:0; height:4%;">
                 <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
               </div>
-              <div style="flex-grow:0; height:14%;">
+              <div style="flex-grow:0; height:13%;">
                 <div class="bar-seg" style="background:#666; height:100%;"></div>
               </div>
             </div>
@@ -1030,10 +1071,10 @@
           <div class="bar-group">
             <div class="bar-value">$650K</div>
             <div class="bar-stack">
-              <div style="flex-grow:0; height:18%;">
+              <div style="flex-grow:0; height:10%;">
                 <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
               </div>
-              <div style="flex-grow:0; height:35%;">
+              <div style="flex-grow:0; height:32%;">
                 <div class="bar-seg" style="background:#666; height:100%;"></div>
               </div>
             </div>
@@ -1043,10 +1084,10 @@
           <div class="bar-group">
             <div class="bar-value">$1.3M</div>
             <div class="bar-stack">
-              <div style="flex-grow:0; height:35%;">
+              <div style="flex-grow:0; height:20%;">
                 <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
               </div>
-              <div style="flex-grow:0; height:36%;">
+              <div style="flex-grow:0; height:45%;">
                 <div class="bar-seg" style="background:#666; height:100%;"></div>
               </div>
             </div>
@@ -1056,10 +1097,10 @@
           <div class="bar-group">
             <div class="bar-value">$2.6M</div>
             <div class="bar-stack">
-              <div style="flex-grow:0; height:55%;">
+              <div style="flex-grow:0; height:38%;">
                 <div class="bar-seg" style="background:#4ade80; height:100%;"></div>
               </div>
-              <div style="flex-grow:0; height:45%;">
+              <div style="flex-grow:0; height:62%;">
                 <div class="bar-seg" style="background:#666; height:100%;"></div>
               </div>
             </div>
@@ -1069,7 +1110,99 @@
         <p style="font-size:11px; color:#555; text-align:center; margin-top:8px;">Active Units Installed</p>
       </div>
     </div>
-    <p class="capital-summary">With $150K invested, Vitruvian can build a working prototype, file provisional patents, and validate with 3–5 beta facilities <span class="arrow" style="color:#4ade80;">→</span> path to $650K–$2.6M ARR within 24 months of first sale.</p>
+
+    <!-- Detailed line-item breakdown -->
+    <div class="capital-detail">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+        <!-- Engineering -->
+        <div class="capital-category">
+          <div class="capital-category-header">
+            <h3><span style="color:#4ade80;">&#9679;</span> Engineering & Prototype</h3>
+            <span class="cat-amount">$90K</span>
+          </div>
+          <div class="capital-line"><span class="line-desc">Mechanical design & CAD</span><span class="line-cost">$15K</span></div>
+          <div class="capital-line"><span class="line-desc">CNC machining, welding, frame fabrication</span><span class="line-cost">$15K</span></div>
+          <div class="capital-line"><span class="line-desc">Motor assembly (BLDC + gearbox + ODrive) × 3 builds</span><span class="line-cost">$12K</span></div>
+          <div class="capital-line"><span class="line-desc">Cable system, spool, bench, cuff, slip clutch</span><span class="line-cost">$10K</span></div>
+          <div class="capital-line"><span class="line-desc">2nd prototype iteration (rework)</span><span class="line-cost">$18K</span></div>
+          <div class="capital-line"><span class="line-desc">Assembly, testing, shop time</span><span class="line-cost">$20K</span></div>
+        </div>
+
+        <!-- AI, Sensors & Software -->
+        <div class="capital-category">
+          <div class="capital-category-header">
+            <h3><span style="color:#3b82f6;">&#9679;</span> AI, Sensors & Software</h3>
+            <span class="cat-amount">$80K</span>
+          </div>
+          <div class="capital-line"><span class="line-desc">Computer vision pipeline (pose estimation, compensation detection)</span><span class="line-cost">$35K</span></div>
+          <div class="capital-line"><span class="line-desc">PID control firmware + load cell integration</span><span class="line-cost">$12K</span></div>
+          <div class="capital-line"><span class="line-desc">Session UI / touchscreen application</span><span class="line-cost">$12K</span></div>
+          <div class="capital-line"><span class="line-desc">RealSense cameras (×5), Jetson compute, touchscreen</span><span class="line-cost">$8K</span></div>
+          <div class="capital-line"><span class="line-desc">Cloud infra (data storage, analytics dashboard)</span><span class="line-cost">$5K</span></div>
+          <div class="capital-line"><span class="line-desc">E-stop system, safety electronics</span><span class="line-cost">$3K</span></div>
+          <div class="capital-line"><span class="line-desc" style="color:#555; font-style:italic;">CV pipeline is the largest line item — training custom pose estimation for supine athletes on edge hardware</span><span class="line-cost"></span></div>
+        </div>
+
+        <!-- Patent & Legal -->
+        <div class="capital-category">
+          <div class="capital-category-header">
+            <h3><span style="color:#facc15;">&#9679;</span> Patent & Legal</h3>
+            <span class="cat-amount">$35K</span>
+          </div>
+          <div class="capital-line"><span class="line-desc">Provisional patent filing (3 claims)</span><span class="line-cost">$6K</span></div>
+          <div class="capital-line"><span class="line-desc">Utility patent filing</span><span class="line-cost">$15K</span></div>
+          <div class="capital-line"><span class="line-desc">Prior art search & analysis</span><span class="line-cost">$4K</span></div>
+          <div class="capital-line"><span class="line-desc">Trademark registration (Vitruvian)</span><span class="line-cost">$2K</span></div>
+          <div class="capital-line"><span class="line-desc">IP strategy, NDA templates, contracts</span><span class="line-cost">$8K</span></div>
+        </div>
+
+        <!-- Business Formation -->
+        <div class="capital-category">
+          <div class="capital-category-header">
+            <h3><span style="color:#888;">&#9679;</span> Business Formation & Ops</h3>
+            <span class="cat-amount">$25K</span>
+          </div>
+          <div class="capital-line"><span class="line-desc">Delaware C-Corp formation</span><span class="line-cost">$3K</span></div>
+          <div class="capital-line"><span class="line-desc">Product liability insurance</span><span class="line-cost">$5K</span></div>
+          <div class="capital-line"><span class="line-desc">D&O insurance</span><span class="line-cost">$3K</span></div>
+          <div class="capital-line"><span class="line-desc">General liability insurance</span><span class="line-cost">$3K</span></div>
+          <div class="capital-line"><span class="line-desc">Accounting, bookkeeping, licenses</span><span class="line-cost">$6K</span></div>
+          <div class="capital-line"><span class="line-desc">FDA / safety regulatory research</span><span class="line-cost">$5K</span></div>
+        </div>
+
+        <!-- Beta & Validation -->
+        <div class="capital-category">
+          <div class="capital-category-header">
+            <h3><span style="color:#a78bfa;">&#9679;</span> Beta & Validation</h3>
+            <span class="cat-amount">$30K</span>
+          </div>
+          <div class="capital-line"><span class="line-desc">Travel to 3–5 beta facilities</span><span class="line-cost">$6K</span></div>
+          <div class="capital-line"><span class="line-desc">Installation & on-site training</span><span class="line-cost">$5K</span></div>
+          <div class="capital-line"><span class="line-desc">Athlete testing sessions, data collection</span><span class="line-cost">$5K</span></div>
+          <div class="capital-line"><span class="line-desc">Beta liability insurance</span><span class="line-cost">$4K</span></div>
+          <div class="capital-line"><span class="line-desc">Video documentation / case studies</span><span class="line-cost">$4K</span></div>
+          <div class="capital-line"><span class="line-desc">Iteration from beta feedback</span><span class="line-cost">$6K</span></div>
+        </div>
+
+        <!-- Contingency -->
+        <div class="capital-category">
+          <div class="capital-category-header">
+            <h3><span style="color:#666;">&#9679;</span> Contingency</h3>
+            <span class="cat-amount">$40K</span>
+          </div>
+          <div class="capital-line"><span class="line-desc">Hardware overruns (industry standard 15–20%)</span><span class="line-cost">$20K</span></div>
+          <div class="capital-line"><span class="line-desc">Unexpected redesign / safety / regulatory</span><span class="line-cost">$10K</span></div>
+          <div class="capital-line"><span class="line-desc">Component lead times, rush orders</span><span class="line-cost">$10K</span></div>
+        </div>
+      </div>
+
+      <div class="capital-total">
+        <span>Total Raise</span>
+        <span class="total-amount">$300,000</span>
+      </div>
+    </div>
+
+    <p class="capital-summary">$300K SAFE at $4M cap gets Vitruvian from design to validated prototype with beta data from 3–5 elite facilities <span style="color:#4ade80;">→</span> path to $650K–$2.6M ARR within 24 months of first sale.</p>
   </div>
   <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="" class="slide-logo">
   <span class="slide-num">14</span>
