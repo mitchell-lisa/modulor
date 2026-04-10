@@ -305,6 +305,24 @@
     }
     .capital-total .total-amount { color: #4ade80; font-size: 20px; }
 
+    /* Patent figure diagrams */
+    .patent-fig {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 24px 16px 12px;
+      margin-top: 24px;
+    }
+    .patent-fig svg { width: 100%; height: auto; display: block; }
+    .fig-title {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #555; text-align: center;
+      margin-bottom: 16px;
+    }
+    .fig-caption {
+      font-size: 11px; color: #555; text-align: center; margin-top: 10px; line-height: 1.6;
+    }
+
     /* Slide logo watermark */
     .slide-logo {
       position: absolute;
@@ -563,8 +581,76 @@
     <p class="slide-tag">The Product</p>
     <h2>Controlled tension. Measured range. Data on every rep.</h2>
     <div class="split" style="margin-top:32px;">
-      <div class="img-wrap">
-        <img src="images/hero-v2.png" alt="Vitruvian stretching platform">
+      <div class="patent-fig">
+        <p class="fig-title">FIG. 2 — Apparatus Side-View Schematic</p>
+        <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" style="max-width:520px; margin:0 auto;">
+          <!-- Frame / upright -->
+          <rect x="40" y="60" width="16" height="220" rx="3" fill="none" stroke="#666" stroke-width="1.5"/>
+          <rect x="40" y="270" width="400" height="12" rx="3" fill="none" stroke="#666" stroke-width="1.5"/>
+          <!-- Bench surface -->
+          <rect x="100" y="220" width="320" height="14" rx="4" fill="none" stroke="#888" stroke-width="1.5"/>
+          <line x1="100" y1="234" x2="120" y2="270" stroke="#666" stroke-width="1"/>
+          <line x1="400" y1="234" x2="380" y2="270" stroke="#666" stroke-width="1"/>
+          <!-- Motor housing at top of upright -->
+          <rect x="20" y="60" width="56" height="44" rx="6" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="1.5"/>
+          <text x="48" y="86" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">BLDC</text>
+          <!-- Gearbox -->
+          <rect x="24" y="108" width="48" height="28" rx="4" fill="rgba(74,222,128,0.05)" stroke="#4ade80" stroke-width="1"/>
+          <text x="48" y="126" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="600" font-family="Inter,sans-serif">20:1</text>
+          <!-- Spool -->
+          <circle cx="48" cy="156" r="14" fill="none" stroke="#888" stroke-width="1.5"/>
+          <circle cx="48" cy="156" r="4" fill="#888"/>
+          <!-- Cable from spool to athlete -->
+          <path d="M62,156 Q120,156 160,195 Q180,210 240,210" fill="none" stroke="#facc15" stroke-width="1.5" stroke-dasharray="6,3"/>
+          <!-- Inline load cell on cable -->
+          <rect x="140" y="188" width="36" height="14" rx="3" fill="rgba(250,204,21,0.1)" stroke="#facc15" stroke-width="1"/>
+          <text x="158" y="198" text-anchor="middle" fill="#facc15" font-size="7" font-weight="600" font-family="Inter,sans-serif">LOAD</text>
+          <!-- Cuff at end of cable -->
+          <path d="M240,203 Q250,195 260,203 L260,217 Q250,225 240,217 Z" fill="rgba(255,255,255,0.05)" stroke="#ccc" stroke-width="1.5"/>
+          <!-- Athlete leg (simplified) -->
+          <line x1="260" y1="210" x2="380" y2="140" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <line x1="380" y1="140" x2="420" y2="210" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="380" cy="140" r="4" fill="none" stroke="#e0e0e0" stroke-width="1.5"/>
+          <!-- Athlete torso on bench -->
+          <line x1="270" y1="210" x2="420" y2="210" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+          <!-- Depth camera mounted on frame -->
+          <rect x="22" y="178" width="48" height="24" rx="5" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1.5"/>
+          <circle cx="36" cy="190" r="5" fill="none" stroke="#3b82f6" stroke-width="1"/>
+          <circle cx="58" cy="190" r="3" fill="none" stroke="#3b82f6" stroke-width="1"/>
+          <!-- Camera FOV cone -->
+          <path d="M70,190 L380,120 L420,220 Z" fill="rgba(59,130,246,0.03)" stroke="rgba(59,130,246,0.15)" stroke-width="0.5" stroke-dasharray="4,4"/>
+          <!-- Joint angle arc -->
+          <path d="M355,160 A30,30 0 0,1 380,140" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+          <text x="345" y="155" fill="#4ade80" font-size="9" font-weight="600" font-family="Inter,sans-serif">θ</text>
+          <!-- Touchscreen -->
+          <rect x="440" y="100" width="50" height="70" rx="4" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1"/>
+          <rect x="444" y="106" width="42" height="50" rx="2" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.2)" stroke-width="0.5"/>
+          <line x1="440" y1="170" x2="440" y2="270" stroke="#666" stroke-width="1"/>
+          <!-- E-stop button -->
+          <circle cx="465" cy="180" r="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.5"/>
+          <text x="465" y="183" text-anchor="middle" fill="#ef4444" font-size="6" font-weight="700" font-family="Inter,sans-serif">E</text>
+          <!-- Reference number labels -->
+          <text x="48" y="54" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">10</text>
+          <text x="48" y="146" text-anchor="middle" fill="#ccc" font-size="10" font-weight="700" font-family="Inter,sans-serif">14</text>
+          <text x="158" y="184" text-anchor="middle" fill="#facc15" font-size="10" font-weight="700" font-family="Inter,sans-serif">16</text>
+          <text x="250" y="196" text-anchor="middle" fill="#ccc" font-size="10" font-weight="700" font-family="Inter,sans-serif">18</text>
+          <text x="46" y="212" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700" font-family="Inter,sans-serif">20</text>
+          <text x="465" y="96" text-anchor="middle" fill="#888" font-size="10" font-weight="700" font-family="Inter,sans-serif">22</text>
+          <text x="465" y="200" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700" font-family="Inter,sans-serif">24</text>
+          <text x="48" y="105" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">12</text>
+          <text x="210" y="275" text-anchor="middle" fill="#666" font-size="10" font-weight="700" font-family="Inter,sans-serif">26</text>
+        </svg>
+        <p class="fig-caption">
+          <span style="color:#4ade80;">10</span> BLDC motor &nbsp;
+          <span style="color:#4ade80;">12</span> Planetary gearbox &nbsp;
+          <span style="color:#ccc;">14</span> Cable spool &nbsp;
+          <span style="color:#facc15;">16</span> Inline load cell &nbsp;
+          <span style="color:#ccc;">18</span> Quick-release cuff &nbsp;
+          <span style="color:#3b82f6;">20</span> Depth camera &nbsp;
+          <span style="color:#888;">22</span> Touchscreen &nbsp;
+          <span style="color:#ef4444;">24</span> E-stop &nbsp;
+          <span style="color:#666;">26</span> Frame + bench
+        </p>
       </div>
       <div class="stack">
         <p>Vitruvian is a single-station platform that applies precise, motorized cable tension to stretch an athlete's muscles while simultaneously measuring range of motion, force response, and movement quality — all in real time.</p>
@@ -591,30 +677,90 @@
   <div class="slide-inner">
     <p class="slide-tag">How It Works</p>
     <h2>Eight minutes. Nine variables. Zero guesswork.</h2>
-    <div class="split" style="margin-top:32px;">
-      <div class="img-wrap">
-        <img src="images/hero-inuse.png" alt="Athlete on Vitruvian during hamstring stretch">
-      </div>
-      <div>
-        <div class="stack" style="gap:20px;">
-          <div class="card">
-            <h3>1. Badge in</h3>
-            <p>Athlete scans ID. System loads their profile, history, and today's training context.</p>
-          </div>
-          <div class="card">
-            <h3>2. Baseline screen</h3>
-            <p>Standardized passive stretch at 8 lb each side. Bilateral ROM comparison in 60 seconds.</p>
-          </div>
-          <div class="card">
-            <h3>3. Stretch protocol</h3>
-            <p>Motor ramps cable tension. PID loop maintains constant force. Camera tracks compensation. Data logs every second.</p>
-          </div>
-          <div class="card">
-            <h3>4. Session report</h3>
-            <p>ROM gain, asymmetry change, tolerance trend. Exportable. Comparable. Actionable.</p>
-          </div>
-        </div>
-      </div>
+    <!-- FIG. 3 — Session method flow -->
+    <div class="patent-fig" style="margin-top:32px;">
+      <p class="fig-title">FIG. 3 — Stretch Session Method (Bilateral Assessment Protocol)</p>
+      <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style="max-width:900px; margin:0 auto;">
+        <!-- Step 1: Badge In -->
+        <rect x="10" y="40" width="120" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="#666" stroke-width="1.2"/>
+        <text x="70" y="32" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 100</text>
+        <text x="70" y="66" text-anchor="middle" fill="#e0e0e0" font-size="11" font-weight="700" font-family="Inter,sans-serif">BADGE IN</text>
+        <text x="70" y="82" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Load athlete profile</text>
+        <text x="70" y="94" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">+ session history</text>
+        <text x="70" y="106" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">+ training context</text>
+        <!-- Arrow -->
+        <path d="M134,80 L158,80" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+        <!-- Step 2: Baseline L -->
+        <rect x="162" y="20" width="120" height="60" rx="8" fill="rgba(59,130,246,0.05)" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="222" y="12" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 102a</text>
+        <text x="222" y="44" text-anchor="middle" fill="#e0e0e0" font-size="10" font-weight="700" font-family="Inter,sans-serif">BASELINE — L</text>
+        <text x="222" y="58" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Passive stretch @ 8 lb</text>
+        <text x="222" y="70" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Measure peak ROM (θ_L)</text>
+        <!-- Step 2b: Baseline R -->
+        <rect x="162" y="100" width="120" height="60" rx="8" fill="rgba(250,204,21,0.05)" stroke="#facc15" stroke-width="1.2"/>
+        <text x="222" y="92" text-anchor="middle" fill="#facc15" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 102b</text>
+        <text x="222" y="124" text-anchor="middle" fill="#e0e0e0" font-size="10" font-weight="700" font-family="Inter,sans-serif">BASELINE — R</text>
+        <text x="222" y="138" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Passive stretch @ 8 lb</text>
+        <text x="222" y="150" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Measure peak ROM (θ_R)</text>
+        <!-- Arrow to comparison -->
+        <path d="M286,50 L310,80" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"/>
+        <path d="M286,130 L310,100" stroke="#facc15" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- Step 3: Bilateral Comparison -->
+        <rect x="314" y="55" width="130" height="70" rx="8" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="379" y="47" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 104</text>
+        <text x="379" y="78" text-anchor="middle" fill="#e0e0e0" font-size="10" font-weight="700" font-family="Inter,sans-serif">ASYMMETRY CALC</text>
+        <text x="379" y="94" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600" font-family="Inter,sans-serif">Δ = |θ_L − θ_R|</text>
+        <text x="379" y="110" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Flag if Δ > 10°</text>
+        <!-- Arrow -->
+        <path d="M448,90 L472,90" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+        <!-- Step 4: Stretch Protocol -->
+        <rect x="476" y="30" width="130" height="120" rx="8" fill="rgba(74,222,128,0.04)" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="541" y="22" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 106</text>
+        <text x="541" y="52" text-anchor="middle" fill="#e0e0e0" font-size="10" font-weight="700" font-family="Inter,sans-serif">STRETCH PROTOCOL</text>
+        <text x="541" y="70" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Motor ramps cable</text>
+        <text x="541" y="82" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">PID @ 100Hz (FIG. 10)</text>
+        <text x="541" y="94" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Vision tracks joints</text>
+        <text x="541" y="106" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Compensation detect</text>
+        <text x="541" y="118" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">(FIG. 11)</text>
+        <!-- Real-time loop arrow inside -->
+        <path d="M490,130 Q490,140 541,140 Q592,140 592,130" fill="none" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="541" y="148" text-anchor="middle" fill="#4ade80" font-size="7" font-family="Inter,sans-serif">100Hz closed loop</text>
+        <!-- Arrow -->
+        <path d="M610,90 L634,90" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+        <!-- Step 5: Data Logging -->
+        <rect x="638" y="45" width="120" height="90" rx="8" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1.2"/>
+        <text x="698" y="37" text-anchor="middle" fill="#888" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 108</text>
+        <text x="698" y="68" text-anchor="middle" fill="#e0e0e0" font-size="10" font-weight="700" font-family="Inter,sans-serif">DATA LOG</text>
+        <text x="698" y="84" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">ROM, force, asymmetry</text>
+        <text x="698" y="96" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">compensation flags</text>
+        <text x="698" y="108" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">tolerance threshold</text>
+        <text x="698" y="120" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">pain response binary</text>
+        <!-- Arrow -->
+        <path d="M762,90 L786,90" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+        <!-- Step 6: Report -->
+        <rect x="790" y="50" width="100" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="#666" stroke-width="1.2"/>
+        <text x="840" y="42" text-anchor="middle" fill="#666" font-size="10" font-weight="700" font-family="Inter,sans-serif">STEP 110</text>
+        <text x="840" y="74" text-anchor="middle" fill="#e0e0e0" font-size="10" font-weight="700" font-family="Inter,sans-serif">REPORT</text>
+        <text x="840" y="90" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Session Δ ROM</text>
+        <text x="840" y="102" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Asymmetry trend</text>
+        <text x="840" y="114" text-anchor="middle" fill="#777" font-size="8" font-family="Inter,sans-serif">Risk score update</text>
+
+        <!-- Longitudinal feedback: report feeds back to next session -->
+        <path d="M840,134 L840,210 L70,210 L70,124" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="6,3"/>
+        <text x="450" y="228" text-anchor="middle" fill="#555" font-size="9" font-weight="600" font-family="Inter,sans-serif">STEP 112 — Longitudinal data feeds next session's baseline targets and protocol parameters</text>
+        <polygon points="70,124 65,134 75,134" fill="#555"/>
+
+        <!-- Arrow marker -->
+        <defs>
+          <marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#4ade80"/></marker>
+        </defs>
+      </svg>
+      <p class="fig-caption">Method claim: Steps 100–112 define the complete bilateral assessment and adaptive stretching protocol with longitudinal feedback loop.</p>
     </div>
   </div>
   <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="" class="slide-logo">
@@ -627,25 +773,174 @@
     <p class="slide-tag">Technology</p>
     <h2>Five systems. One closed loop.</h2>
     <div class="grid-2" style="margin-top:32px;">
+      <!-- FIG. 4 — Cable Drive Assembly -->
       <div class="card" style="text-align:center;">
-        <div class="img-wrap" style="margin-bottom:16px;"><img src="images/detail-drive.png" alt="Motor assembly"></div>
+        <div class="patent-fig" style="margin:0 0 16px; padding:16px 8px 8px;">
+          <p class="fig-title" style="margin-bottom:10px;">FIG. 4 — Cable Drive Assembly</p>
+          <svg viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Motor -->
+            <rect x="10" y="40" width="60" height="50" rx="6" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="1.2"/>
+            <text x="40" y="62" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">BLDC</text>
+            <text x="40" y="74" text-anchor="middle" fill="#4ade80" font-size="7" font-family="Inter,sans-serif">200W</text>
+            <text x="40" y="34" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">30</text>
+            <!-- Shaft -->
+            <line x1="70" y1="65" x2="90" y2="65" stroke="#888" stroke-width="3"/>
+            <!-- Gearbox -->
+            <rect x="90" y="44" width="50" height="42" rx="4" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1.2"/>
+            <text x="115" y="62" text-anchor="middle" fill="#ccc" font-size="8" font-weight="700" font-family="Inter,sans-serif">20:1</text>
+            <text x="115" y="74" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">PLANETARY</text>
+            <text x="115" y="38" text-anchor="middle" fill="#ccc" font-size="9" font-weight="700" font-family="Inter,sans-serif">32</text>
+            <!-- Output shaft -->
+            <line x1="140" y1="65" x2="155" y2="65" stroke="#888" stroke-width="3"/>
+            <!-- Spool -->
+            <circle cx="175" cy="65" r="20" fill="none" stroke="#facc15" stroke-width="1.5"/>
+            <circle cx="175" cy="65" r="6" fill="#facc15" opacity="0.3"/>
+            <text x="175" y="68" text-anchor="middle" fill="#facc15" font-size="7" font-weight="700" font-family="Inter,sans-serif">⊕</text>
+            <text x="175" y="38" text-anchor="middle" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">34</text>
+            <!-- Slip clutch -->
+            <rect x="198" y="56" width="28" height="18" rx="3" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="1"/>
+            <text x="212" y="69" text-anchor="middle" fill="#ef4444" font-size="6" font-weight="600" font-family="Inter,sans-serif">CLUTCH</text>
+            <text x="212" y="50" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700" font-family="Inter,sans-serif">36</text>
+            <!-- Cable -->
+            <line x1="226" y1="65" x2="330" y2="65" stroke="#facc15" stroke-width="1.5" stroke-dasharray="6,3"/>
+            <text x="278" y="58" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">DYNEEMA CABLE</text>
+            <text x="278" y="80" text-anchor="middle" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">38</text>
+            <!-- ODrive controller below -->
+            <rect x="20" y="110" width="70" height="30" rx="4" fill="rgba(74,222,128,0.05)" stroke="#4ade80" stroke-width="1" stroke-dasharray="4,2"/>
+            <text x="55" y="128" text-anchor="middle" fill="#4ade80" font-size="7" font-weight="600" font-family="Inter,sans-serif">ODrive FOC</text>
+            <text x="55" y="138" text-anchor="middle" fill="#777" font-size="6" font-family="Inter,sans-serif">100Hz PWM</text>
+            <path d="M55,110 L55,96 L40,90" fill="none" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="3,2"/>
+          </svg>
+        </div>
         <h3>Cable Drive</h3>
         <p>200W BLDC motor, 20:1 planetary gearbox, Dyneema cable. ODrive FOC controller at 100Hz. Force-compliant, backdriveable.</p>
       </div>
+
+      <!-- FIG. 5 — Sensor Array Configuration -->
       <div class="card" style="text-align:center;">
-        <div class="img-wrap" style="margin-bottom:16px;"><img src="images/detail-sensor.png" alt="Depth camera"></div>
-        <h3>Depth Camera</h3>
-        <p>Intel RealSense D435. 12-point skeletal tracking at 30fps. Measures joint angles to ±2°. Detects compensation in real time.</p>
+        <div class="patent-fig" style="margin:0 0 16px; padding:16px 8px 8px;">
+          <p class="fig-title" style="margin-bottom:10px;">FIG. 5 — Sensor Array & Data Paths</p>
+          <svg viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Depth camera -->
+            <rect x="20" y="15" width="70" height="35" rx="6" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1.2"/>
+            <circle cx="42" cy="32" r="8" fill="none" stroke="#3b82f6" stroke-width="1"/>
+            <circle cx="72" cy="32" r="5" fill="none" stroke="#3b82f6" stroke-width="1"/>
+            <text x="55" y="8" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">40</text>
+            <text x="55" y="60" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">RealSense D435</text>
+            <!-- Load cell -->
+            <rect x="20" y="80" width="70" height="30" rx="5" fill="rgba(250,204,21,0.08)" stroke="#facc15" stroke-width="1.2"/>
+            <text x="55" y="99" text-anchor="middle" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">LOAD CELL</text>
+            <text x="55" y="74" text-anchor="middle" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">42</text>
+            <text x="55" y="120" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Inline, 100Hz</text>
+            <!-- Jetson compute -->
+            <rect x="140" y="30" width="80" height="50" rx="6" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1.5"/>
+            <text x="180" y="52" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">JETSON</text>
+            <text x="180" y="66" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">EDGE COMPUTE</text>
+            <text x="180" y="22" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">44</text>
+            <!-- Data paths -->
+            <path d="M94,32 L136,48" stroke="#3b82f6" stroke-width="1" marker-end="url(#arrowB)"/>
+            <text x="112" y="34" fill="#3b82f6" font-size="6" font-family="Inter,sans-serif">30fps depth</text>
+            <path d="M94,95 L136,65" stroke="#facc15" stroke-width="1" marker-end="url(#arrowY)"/>
+            <text x="112" y="88" fill="#facc15" font-size="6" font-family="Inter,sans-serif">100Hz force</text>
+            <!-- Output to UI -->
+            <path d="M224,55 L260,55" stroke="#4ade80" stroke-width="1" marker-end="url(#arrowG2)"/>
+            <!-- Touchscreen -->
+            <rect x="264" y="25" width="60" height="60" rx="6" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1.2"/>
+            <rect x="270" y="31" width="48" height="36" rx="3" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.15)" stroke-width="0.5"/>
+            <text x="294" y="82" text-anchor="middle" fill="#888" font-size="7" font-family="Inter,sans-serif">15" TOUCH</text>
+            <text x="294" y="18" text-anchor="middle" fill="#888" font-size="9" font-weight="700" font-family="Inter,sans-serif">46</text>
+            <!-- Cloud path -->
+            <path d="M180,84 L180,120 L280,120" stroke="#555" stroke-width="0.8" stroke-dasharray="4,3"/>
+            <rect x="280" y="110" width="50" height="24" rx="4" fill="rgba(255,255,255,0.02)" stroke="#555" stroke-width="0.8"/>
+            <text x="305" y="126" text-anchor="middle" fill="#555" font-size="7" font-weight="600" font-family="Inter,sans-serif">CLOUD</text>
+            <text x="305" y="106" text-anchor="middle" fill="#555" font-size="9" font-weight="700" font-family="Inter,sans-serif">48</text>
+            <!-- Markers -->
+            <defs>
+              <marker id="arrowB" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#3b82f6"/></marker>
+              <marker id="arrowY" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#facc15"/></marker>
+              <marker id="arrowG2" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#4ade80"/></marker>
+            </defs>
+          </svg>
+        </div>
+        <h3>Depth Camera + Sensors</h3>
+        <p>Intel RealSense D435. 12-point skeletal tracking at 30fps. Inline load cell at 100Hz. Edge compute on Jetson module.</p>
       </div>
+
+      <!-- FIG. 6 — Control Interface Architecture -->
       <div class="card" style="text-align:center;">
-        <div class="img-wrap" style="margin-bottom:16px;"><img src="images/detail-ui.png" alt="Touchscreen interface"></div>
+        <div class="patent-fig" style="margin:0 0 16px; padding:16px 8px 8px;">
+          <p class="fig-title" style="margin-bottom:10px;">FIG. 6 — Control Interface Architecture</p>
+          <svg viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Staff layer -->
+            <rect x="10" y="10" width="320" height="40" rx="6" fill="rgba(255,255,255,0.02)" stroke="#666" stroke-width="0.8"/>
+            <text x="170" y="34" text-anchor="middle" fill="#888" font-size="8" font-weight="600" font-family="Inter,sans-serif">STAFF / OPERATOR LAYER</text>
+            <!-- Touchscreen UI block -->
+            <rect x="30" y="65" width="90" height="40" rx="5" fill="rgba(74,222,128,0.05)" stroke="#4ade80" stroke-width="1.2"/>
+            <text x="75" y="82" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">SESSION UI</text>
+            <text x="75" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Protocol select</text>
+            <text x="75" y="58" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">50</text>
+            <path d="M75,50 L75,61" stroke="#666" stroke-width="0.8"/>
+            <!-- Real-time display -->
+            <rect x="135" y="65" width="80" height="40" rx="5" fill="rgba(59,130,246,0.05)" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="175" y="82" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="700" font-family="Inter,sans-serif">LIVE DISPLAY</text>
+            <text x="175" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Force + ROM</text>
+            <text x="175" y="58" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">52</text>
+            <path d="M175,50 L175,61" stroke="#666" stroke-width="0.8"/>
+            <!-- History/trends -->
+            <rect x="230" y="65" width="90" height="40" rx="5" fill="rgba(250,204,21,0.05)" stroke="#facc15" stroke-width="1.2"/>
+            <text x="275" y="82" text-anchor="middle" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">TREND VIEW</text>
+            <text x="275" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Longitudinal Δ</text>
+            <text x="275" y="58" text-anchor="middle" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">54</text>
+            <path d="M275,50 L275,61" stroke="#666" stroke-width="0.8"/>
+            <!-- Data bus -->
+            <rect x="10" y="120" width="320" height="28" rx="4" fill="rgba(74,222,128,0.03)" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="4,3"/>
+            <text x="170" y="138" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="600" font-family="Inter,sans-serif">LOCAL DATA BUS — Sensor fusion @ 100Hz → UI update @ 30Hz → Cloud sync @ session end</text>
+            <path d="M75,109 L75,118" stroke="#4ade80" stroke-width="0.8"/>
+            <path d="M175,109 L175,118" stroke="#3b82f6" stroke-width="0.8"/>
+            <path d="M275,109 L275,118" stroke="#facc15" stroke-width="0.8"/>
+          </svg>
+        </div>
         <h3>Live Interface</h3>
-        <p>15" touchscreen. Real-time force graph, ROM tracking, bilateral comparison. Dark UI designed for staff and athlete visibility.</p>
+        <p>15" touchscreen. Real-time force graph, ROM tracking, bilateral comparison. Longitudinal trend view with export.</p>
       </div>
+
+      <!-- FIG. 7 — Five-Layer Safety System -->
       <div class="card" style="text-align:center;">
-        <div class="img-wrap" style="margin-bottom:16px;"><img src="images/detail-attachment.png" alt="Ankle cuff"></div>
-        <h3>Quick-Release Cuff</h3>
-        <p>Padded neoprene. Carabiner quick-release. 5-layer safety: software cap, PID compliance, slip clutch, E-stop, quick-release.</p>
+        <div class="patent-fig" style="margin:0 0 16px; padding:16px 8px 8px;">
+          <p class="fig-title" style="margin-bottom:10px;">FIG. 7 — Five-Layer Safety Cascade</p>
+          <svg viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+            <!-- Layer 1: Software -->
+            <rect x="10" y="8" width="320" height="24" rx="4" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1"/>
+            <text x="28" y="24" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">L1</text>
+            <text x="170" y="24" text-anchor="middle" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">SOFTWARE FORCE CAP — max tension limit, cannot be overridden by protocol</text>
+            <!-- Layer 2: PID -->
+            <rect x="30" y="36" width="280" height="24" rx="4" fill="rgba(74,222,128,0.05)" stroke="#4ade80" stroke-width="0.8"/>
+            <text x="48" y="52" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">L2</text>
+            <text x="170" y="52" text-anchor="middle" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">PID COMPLIANCE — force setpoint tracking, auto-reduce on overshoot</text>
+            <!-- Layer 3: Slip clutch -->
+            <rect x="50" y="64" width="240" height="24" rx="4" fill="rgba(250,204,21,0.06)" stroke="#facc15" stroke-width="0.8"/>
+            <text x="68" y="80" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">L3</text>
+            <text x="170" y="80" text-anchor="middle" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">SLIP CLUTCH — mechanical torque limit, cable slips at threshold</text>
+            <!-- Layer 4: E-stop -->
+            <rect x="70" y="92" width="200" height="24" rx="4" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="0.8"/>
+            <text x="88" y="108" fill="#ef4444" font-size="8" font-weight="700" font-family="Inter,sans-serif">L4</text>
+            <text x="170" y="108" text-anchor="middle" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">E-STOP — hardwired motor kill, staff or athlete accessible</text>
+            <!-- Layer 5: Quick-release -->
+            <rect x="90" y="120" width="160" height="24" rx="4" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="1"/>
+            <text x="108" y="136" fill="#ef4444" font-size="8" font-weight="700" font-family="Inter,sans-serif">L5</text>
+            <text x="170" y="136" text-anchor="middle" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">QUICK-RELEASE CUFF — instant mechanical disconnect</text>
+            <!-- Response time annotations -->
+            <text x="335" y="24" text-anchor="end" fill="#555" font-size="7" font-family="Inter,sans-serif">&lt;10ms</text>
+            <text x="315" y="52" text-anchor="end" fill="#555" font-size="7" font-family="Inter,sans-serif">&lt;10ms</text>
+            <text x="295" y="80" text-anchor="end" fill="#555" font-size="7" font-family="Inter,sans-serif">passive</text>
+            <text x="275" y="108" text-anchor="end" fill="#555" font-size="7" font-family="Inter,sans-serif">&lt;50ms</text>
+            <text x="255" y="136" text-anchor="end" fill="#555" font-size="7" font-family="Inter,sans-serif">instant</text>
+            <!-- Label -->
+            <text x="170" y="156" text-anchor="middle" fill="#555" font-size="7" font-style="italic" font-family="Inter,sans-serif">Each layer operates independently — any single layer can halt the stretch</text>
+          </svg>
+        </div>
+        <h3>Five-Layer Safety</h3>
+        <p>Software cap → PID compliance → slip clutch → E-stop → quick-release. Each layer is independent and fail-safe.</p>
       </div>
     </div>
   </div>
@@ -658,7 +953,113 @@
   <div class="slide-inner">
     <p class="slide-tag">What It Measures</p>
     <h2>Nine variables. Measured, not estimated.</h2>
-    <div class="grid-3" style="margin-top:32px;">
+
+    <!-- FIG. 8 — Measurement Extraction Pipeline -->
+    <div class="patent-fig" style="margin-top:24px; margin-bottom:32px;">
+      <p class="fig-title">FIG. 8 — Measurement Extraction Pipeline (Raw Sensor → Derived Variables)</p>
+      <svg viewBox="0 0 940 200" xmlns="http://www.w3.org/2000/svg" style="max-width:940px; margin:0 auto;">
+        <!-- INPUT: Depth Camera -->
+        <rect x="10" y="10" width="100" height="50" rx="6" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="60" y="32" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">DEPTH CAMERA</text>
+        <text x="60" y="46" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">640×480 @ 30fps</text>
+        <!-- INPUT: Load Cell -->
+        <rect x="10" y="75" width="100" height="50" rx="6" fill="rgba(250,204,21,0.08)" stroke="#facc15" stroke-width="1.2"/>
+        <text x="60" y="97" text-anchor="middle" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">LOAD CELL</text>
+        <text x="60" y="111" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">100Hz analog</text>
+        <!-- INPUT: Motor Encoder -->
+        <rect x="10" y="140" width="100" height="50" rx="6" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1.2"/>
+        <text x="60" y="162" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">MOTOR ENC</text>
+        <text x="60" y="176" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Position + velocity</text>
+
+        <!-- PROCESSING: Skeleton -->
+        <path d="M114,35 L150,55" stroke="#3b82f6" stroke-width="1" marker-end="url(#aB8)"/>
+        <rect x="154" y="30" width="110" height="55" rx="6" fill="rgba(59,130,246,0.05)" stroke="#3b82f6" stroke-width="1"/>
+        <text x="209" y="50" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="700" font-family="Inter,sans-serif">POSE ESTIMATION</text>
+        <text x="209" y="64" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">12-joint skeleton</text>
+        <text x="209" y="76" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">3D coordinates</text>
+
+        <!-- PROCESSING: Force -->
+        <path d="M114,100 L150,110" stroke="#facc15" stroke-width="1" marker-end="url(#aY8)"/>
+        <rect x="154" y="95" width="110" height="45" rx="6" fill="rgba(250,204,21,0.05)" stroke="#facc15" stroke-width="1"/>
+        <text x="209" y="115" text-anchor="middle" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">FORCE PROCESSING</text>
+        <text x="209" y="129" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Filtered, calibrated</text>
+
+        <!-- PROCESSING: Cable position -->
+        <path d="M114,165 L150,155" stroke="#4ade80" stroke-width="1" marker-end="url(#aG8)"/>
+        <rect x="154" y="148" width="110" height="35" rx="6" fill="rgba(74,222,128,0.04)" stroke="#4ade80" stroke-width="1"/>
+        <text x="209" y="169" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">CABLE LENGTH</text>
+
+        <!-- FUSION -->
+        <path d="M268,58 L306,80" stroke="#888" stroke-width="1"/>
+        <path d="M268,117 L306,100" stroke="#888" stroke-width="1"/>
+        <path d="M268,165 L306,115" stroke="#888" stroke-width="1"/>
+        <rect x="310" y="55" width="90" height="80" rx="8" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="355" y="78" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">SENSOR</text>
+        <text x="355" y="92" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">FUSION</text>
+        <text x="355" y="110" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">100Hz sync</text>
+        <text x="355" y="48" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">60</text>
+
+        <!-- DERIVED VARIABLES (the 9) -->
+        <path d="M404,95 L430,95" stroke="#4ade80" stroke-width="1.5" marker-end="url(#aG8)"/>
+
+        <!-- 9 output boxes in 3 columns -->
+        <!-- Col 1 -->
+        <rect x="436" y="8" width="150" height="24" rx="4" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.2)" stroke-width="0.8"/>
+        <text x="441" y="24" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">V1</text>
+        <text x="462" y="24" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Joint Angle (θ peak)</text>
+
+        <rect x="436" y="38" width="150" height="24" rx="4" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.2)" stroke-width="0.8"/>
+        <text x="441" y="54" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">V2</text>
+        <text x="462" y="54" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Cable Force (F peak, σ)</text>
+
+        <rect x="436" y="68" width="150" height="24" rx="4" fill="rgba(74,222,128,0.04)" stroke="rgba(74,222,128,0.2)" stroke-width="0.8"/>
+        <text x="441" y="84" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">V3</text>
+        <text x="462" y="84" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Bilateral Asymmetry (Δ)</text>
+
+        <!-- Col 2 -->
+        <rect x="436" y="98" width="150" height="24" rx="4" fill="rgba(250,204,21,0.04)" stroke="rgba(250,204,21,0.2)" stroke-width="0.8"/>
+        <text x="441" y="114" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">V4</text>
+        <text x="462" y="114" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Hold Time (t @ end-range)</text>
+
+        <rect x="436" y="128" width="150" height="24" rx="4" fill="rgba(250,204,21,0.04)" stroke="rgba(250,204,21,0.2)" stroke-width="0.8"/>
+        <text x="441" y="144" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">V5</text>
+        <text x="462" y="144" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Compensation Flags</text>
+
+        <rect x="436" y="158" width="150" height="24" rx="4" fill="rgba(250,204,21,0.04)" stroke="rgba(250,204,21,0.2)" stroke-width="0.8"/>
+        <text x="441" y="174" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">V6</text>
+        <text x="462" y="174" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Tolerance Threshold</text>
+
+        <!-- Col 3 — right side -->
+        <rect x="600" y="8" width="150" height="24" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+        <text x="605" y="24" fill="#888" font-size="8" font-weight="700" font-family="Inter,sans-serif">V7</text>
+        <text x="626" y="24" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Pain Response (binary)</text>
+
+        <rect x="600" y="38" width="150" height="24" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+        <text x="605" y="54" fill="#888" font-size="8" font-weight="700" font-family="Inter,sans-serif">V8</text>
+        <text x="626" y="54" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Tension Ramp Rate</text>
+
+        <rect x="600" y="68" width="150" height="24" rx="4" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+        <text x="605" y="84" fill="#888" font-size="8" font-weight="700" font-family="Inter,sans-serif">V9</text>
+        <text x="626" y="84" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">Session Δ (acute + chronic)</text>
+
+        <!-- Longitudinal output -->
+        <path d="M675,98 L675,130 L820,130" stroke="#4ade80" stroke-width="1" stroke-dasharray="4,3"/>
+        <rect x="780" y="110" width="150" height="50" rx="8" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1.2"/>
+        <text x="855" y="132" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">RISK SCORE</text>
+        <text x="855" y="146" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Longitudinal trend</text>
+        <text x="855" y="156" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">analysis → injury prediction</text>
+        <text x="855" y="104" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">62</text>
+
+        <defs>
+          <marker id="aB8" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#3b82f6"/></marker>
+          <marker id="aY8" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#facc15"/></marker>
+          <marker id="aG8" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#4ade80"/></marker>
+        </defs>
+      </svg>
+      <p class="fig-caption">Apparatus claim: Three independent sensor inputs (40, 42, encoder) are fused at element 60 to derive nine biomechanical variables (V1–V9), fed to longitudinal risk scoring engine (62).</p>
+    </div>
+
+    <div class="grid-3" style="margin-top:0;">
       <div class="card"><h3>Joint Angle</h3><p>Peak passive ROM at standardized force. ±2° accuracy. Comparable across sessions.</p></div>
       <div class="card"><h3>Cable Force</h3><p>Inline load cell at 100Hz. Logs tension ramp, peak force, and variability during hold.</p></div>
       <div class="card"><h3>Asymmetry</h3><p>Left vs. right at matched force. Flags differences &gt;10%. Tracks resolution over time.</p></div>
@@ -804,7 +1205,119 @@
   <div class="slide-inner">
     <p class="slide-tag">Product Roadmap</p>
     <h2>Honest scope. No overclaiming.</h2>
-    <div class="split" style="margin-top:32px;">
+
+    <!-- FIG. 9 — Multi-Pattern Reconfigurable Platform -->
+    <div class="patent-fig" style="margin-top:24px; margin-bottom:32px;">
+      <p class="fig-title">FIG. 9 — Multi-Pattern Reconfigurable Platform (Single Frame, Seven Patterns)</p>
+      <svg viewBox="0 0 920 300" xmlns="http://www.w3.org/2000/svg" style="max-width:920px; margin:0 auto;">
+        <!-- Central frame schematic -->
+        <rect x="380" y="20" width="160" height="260" rx="8" fill="rgba(255,255,255,0.02)" stroke="#666" stroke-width="1.5"/>
+        <text x="460" y="45" text-anchor="middle" fill="#888" font-size="10" font-weight="700" font-family="Inter,sans-serif">SINGLE FRAME</text>
+        <!-- Motor -->
+        <rect x="420" y="55" width="80" height="26" rx="4" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1"/>
+        <text x="460" y="72" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">BLDC MOTOR (10)</text>
+        <!-- Spool -->
+        <circle cx="460" cy="108" r="14" fill="none" stroke="#facc15" stroke-width="1.2"/>
+        <circle cx="460" cy="108" r="4" fill="#facc15" opacity="0.3"/>
+        <text x="460" y="112" text-anchor="middle" fill="#facc15" font-size="7" font-weight="700" font-family="Inter,sans-serif">34</text>
+        <!-- V1: Fixed pulley point -->
+        <circle cx="430" cy="150" r="6" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="430" y="153" text-anchor="middle" fill="#4ade80" font-size="6" font-weight="700" font-family="Inter,sans-serif">P1</text>
+        <text x="430" y="170" text-anchor="middle" fill="#4ade80" font-size="7" font-weight="600" font-family="Inter,sans-serif">V1 FIXED</text>
+        <!-- V2: Sliding track -->
+        <line x1="410" y1="195" x2="510" y2="195" stroke="#888" stroke-width="2" stroke-linecap="round"/>
+        <rect x="450" y="188" width="16" height="14" rx="3" fill="rgba(250,204,21,0.1)" stroke="#facc15" stroke-width="1"/>
+        <text x="458" y="198" text-anchor="middle" fill="#facc15" font-size="6" font-weight="700" font-family="Inter,sans-serif">P2</text>
+        <text x="460" y="220" text-anchor="middle" fill="#facc15" font-size="7" font-weight="600" font-family="Inter,sans-serif">V2 SLIDING</text>
+        <!-- Arrows showing P2 slides -->
+        <path d="M420,195 L410,195" stroke="#facc15" stroke-width="0.8" marker-end="url(#aY9)"/>
+        <path d="M500,195 L510,195" stroke="#facc15" stroke-width="0.8" marker-end="url(#aY9)"/>
+        <!-- Camera -->
+        <rect x="415" y="240" width="90" height="20" rx="4" fill="rgba(59,130,246,0.06)" stroke="#3b82f6" stroke-width="0.8"/>
+        <text x="460" y="254" text-anchor="middle" fill="#3b82f6" font-size="7" font-weight="700" font-family="Inter,sans-serif">DEPTH CAMERA (40)</text>
+
+        <!-- V1 PATTERNS — left side -->
+        <text x="180" y="16" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="700" font-family="Inter,sans-serif">V1 — LAUNCH (4 Patterns)</text>
+
+        <!-- Pattern A: Hamstring SLR -->
+        <rect x="30" y="32" width="260" height="48" rx="6" fill="rgba(74,222,128,0.04)" stroke="#4ade80" stroke-width="0.8"/>
+        <text x="44" y="52" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-A</text>
+        <text x="70" y="52" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">Hamstring SLR</text>
+        <text x="70" y="68" fill="#777" font-size="7" font-family="Inter,sans-serif">Supine, leg elevated. Cable at ankle. Straight-leg raise to end-range.</text>
+        <!-- mini schematic -->
+        <line x1="230" y1="44" x2="260" y2="60" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+        <line x1="260" y1="60" x2="280" y2="44" stroke="#e0e0e0" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+        <path d="M250,48 A12,12 0 0,1 260,60" fill="none" stroke="#4ade80" stroke-width="1"/>
+
+        <!-- Pattern B: Adductor Abduction -->
+        <rect x="30" y="88" width="260" height="48" rx="6" fill="rgba(74,222,128,0.04)" stroke="#4ade80" stroke-width="0.8"/>
+        <text x="44" y="108" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-B</text>
+        <text x="70" y="108" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">Adductor Abduction</text>
+        <text x="70" y="124" fill="#777" font-size="7" font-family="Inter,sans-serif">Supine, leg lateral. Cable pulls outward. Measures abduction ROM.</text>
+        <line x1="245" y1="106" x2="280" y2="100" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+        <line x1="245" y1="106" x2="275" y2="120" stroke="#e0e0e0" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+
+        <!-- Pattern C: Hip Flexor Extension -->
+        <rect x="30" y="144" width="260" height="48" rx="6" fill="rgba(74,222,128,0.04)" stroke="#4ade80" stroke-width="0.8"/>
+        <text x="44" y="164" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-C</text>
+        <text x="70" y="164" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">Hip Flexor Extension</text>
+        <text x="70" y="180" fill="#777" font-size="7" font-family="Inter,sans-serif">Prone/side-lying. Cable pulls into extension. Stretches hip flexors.</text>
+        <line x1="250" y1="168" x2="280" y2="160" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Pattern D: PNF Overlay -->
+        <rect x="30" y="200" width="260" height="58" rx="6" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1"/>
+        <text x="44" y="220" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-D</text>
+        <text x="70" y="220" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">PNF Contract-Relax</text>
+        <text x="70" y="236" fill="#777" font-size="7" font-family="Inter,sans-serif">Applied to any pattern. Athlete pushes against cable (isometric),</text>
+        <text x="70" y="248" fill="#777" font-size="7" font-family="Inter,sans-serif">motor holds, then advances to new end-range. Motor detects force reversal.</text>
+
+        <!-- Connection lines from V1 patterns to fixed pulley -->
+        <path d="M294,56 L424,150" stroke="#4ade80" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+        <path d="M294,112 L424,150" stroke="#4ade80" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+        <path d="M294,168 L424,150" stroke="#4ade80" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+        <path d="M294,229 L424,150" stroke="#4ade80" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+
+        <!-- V2 PATTERNS — right side -->
+        <text x="740" y="16" text-anchor="middle" fill="#facc15" font-size="11" font-weight="700" font-family="Inter,sans-serif">V2 — YEAR 2 (3 Patterns)</text>
+
+        <!-- Pattern E: Hip IR/ER -->
+        <rect x="630" y="32" width="260" height="48" rx="6" fill="rgba(250,204,21,0.04)" stroke="#facc15" stroke-width="0.8"/>
+        <text x="644" y="52" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-E</text>
+        <text x="670" y="52" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">Hip Internal / External Rotation</text>
+        <text x="670" y="68" fill="#777" font-size="7" font-family="Inter,sans-serif">Seated, knee bent 90°. Cable at ankle. Rotational stretch. Requires P2 at 45°.</text>
+
+        <!-- Pattern F: Ankle DF -->
+        <rect x="630" y="88" width="260" height="48" rx="6" fill="rgba(250,204,21,0.04)" stroke="#facc15" stroke-width="0.8"/>
+        <text x="644" y="108" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-F</text>
+        <text x="670" y="108" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">Ankle Dorsiflexion</text>
+        <text x="670" y="124" fill="#777" font-size="7" font-family="Inter,sans-serif">Seated, foot on plate. Cable at forefoot. Measures DF ROM. Requires P2 low.</text>
+
+        <!-- Pattern G: Thoracic Rotation -->
+        <rect x="630" y="144" width="260" height="48" rx="6" fill="rgba(250,204,21,0.04)" stroke="#facc15" stroke-width="0.8"/>
+        <text x="644" y="164" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">P-G</text>
+        <text x="670" y="164" fill="#e0e0e0" font-size="9" font-weight="600" font-family="Inter,sans-serif">Thoracic Rotation</text>
+        <text x="670" y="180" fill="#777" font-size="7" font-family="Inter,sans-serif">Seated, cable at shoulder harness. Rotational stretch. Requires P2 high.</text>
+
+        <!-- Connection lines from V2 patterns to sliding pulley -->
+        <path d="M626,56 L476,195" stroke="#facc15" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+        <path d="M626,112 L476,195" stroke="#facc15" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+        <path d="M626,168 L476,195" stroke="#facc15" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.5"/>
+
+        <!-- Key insight box -->
+        <rect x="630" y="210" width="260" height="68" rx="6" fill="rgba(255,255,255,0.02)" stroke="#555" stroke-width="0.8"/>
+        <text x="760" y="232" text-anchor="middle" fill="#888" font-size="8" font-weight="700" font-family="Inter,sans-serif">V1 → V2 UPGRADE PATH</text>
+        <text x="760" y="248" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Same motor (10), same cable (38), same spool (34)</text>
+        <text x="760" y="262" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Add: sliding track bracket + software update</text>
+        <text x="760" y="276" text-anchor="middle" fill="#facc15" font-size="7" font-weight="600" font-family="Inter,sans-serif">Hardware cost: ~$200 | Software: OTA update</text>
+
+        <defs>
+          <marker id="aY9" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#facc15"/></marker>
+        </defs>
+      </svg>
+      <p class="fig-caption">Apparatus claim: A single motorized cable platform (elements 10, 34, 38) serves seven distinct stretch patterns through athlete repositioning (V1) and adjustable pulley position on a sliding track (V2), without changing the drive system.</p>
+    </div>
+
+    <div class="split" style="margin-top:0;">
       <div>
         <div class="card" style="border-color:rgba(74,222,128,0.2);">
           <p class="slide-tag" style="margin-bottom:12px;">V1 — Launch</p>
@@ -844,56 +1357,254 @@
     <p class="slide-tag">Intellectual Property</p>
     <h2>With a patent to protect it.</h2>
 
-    <!-- System flow diagram -->
-    <p style="font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#666; text-align:center; margin-top:32px; margin-bottom:16px;">FIG. 1 — FORCE-CONTROLLED STRETCH WITH COMPENSATION-AWARE ADJUSTMENT</p>
-    <div class="flow-diagram">
-      <div class="flow-node">
-        <h4>1. Athlete</h4>
-        <p>Scans badge. System loads profile + history.</p>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node">
-        <h4>2. Protocol</h4>
-        <p>Selects stretch pattern. Sets target force.</p>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node highlight">
-        <h4>3. PID Loop</h4>
-        <p>Motor ramps cable. Load cell feedback at 100Hz.</p>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node highlight">
-        <h4>4. Vision</h4>
-        <p>Depth camera tracks 12 joints at 30fps.</p>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node highlight">
-        <h4>5. Compliance</h4>
-        <p>Detects compensation. Adjusts tension in real time.</p>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-node">
-        <h4>6. Data</h4>
-        <p>ROM, force, asymmetry logged. Trend analysis.</p>
-      </div>
-    </div>
-    <div class="flow-return">← Feedback loop: Steps 3–5 run continuously at 100Hz throughout each stretch hold →</div>
+    <!-- FIG. 1 — Enhanced System Block Diagram -->
+    <div class="patent-fig" style="margin-top:24px;">
+      <p class="fig-title">FIG. 1 — System Block Diagram (Force-Controlled Stretch with Compensation-Aware Adjustment)</p>
+      <svg viewBox="0 0 960 220" xmlns="http://www.w3.org/2000/svg" style="max-width:960px; margin:0 auto;">
+        <!-- Athlete Input -->
+        <rect x="10" y="60" width="100" height="60" rx="8" fill="rgba(255,255,255,0.03)" stroke="#666" stroke-width="1.2"/>
+        <text x="60" y="52" text-anchor="middle" fill="#666" font-size="9" font-weight="700" font-family="Inter,sans-serif">200</text>
+        <text x="60" y="84" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">ATHLETE ID</text>
+        <text x="60" y="98" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Badge + profile</text>
+        <text x="60" y="110" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">+ session history</text>
+        <path d="M114,90 L140,90" stroke="#666" stroke-width="1.2" marker-end="url(#aG1)"/>
 
-    <div class="grid-3" style="margin-top:40px;">
-      <div class="card">
-        <h3 style="font-size:15px;">Claim 1</h3>
-        <p style="font-size:13px;">Force-controlled stretch with compensation-aware adjustment — PID cable tension modified by depth-camera pose detection.</p>
+        <!-- Protocol Engine -->
+        <rect x="144" y="50" width="110" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1.2"/>
+        <text x="199" y="42" text-anchor="middle" fill="#888" font-size="9" font-weight="700" font-family="Inter,sans-serif">202</text>
+        <text x="199" y="74" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">PROTOCOL</text>
+        <text x="199" y="88" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">ENGINE</text>
+        <text x="199" y="104" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Pattern select</text>
+        <text x="199" y="116" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Force target (F_set)</text>
+        <path d="M258,90 L284,90" stroke="#888" stroke-width="1.2" marker-end="url(#aG1)"/>
+
+        <!-- PID Controller — highlighted (novel) -->
+        <rect x="288" y="35" width="130" height="110" rx="8" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="2"/>
+        <text x="353" y="27" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">204</text>
+        <text x="353" y="58" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">PID FORCE</text>
+        <text x="353" y="72" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">CONTROLLER</text>
+        <text x="353" y="92" text-anchor="middle" fill="#ccc" font-size="8" font-family="Inter,sans-serif">e(t) = F_set − F_meas</text>
+        <text x="353" y="106" text-anchor="middle" fill="#ccc" font-size="8" font-family="Inter,sans-serif">u(t) = Kp·e + Ki·∫e + Kd·ė</text>
+        <text x="353" y="120" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">→ Motor PWM command</text>
+        <text x="353" y="134" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">100Hz update rate</text>
+        <path d="M422,90 L448,90" stroke="#4ade80" stroke-width="1.5" marker-end="url(#aG1)"/>
+
+        <!-- Motor + Cable -->
+        <rect x="452" y="55" width="100" height="70" rx="8" fill="rgba(250,204,21,0.06)" stroke="#facc15" stroke-width="1.2"/>
+        <text x="502" y="47" text-anchor="middle" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">206</text>
+        <text x="502" y="78" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">CABLE DRIVE</text>
+        <text x="502" y="92" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">BLDC + gearbox</text>
+        <text x="502" y="104" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">+ spool + cable</text>
+        <text x="502" y="116" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">+ slip clutch</text>
+
+        <!-- Load cell feedback -->
+        <path d="M502,129 L502,170 L353,170 L353,149" stroke="#facc15" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#aY1)"/>
+        <text x="430" y="186" text-anchor="middle" fill="#facc15" font-size="8" font-weight="600" font-family="Inter,sans-serif">F_meas (load cell @ 100Hz)</text>
+
+        <!-- Force arrow to athlete -->
+        <path d="M556,90 L582,90" stroke="#facc15" stroke-width="1.2" marker-end="url(#aG1)"/>
+
+        <!-- Athlete body -->
+        <rect x="586" y="55" width="80" height="70" rx="8" fill="rgba(255,255,255,0.03)" stroke="#ccc" stroke-width="1.2"/>
+        <text x="626" y="47" text-anchor="middle" fill="#ccc" font-size="9" font-weight="700" font-family="Inter,sans-serif">208</text>
+        <text x="626" y="80" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">ATHLETE</text>
+        <text x="626" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">On platform</text>
+        <text x="626" y="108" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Limb stretched</text>
+
+        <!-- Vision System — highlighted (novel) -->
+        <path d="M626,129 L626,158" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="626" y="154" text-anchor="middle" fill="#3b82f6" font-size="7" font-family="Inter,sans-serif">observes</text>
+
+        <!-- Vision processing -->
+        <rect x="568" y="162" width="116" height="50" rx="8" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="626" y="155" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">210</text>
+        <text x="626" y="182" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">VISION SYSTEM</text>
+        <text x="626" y="196" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Skeleton + joint angles</text>
+        <text x="626" y="207" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">+ compensation detect</text>
+
+        <!-- Compensation feedback to PID — the KEY novel link -->
+        <path d="M564,187 L353,187 L353,149" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aR1)"/>
+        <text x="460" y="200" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700" font-family="Inter,sans-serif">COMPENSATION SIGNAL → modifies F_set (NOVEL)</text>
+
+        <!-- Data Store -->
+        <path d="M670,90 L700,90" stroke="#888" stroke-width="1" marker-end="url(#aG1)"/>
+        <rect x="704" y="40" width="110" height="100" rx="8" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1.2"/>
+        <text x="759" y="32" text-anchor="middle" fill="#888" font-size="9" font-weight="700" font-family="Inter,sans-serif">212</text>
+        <text x="759" y="68" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">DATA ENGINE</text>
+        <text x="759" y="84" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">9 variables / rep</text>
+        <text x="759" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Longitudinal trends</text>
+        <text x="759" y="108" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Asymmetry alerts</text>
+        <text x="759" y="120" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Injury risk score (62)</text>
+
+        <!-- Adaptive feedback from data to protocol -->
+        <path d="M759,144 L759,210 L199,210 L199,134" stroke="#555" stroke-width="1" stroke-dasharray="6,3"/>
+        <text x="480" y="208" text-anchor="middle" fill="#555" font-size="8" font-weight="600" font-family="Inter,sans-serif">214 — ADAPTIVE FEEDBACK: Historical data modifies next session's protocol parameters</text>
+        <polygon points="199,134 194,144 204,144" fill="#555"/>
+
+        <defs>
+          <marker id="aG1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#4ade80"/></marker>
+          <marker id="aY1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#facc15"/></marker>
+          <marker id="aR1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#ef4444"/></marker>
+        </defs>
+      </svg>
+      <p class="fig-caption">System claim: Elements 200–214 define the complete closed-loop system. The <span style="color:#ef4444;">red dashed path</span> (210 → 204) represents the novel compensation-aware force adjustment — vision-detected compensation modifies the PID setpoint in real time.</p>
+    </div>
+
+    <!-- FIG. 10 — PID Force-Compliance Control Loop Detail -->
+    <div class="patent-fig" style="margin-top:16px;">
+      <p class="fig-title">FIG. 10 — PID Force-Compliance Control Loop (Element 204 Detail)</p>
+      <svg viewBox="0 0 900 190" xmlns="http://www.w3.org/2000/svg" style="max-width:900px; margin:0 auto;">
+        <!-- Setpoint input -->
+        <text x="10" y="68" fill="#888" font-size="9" font-weight="700" font-family="Inter,sans-serif">F_set</text>
+        <text x="10" y="82" fill="#777" font-size="7" font-family="Inter,sans-serif">(from protocol)</text>
+        <path d="M50,72 L80,72" stroke="#888" stroke-width="1.2" marker-end="url(#aG10)"/>
+
+        <!-- Summing junction -->
+        <circle cx="95" cy="72" r="14" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="95" y="76" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="700" font-family="Inter,sans-serif">Σ</text>
+        <text x="84" y="62" fill="#4ade80" font-size="8" font-family="Inter,sans-serif">+</text>
+        <text x="84" y="88" fill="#ef4444" font-size="8" font-family="Inter,sans-serif">−</text>
+        <path d="M109,72 L140,72" stroke="#4ade80" stroke-width="1.2" marker-end="url(#aG10)"/>
+
+        <!-- Error signal -->
+        <text x="125" y="62" fill="#4ade80" font-size="8" font-weight="600" font-family="Inter,sans-serif">e(t)</text>
+
+        <!-- PID block -->
+        <rect x="144" y="42" width="140" height="60" rx="6" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="214" y="64" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700" font-family="Inter,sans-serif">PID CONTROLLER</text>
+        <text x="214" y="80" text-anchor="middle" fill="#ccc" font-size="8" font-family="Inter,sans-serif">Kp=2.4  Ki=0.8  Kd=0.15</text>
+        <text x="214" y="92" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Anti-windup enabled</text>
+        <path d="M288,72 L318,72" stroke="#4ade80" stroke-width="1.2" marker-end="url(#aG10)"/>
+        <text x="303" y="62" fill="#ccc" font-size="8" font-weight="600" font-family="Inter,sans-serif">u(t)</text>
+
+        <!-- Safety clamp -->
+        <rect x="322" y="48" width="80" height="48" rx="6" fill="rgba(239,68,68,0.06)" stroke="#ef4444" stroke-width="1"/>
+        <text x="362" y="68" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700" font-family="Inter,sans-serif">FORCE CAP</text>
+        <text x="362" y="82" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">clamp(u, F_max)</text>
+        <path d="M406,72 L436,72" stroke="#ef4444" stroke-width="1.2" marker-end="url(#aG10)"/>
+
+        <!-- ODrive / Motor -->
+        <rect x="440" y="48" width="90" height="48" rx="6" fill="rgba(250,204,21,0.06)" stroke="#facc15" stroke-width="1.2"/>
+        <text x="485" y="68" text-anchor="middle" fill="#facc15" font-size="8" font-weight="700" font-family="Inter,sans-serif">MOTOR DRIVE</text>
+        <text x="485" y="82" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">ODrive FOC</text>
+        <path d="M534,72 L564,72" stroke="#facc15" stroke-width="1.2" marker-end="url(#aG10)"/>
+
+        <!-- Plant (cable + athlete) -->
+        <rect x="568" y="42" width="120" height="60" rx="6" fill="rgba(255,255,255,0.03)" stroke="#888" stroke-width="1.2"/>
+        <text x="628" y="64" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">PLANT</text>
+        <text x="628" y="78" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Cable + limb + tissue</text>
+        <text x="628" y="90" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">viscoelastic response</text>
+
+        <!-- Load cell output -->
+        <path d="M692,72 L730,72" stroke="#888" stroke-width="1"/>
+        <text x="750" y="68" fill="#facc15" font-size="9" font-weight="700" font-family="Inter,sans-serif">F_meas</text>
+        <text x="750" y="82" fill="#777" font-size="7" font-family="Inter,sans-serif">(load cell)</text>
+
+        <!-- Feedback path -->
+        <path d="M750,90 L750,145 L95,145 L95,90" stroke="#facc15" stroke-width="1.2" stroke-dasharray="5,3"/>
+        <text x="420" y="160" text-anchor="middle" fill="#facc15" font-size="8" font-weight="600" font-family="Inter,sans-serif">FORCE FEEDBACK PATH — 100Hz sample rate, &lt;10ms loop latency</text>
+
+        <!-- Compensation modifier input (from vision) -->
+        <path d="M214,28 L214,38" stroke="#ef4444" stroke-width="1.5" marker-end="url(#aR10)"/>
+        <rect x="150" y="2" width="128" height="24" rx="4" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="1"/>
+        <text x="214" y="18" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700" font-family="Inter,sans-serif">COMP. SIGNAL (from 210)</text>
+        <text x="350" y="18" fill="#ef4444" font-size="7" font-family="Inter,sans-serif">Reduces F_set when compensation detected</text>
+
+        <defs>
+          <marker id="aG10" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#4ade80"/></marker>
+          <marker id="aR10" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5" fill="#ef4444"/></marker>
+        </defs>
+      </svg>
+      <p class="fig-caption">Method claim: The PID controller (204) maintains force setpoint while the compensation signal from the vision system (210) dynamically modifies the target, creating a dual-feedback architecture unique to this apparatus.</p>
+    </div>
+
+    <!-- FIG. 11 — Compensation Detection & Adaptive Response -->
+    <div class="patent-fig" style="margin-top:16px;">
+      <p class="fig-title">FIG. 11 — Compensation Detection & Adaptive Force Response (Element 210 Detail)</p>
+      <svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" style="max-width:900px; margin:0 auto;">
+        <!-- Depth frames input -->
+        <rect x="10" y="50" width="100" height="50" rx="6" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="60" y="72" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">DEPTH FRAMES</text>
+        <text x="60" y="88" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">640×480 @ 30fps</text>
+        <path d="M114,75 L144,75" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#aB11)"/>
+
+        <!-- Pose estimation -->
+        <rect x="148" y="40" width="110" height="70" rx="6" fill="rgba(59,130,246,0.05)" stroke="#3b82f6" stroke-width="1"/>
+        <text x="203" y="32" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" font-family="Inter,sans-serif">220</text>
+        <text x="203" y="62" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">POSE MODEL</text>
+        <text x="203" y="78" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">12-joint skeleton</text>
+        <text x="203" y="92" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">3D coordinates</text>
+        <text x="203" y="104" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">(hip, knee, ankle, pelvis...)</text>
+        <path d="M262,75 L292,75" stroke="#3b82f6" stroke-width="1" marker-end="url(#aB11)"/>
+
+        <!-- Joint angle calc -->
+        <rect x="296" y="45" width="100" height="60" rx="6" fill="rgba(74,222,128,0.05)" stroke="#4ade80" stroke-width="1"/>
+        <text x="346" y="37" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700" font-family="Inter,sans-serif">222</text>
+        <text x="346" y="68" text-anchor="middle" fill="#e0e0e0" font-size="9" font-weight="700" font-family="Inter,sans-serif">ANGLE CALC</text>
+        <text x="346" y="84" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">θ = arctan2(Δy, Δx)</text>
+        <text x="346" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">per joint pair</text>
+        <path d="M400,75 L430,75" stroke="#4ade80" stroke-width="1" marker-end="url(#aG11)"/>
+
+        <!-- Compensation classifier -->
+        <rect x="434" y="30" width="140" height="90" rx="8" fill="rgba(239,68,68,0.06)" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="504" y="22" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700" font-family="Inter,sans-serif">224</text>
+        <text x="504" y="52" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700" font-family="Inter,sans-serif">COMPENSATION</text>
+        <text x="504" y="66" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700" font-family="Inter,sans-serif">CLASSIFIER</text>
+        <text x="504" y="84" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Pelvic rotation > 5°?</text>
+        <text x="504" y="96" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Knee bend > 10°?</text>
+        <text x="504" y="108" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Trunk lateral shift > 3cm?</text>
+
+        <!-- Decision outputs -->
+        <!-- No compensation path -->
+        <path d="M578,55 L620,55" stroke="#4ade80" stroke-width="1.2" marker-end="url(#aG11)"/>
+        <rect x="624" y="38" width="120" height="34" rx="5" fill="rgba(74,222,128,0.05)" stroke="#4ade80" stroke-width="0.8"/>
+        <text x="684" y="58" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">NO COMP → HOLD</text>
+        <text x="684" y="68" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Maintain F_set</text>
+
+        <!-- Compensation detected path -->
+        <path d="M578,100 L620,100" stroke="#ef4444" stroke-width="1.5" marker-end="url(#aR11)"/>
+        <rect x="624" y="80" width="120" height="50" rx="5" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="1.2"/>
+        <text x="684" y="100" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700" font-family="Inter,sans-serif">COMP DETECTED</text>
+        <text x="684" y="114" text-anchor="middle" fill="#ef4444" font-size="7" font-weight="600" font-family="Inter,sans-serif">F_set *= (1 − α·severity)</text>
+        <text x="684" y="126" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">α = 0.15 per threshold</text>
+
+        <!-- Output to PID -->
+        <path d="M748,105 L790,105" stroke="#ef4444" stroke-width="1.5" marker-end="url(#aR11)"/>
+        <rect x="794" y="80" width="96" height="50" rx="8" fill="rgba(74,222,128,0.06)" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="842" y="100" text-anchor="middle" fill="#4ade80" font-size="8" font-weight="700" font-family="Inter,sans-serif">→ PID (204)</text>
+        <text x="842" y="114" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">Modified F_set</text>
+        <text x="842" y="126" text-anchor="middle" fill="#777" font-size="7" font-family="Inter,sans-serif">sent to motor</text>
+
+        <!-- Data logging branch -->
+        <path d="M504,124 L504,160 L750,160" stroke="#888" stroke-width="0.8" stroke-dasharray="4,3"/>
+        <rect x="754" y="148" width="130" height="30" rx="4" fill="rgba(255,255,255,0.02)" stroke="#555" stroke-width="0.8"/>
+        <text x="819" y="167" text-anchor="middle" fill="#555" font-size="7" font-weight="600" font-family="Inter,sans-serif">LOG: comp type, severity, timestamp</text>
+
+        <defs>
+          <marker id="aB11" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#3b82f6"/></marker>
+          <marker id="aG11" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#4ade80"/></marker>
+          <marker id="aR11" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L6,2.5 L0,5" fill="#ef4444"/></marker>
+        </defs>
+      </svg>
+      <p class="fig-caption">Method claim: The compensation classifier (224) analyzes pose data to detect pelvic rotation, knee bend, or trunk shift, then proportionally reduces force setpoint — the core novel mechanism that distinguishes Vitruvian from all existing stretch devices.</p>
+    </div>
+
+    <!-- Patent Claims -->
+    <div class="grid-3" style="margin-top:32px;">
+      <div class="card" style="border-color:rgba(74,222,128,0.2);">
+        <h3 style="font-size:15px; color:#4ade80;">Claim 1 — Method</h3>
+        <p style="font-size:13px;">A method for force-controlled stretching with compensation-aware adjustment, comprising: applying motorized cable tension via PID force control (204), detecting movement compensation via depth-camera pose estimation (210, 224), and dynamically modifying the force setpoint in response to detected compensation.</p>
       </div>
-      <div class="card">
-        <h3 style="font-size:15px;">Claim 2</h3>
-        <p style="font-size:13px;">Integrated cable-drive + vision feedback apparatus — motorized spool, inline force sensing, skeletal tracking, compliance controller.</p>
+      <div class="card" style="border-color:rgba(59,130,246,0.2);">
+        <h3 style="font-size:15px; color:#3b82f6;">Claim 2 — Apparatus</h3>
+        <p style="font-size:13px;">An integrated cable-drive and vision feedback stretching apparatus comprising: a motorized spool (34) with inline force sensing (42), a depth camera (40) with skeletal tracking (220), a PID compliance controller (204), and a compensation classifier (224) that adjusts cable tension in real time.</p>
       </div>
-      <div class="card">
-        <h3 style="font-size:15px;">Claim 3</h3>
-        <p style="font-size:13px;">Bilateral assessment + adaptive protocol — standardized force, bilateral comparison, asymmetry alerting, longitudinal trend analysis.</p>
+      <div class="card" style="border-color:rgba(250,204,21,0.2);">
+        <h3 style="font-size:15px; color:#facc15;">Claim 3 — System</h3>
+        <p style="font-size:13px;">A bilateral assessment and adaptive protocol system comprising: standardized force application (F_set), bilateral ROM comparison (Δ = |θ_L − θ_R|), longitudinal trend analysis with injury risk scoring (62), and adaptive protocol modification (214) based on historical session data.</p>
       </div>
     </div>
-    <p style="margin-top:24px; font-size:14px; color:#666;">Prior art gap is strong — existing stretch devices lack real-time biomechanical feedback loops. Provisional patent recommended.</p>
+    <p style="margin-top:24px; font-size:14px; color:#666;">Figures 1–11 document the complete system. Prior art gap is strong — no existing device combines motorized cable stretching with real-time vision-based compensation detection and adaptive force modification.</p>
   </div>
   <img src="03d2414f-fd4c-4106-a882-4548fa9c567e.png" alt="" class="slide-logo">
   <span class="slide-num">11</span>
