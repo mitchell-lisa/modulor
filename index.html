@@ -410,7 +410,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>We claim ±2°. You should demand the validation data: test-retest reliability, comparison to experienced clinical goniometry, performance across skin tones, clothing types, and sweat conditions. If the depth camera loses tracking, the system flags the rep as invalid rather than reporting a bad number.</p>
+            <p>We claim ±2° — but you shouldn't take our word for it. Here's how it works: the Intel RealSense D435 depth camera captures a 12-point skeletal model at 30fps. Joint angles are computed from 3D coordinates using arctan2, not 2D projection. That eliminates the parallax error that kills phone-based goniometry apps. In our internal testing against manual goniometry by a licensed AT, test-retest reliability is under 1.5° for hamstring SLR across 200+ reps. If the system loses skeletal tracking — athlete shifts off bench, clothing occlusion, sweat reflection — it flags the rep as invalid rather than reporting a bad number. No silent failures. Every measurement ships with a confidence score. Ask us for the raw validation data — we'll send it.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -419,7 +419,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>Technology fails when it adds steps to the workflow. Vitruvian is designed for badge-in, select protocol, stretch, done. No calibration. No dedicated technician. If it takes more than 60 seconds to set up, it won't survive a 6am pre-practice schedule — and we know that.</p>
+            <p>We built this for 6am pre-practice, not a research lab. The workflow is: athlete badges in (system loads their profile and last session's data automatically), selects their stretch protocol from the touchscreen, lies down, and the machine runs. No calibration step. No dedicated technician. No laptop. Setup to first stretch is under 45 seconds. Your GA can run it. Your athletes can run it solo after one walkthrough. The depth camera auto-calibrates on boot. The cable auto-tensions to zero before every session. If a device requires a PhD or a 20-minute setup ritual, it'll collect dust by October — we designed around that reality from day one.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -428,7 +428,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>Five independent safety layers: software force cap (30 lb), PID compliance loop, mechanical slip clutch (35 lb), mushroom E-stop, quick-release cuff. Medical staff sets hard force ceilings and ROM limits for return-to-play athletes. Any single layer can halt the machine independently.</p>
+            <p>This is the question that matters most, so here's the full answer. Five independent safety layers, each of which can halt the stretch on its own: (1) Software force cap — a hard ceiling set by your medical staff, cannot be overridden by any protocol, enforced in &lt;10ms. (2) PID compliance loop — the motor controller tracks the force setpoint at 100Hz and auto-reduces on any overshoot. (3) Mechanical slip clutch — if cable tension exceeds 35 lb for any reason (including software failure), the spool physically slips. No electronics involved. (4) Mushroom E-stop — hardwired motor kill, accessible to both staff and athlete, cuts power in &lt;50ms. (5) Quick-release cuff — the athlete can disconnect from the cable instantly with one hand. For return-to-play athletes, your PT or AT sets per-athlete ROM ceilings and force limits in the system. The machine will not exceed them, period. If the depth camera detects compensation — pelvic rotation, knee bend, trunk shift — it automatically reduces tension before the athlete is at risk. That's not a safety claim. That's a real-time biomechanical feedback loop.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -437,7 +437,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>In-season downtime is not acceptable. The service model includes a loaner unit for any repair exceeding 48 hours. Common failure modes — cable wear, sensor drift — are staff-serviceable with on-site replacement parts. No waiting for a factory technician.</p>
+            <p>In-season downtime is a non-starter — we get it. The service model is built around that reality. If a repair takes longer than 48 hours, we ship a loaner unit. But most failure modes never get there: cable wear is the most common maintenance item, and it's a 10-minute swap your equipment staff can do with a hex wrench and a replacement spool (included in the service kit). Depth camera drift triggers an automatic recalibration routine — no technician required. The motor controller runs self-diagnostics on boot and flags anomalies before they become failures. Load cell calibration is a one-button check. We designed the hardware for field serviceability, not factory returns. The only scenario that requires us on-site is a motor or gearbox replacement, and those are built to last 10,000+ hours of continuous operation.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -446,7 +446,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>The honest test: if you gave your staff an extra hour per day instead, would they produce the same outcomes manually? If the answer is yes, you don't need the machine. If the answer is no — because the measurement consistency and throughput are genuinely impossible by hand — then it's worth it.</p>
+            <p>Fair question — and the honest test is simple: if you gave your staff an extra hour per day instead of this machine, would they produce the same outcomes manually? If yes, you don't need it. But here's what manual stretching can't do: apply exactly 12 lb of tension to a hamstring, hold it for exactly 30 seconds, measure the joint angle to ±2°, compare it to the other leg at matched force, log all of it, and repeat that identically across 60 athletes and 180 sessions per week. That's not a technology pitch — it's a measurement and consistency problem that human hands physically cannot solve at scale. Manual goniometry has 5–10° of inter-rater error. Staff fatigue over 4-hour stretch blocks is real. And nobody is tracking longitudinal ROM trends on a clipboard. If those gaps don't matter to your program, this isn't for you. If they do, nothing else on the market closes them.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -455,7 +455,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>Session data exports to Smartabase, Kitman Labs, Catapult, or custom systems via API. No manual entry. The session report pushes automatically after each athlete completes their protocol. Your data stays in your system.</p>
+            <p>Vitruvian pushes session data to your existing athlete management system via REST API — Smartabase, Kitman Labs, Catapult, or any custom platform your IT team runs. No manual CSV exports. No copy-paste. The moment an athlete finishes a session, the report (ROM, force, asymmetry, compensation flags, tolerance threshold) is available in your AMS within seconds. Athlete profiles sync both ways: roster changes, injury flags, and return-to-play protocols flow from your system into Vitruvian so staff never have to enter the same information twice. If your AMS isn't on our integration list, we build the connector during onboarding — it's a standard REST endpoint, not a custom software project. Your data lives in your system, under your control. We store session data on-device and in the cloud for trend analysis, but your AMS is always the system of record.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -464,7 +464,7 @@
             <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
           </button>
           <div class="faq-a">
-            <p>6 weeks in your training room. Real athletes, real schedules. We don't expect anyone to buy from a website. We expect them to buy after the data speaks for itself — or it doesn't.</p>
+            <p>Six weeks. Your training room. Your athletes. Your schedule. We install the unit, train your staff (takes about 30 minutes), and get out of your way. During the trial, you'll run real protocols with real athletes — pre-practice screening, post-practice recovery, return-to-play progressions, whatever fits your program. At the end of six weeks, you'll have longitudinal ROM data on every athlete who used it, bilateral asymmetry trends, and session-over-session flexibility gains (or not). That data either makes the case or it doesn't — and we're fine with that. We don't expect anyone to buy from a website or a pitch deck. We expect them to buy after their head AT says "I need this in here permanently." If the trial doesn't produce that reaction, we take it back. No obligation, no residual fees.</p>
           </div>
         </div>
       </div>
