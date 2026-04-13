@@ -28,12 +28,13 @@ Open `hub.html` for the annotated map. Direct links:
 Nine markdown specs: product definition, MVP, mechanical, sensor/AI, UX flow,
 build plan, what-to-cut, what-makes-this-special, redesign notes.
 
-### Founder (private)
-- `outreach.md` &mdash; personalized outreach messages. **Do not publish to the
-  public domain.**
+### Founder (private) &mdash; [`private/`](./private/)
+- `private/outreach.md` &mdash; personalized outreach messages.
+- **Do not deploy `private/` to the public site.** See `private/README.md` for
+  ignore patterns per host.
 
 ## Before launch
 1. File the provisional patent (see `patent.html`).
 2. Set the real domain in the briefs and in `feedback.html`.
 3. Wire `feedback.html` to a real form handler (Formspree / Basin / own endpoint).
-4. Remove `outreach.md` from the public deploy or gate it behind auth.
+4. Confirm `private/` is excluded from your deploy (`.vercelignore` / `.netlifyignore` / host-specific).
