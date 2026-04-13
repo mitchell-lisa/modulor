@@ -169,11 +169,20 @@
     .toc a:hover { text-decoration: underline; }
 
     @media print {
-      body { font-size: 11pt; }
-      .doc-wrap { padding: 0.75in; max-width: 100%; }
-      .section-heading { page-break-before: auto; }
-      .fig-block { page-break-inside: avoid; }
-      .no-print { display: none; }
+      @page { size: 8.5in 11in; margin: 1in 1in 1in 1.25in; }
+      body { font-size: 12pt; line-height: 2.0; background: #fff; }
+      .doc-wrap { padding: 0; max-width: 100%; }
+      h2.section-heading { page-break-before: always; page-break-after: avoid; }
+      h2.section-heading:first-of-type { page-break-before: auto; }
+      h3.subsection-heading { page-break-after: avoid; }
+      .fig-block { page-break-inside: avoid; background: #fff; border: 1px solid #000; }
+      .fig-block svg { max-width: 6in; }
+      .claim-list > li { page-break-inside: avoid; }
+      .ref-table { page-break-inside: avoid; }
+      .toc, .no-print { display: none; }
+      .abstract-box { background: #fff; }
+      p.para { orphans: 3; widows: 3; }
+      a { color: #000; text-decoration: none; }
     }
   </style>
 </head>
@@ -184,12 +193,54 @@
        HEADER BLOCK
        ============================================================ -->
   <div class="header-block">
-    <p class="docket">Attorney Docket No. VITR-001-PROV<br>Provisional Patent Application</p>
+    <p class="docket">Attorney Docket No. VITR-001-PROV<br>Provisional Patent Application under 35 U.S.C. &sect; 111(b)</p>
     <h1>Force-Controlled Cable-Driven Stretching Apparatus with<br>
         Vision-Based Compensation Detection and<br>
         Adaptive Longitudinal Protocol</h1>
-    <p class="subtitle">Inventor(s): [Inventor Name] &mdash; Assignee: Vitruvian, Inc.</p>
+    <p class="subtitle">Provisional Application Cover Sheet &mdash; PTO/SB/16 (equivalent)</p>
   </div>
+
+  <!-- ============================================================
+       COVER SHEET (PTO/SB/16 equivalent)
+       ============================================================ -->
+  <table class="ref-table" style="margin-bottom:18pt;">
+    <tr>
+      <th style="width:180pt;">Title of Invention</th>
+      <td>Force-Controlled Cable-Driven Stretching Apparatus with Vision-Based Compensation Detection and Adaptive Longitudinal Protocol</td>
+    </tr>
+    <tr>
+      <th>Inventor(s)</th>
+      <td>
+        1. [Full legal name] &mdash; Residence: [City, State/Country] &mdash; Citizenship: [Country]<br>
+        2. [Full legal name] &mdash; Residence: [City, State/Country] &mdash; Citizenship: [Country]<br>
+        <em>(add additional joint inventors as applicable)</em>
+      </td>
+    </tr>
+    <tr>
+      <th>Applicant / Assignee</th>
+      <td>Vitruvian, Inc. &mdash; [State of incorporation] &mdash; [Principal place of business]</td>
+    </tr>
+    <tr>
+      <th>Correspondence Address</th>
+      <td>[Name of attorney or agent or inventor]<br>[Address line 1]<br>[City, State, ZIP]<br>Telephone: [&nbsp;]&nbsp;&nbsp;&nbsp;Email: [&nbsp;]</td>
+    </tr>
+    <tr>
+      <th>Attorney Docket No.</th>
+      <td>VITR-001-PROV</td>
+    </tr>
+    <tr>
+      <th>Entity Status</th>
+      <td>[ ] Regular &nbsp;&nbsp; [X] Small Entity (37 CFR 1.27) &nbsp;&nbsp; [ ] Micro Entity (37 CFR 1.29)</td>
+    </tr>
+    <tr>
+      <th>Filing Date</th>
+      <td>______________________ <span style="font-style:italic;">(to be completed at filing)</span></td>
+    </tr>
+    <tr>
+      <th>Enclosures</th>
+      <td>[X] Specification (pages) &nbsp;&nbsp; [X] Drawings (FIG. 1&ndash;11) &nbsp;&nbsp; [X] Claims (provisional &mdash; optional) &nbsp;&nbsp; [X] Abstract &nbsp;&nbsp; [ ] Fee transmittal (PTO/SB/17) &nbsp;&nbsp; [ ] Application Data Sheet (PTO/AIA/14)</td>
+    </tr>
+  </table>
 
   <!-- ============================================================
        TABLE OF CONTENTS (aid for prosecution)
@@ -1264,8 +1315,42 @@
 
   <h2 class="section-heading">Abstract of the Disclosure</h2>
 
-  <p class="para no-indent">
-    A cable-driven assisted-stretching apparatus, method, and system apply controlled, measured tension to a limb of a human subject and yield compliantly in real time upon detection of compensatory motion. A brushless motor, reduction gearbox, torque-limiting slip clutch, inline load cell, and quick-release cuff cooperate with a depth-sensing camera and a control processor running a closed-loop force controller at 100 Hz and a vision-based compensation detector at 30 Hz. An adaptive set-point law reduces commanded force as a monotonic function of a compensation signal computed from pelvic, contralateral hip, lumbar, and trunk displacement. A five-layer safety cascade (software ceiling, PID compliance, slip clutch, hardwired emergency stop, manual quick-release) protects the subject. Nine measurement variables and a composite injury-risk score are logged per session and exported to athlete-management systems, enabling bilateral longitudinal assessment on a single reconfigurable seven-pattern platform.
+  <div class="abstract-box">
+    <p class="para no-indent">
+      A cable-driven assisted-stretching apparatus, method, and system apply controlled, measured tension to a limb of a human subject and yield compliantly in real time upon detection of compensatory motion. A brushless motor, reduction gearbox, torque-limiting slip clutch, inline load cell, and quick-release cuff cooperate with a depth-sensing camera and a control processor running a closed-loop force controller at 100 Hz and a vision-based compensation detector at 30 Hz. An adaptive set-point law reduces commanded force as a monotonic function of a compensation signal computed from pelvic, contralateral hip, lumbar, and trunk displacement. A five-layer safety cascade (software ceiling, PID compliance, slip clutch, hardwired emergency stop, manual quick-release) protects the subject. Nine measurement variables and a composite injury-risk score are logged per session and exported to athlete-management systems, enabling bilateral longitudinal assessment on a single reconfigurable seven-pattern platform.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       INVENTOR DECLARATION (recommended for provisional)
+       ============================================================ -->
+  <h2 class="section-heading">Declaration of Inventorship</h2>
+
+  <p class="para">
+    Each undersigned inventor hereby declares that: (i) the above-identified application was made or authorized to be made by the inventor; (ii) the inventor believes himself or herself to be the original inventor or an original joint inventor of a claimed invention in the application; and (iii) the inventor acknowledges the duty to disclose to the United States Patent and Trademark Office all information known to be material to patentability as defined in 37 CFR 1.56. The inventor further declares that all statements made herein of the inventor's own knowledge are true, that all statements made herein on information and belief are believed to be true, and that these statements were made with the knowledge that willful false statements and the like are punishable by fine or imprisonment, or both, under 18 U.S.C. 1001.
+  </p>
+
+  <table class="ref-table" style="margin-top:24pt;">
+    <tr>
+      <th style="width:40%;">Inventor Name (print)</th>
+      <th style="width:35%;">Signature</th>
+      <th>Date</th>
+    </tr>
+    <tr>
+      <td style="height:42pt; text-align:left; font-weight:400;">_______________________________</td>
+      <td style="text-align:left;">_______________________________</td>
+      <td style="text-align:left;">_______________</td>
+    </tr>
+    <tr>
+      <td style="height:42pt; text-align:left; font-weight:400;">_______________________________</td>
+      <td style="text-align:left;">_______________________________</td>
+      <td style="text-align:left;">_______________</td>
+    </tr>
+  </table>
+
+  <p class="para" style="margin-top:24pt; font-style:italic; font-size:10pt; text-align:center;">
+    &mdash; End of Provisional Patent Application &mdash;<br>
+    Attorney Docket No. VITR-001-PROV
   </p>
 
 </div>
