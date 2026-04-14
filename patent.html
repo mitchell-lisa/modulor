@@ -168,6 +168,59 @@
     }
     .toc a:hover { text-decoration: underline; }
 
+    /* ============================================================
+       FILING BANNER (screen only — workflow instructions)
+       ============================================================ */
+    .filing-banner {
+      max-width: 8.5in;
+      margin: 24pt auto 0;
+      padding: 18pt 22pt;
+      background: #f2f7ff;
+      border: 1px solid #2b5fd9;
+      border-left: 4px solid #2b5fd9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #0f1e3d;
+    }
+    .filing-banner h4 {
+      font-size: 12pt;
+      font-weight: 700;
+      margin-bottom: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .filing-banner ol {
+      padding-left: 22pt;
+      margin: 6pt 0 10pt;
+    }
+    .filing-banner ol li { margin-bottom: 4pt; }
+    .filing-banner .btn-row { margin-top: 12pt; display: flex; gap: 10pt; flex-wrap: wrap; }
+    .filing-banner button {
+      font-family: inherit;
+      font-size: 11pt;
+      font-weight: 600;
+      padding: 8pt 16pt;
+      background: #2b5fd9;
+      color: #fff;
+      border: none;
+      border-radius: 3pt;
+      cursor: pointer;
+    }
+    .filing-banner button.alt {
+      background: #fff;
+      color: #2b5fd9;
+      border: 1px solid #2b5fd9;
+    }
+    .filing-banner button:hover { opacity: 0.88; }
+    .filing-banner code {
+      font-family: 'SF Mono', Menlo, monospace;
+      background: #e1ecff;
+      padding: 1pt 5pt;
+      border-radius: 2pt;
+      font-size: 10pt;
+    }
+
     @media print {
       @page { size: 8.5in 11in; margin: 1in 1in 1in 1.25in; }
       body { font-size: 12pt; line-height: 2.0; background: #fff; }
@@ -179,14 +232,39 @@
       .fig-block svg { max-width: 6in; }
       .claim-list > li { page-break-inside: avoid; }
       .ref-table { page-break-inside: avoid; }
-      .toc, .no-print { display: none; }
+      .toc, .no-print, .filing-banner { display: none; }
       .abstract-box { background: #fff; }
       p.para { orphans: 3; widows: 3; }
       a { color: #000; text-decoration: none; }
+
+      /* Filing mode — hide items that Patent Center collects via forms
+         or that belong in the separate Drawings PDF.
+         Default: always hide in print (recommended for provisional filing). */
+      .filing-hide { display: none !important; }
+      .fig-block { display: none !important; }
     }
   </style>
 </head>
 <body>
+
+<!-- ============================================================
+     FILING BANNER — on-screen workflow guide (hidden on print)
+     ============================================================ -->
+<div class="filing-banner no-print">
+  <h4>Filing-Ready Provisional — Print Workflow</h4>
+  <p>This page is the <strong>Specification</strong> portion of your provisional filing. The cover sheet, inventor declaration, and inline drawings are hidden when printing &mdash; Patent Center collects cover-sheet data via its form, and drawings go as a separate PDF.</p>
+  <ol>
+    <li><strong>Specification PDF:</strong> press <code>Cmd+P</code> (or <code>Ctrl+P</code>) here &rarr; <em>Save as PDF</em>. You get a clean spec with title, background, summary, brief description of drawings, detailed description, claims, and abstract.</li>
+    <li><strong>Drawings PDF:</strong> open <a href="drawings.html">drawings.html</a> and print-to-PDF from there. One figure per page, black and white, USPTO-compliant.</li>
+    <li><strong>Upload both PDFs</strong> at <a href="https://patentcenter.uspto.gov" target="_blank" rel="noopener">patentcenter.uspto.gov</a> under a Provisional (35 U.S.C. &sect; 111(b)) filing. Inventor names, residence, correspondence address, and entity status are entered there &mdash; not in the spec.</li>
+    <li>Attorney Docket: <code>VITR-001-PROV</code>. Entity status (Small vs. Micro) governs your fee: Micro $60 &middot; Small $130 &middot; Large $325.</li>
+  </ol>
+  <div class="btn-row">
+    <button type="button" onclick="window.print()">Print Specification PDF</button>
+    <button type="button" class="alt" onclick="window.location.href='drawings.html'">Go to Drawings &rarr;</button>
+  </div>
+</div>
+
 <div class="doc-wrap">
 
   <!-- ============================================================
@@ -197,13 +275,15 @@
     <h1>Force-Controlled Cable-Driven Stretching Apparatus with<br>
         Vision-Based Compensation Detection and<br>
         Adaptive Longitudinal Protocol</h1>
-    <p class="subtitle">Provisional Application Cover Sheet &mdash; PTO/SB/16 (equivalent)</p>
+    <p class="subtitle">Specification &mdash; Provisional Application under 35 U.S.C. &sect; 111(b)</p>
   </div>
 
   <!-- ============================================================
-       COVER SHEET (PTO/SB/16 equivalent)
+       COVER SHEET (PTO/SB/16 equivalent) — hidden on print.
+       Patent Center collects this information via its online form.
+       Retained here on-screen for reference while preparing the filing.
        ============================================================ -->
-  <table class="ref-table" style="margin-bottom:18pt;">
+  <table class="ref-table filing-hide" style="margin-bottom:18pt;">
     <tr>
       <th style="width:180pt;">Title of Invention</th>
       <td>Force-Controlled Cable-Driven Stretching Apparatus with Vision-Based Compensation Detection and Adaptive Longitudinal Protocol</td>
@@ -1322,34 +1402,41 @@
   </div>
 
   <!-- ============================================================
-       INVENTOR DECLARATION (recommended for provisional)
+       INVENTOR DECLARATION (on-screen reference only).
+       Hidden when printing the spec: Patent Center's ADS / inventor
+       oath workflow handles inventorship declarations directly. A
+       declaration is not required at the provisional stage (it's
+       required when the nonprovisional is filed), so retaining it
+       only in the on-screen version is correct.
        ============================================================ -->
-  <h2 class="section-heading">Declaration of Inventorship</h2>
+  <div class="filing-hide">
+    <h2 class="section-heading">Declaration of Inventorship</h2>
 
-  <p class="para">
-    Each undersigned inventor hereby declares that: (i) the above-identified application was made or authorized to be made by the inventor; (ii) the inventor believes himself or herself to be the original inventor or an original joint inventor of a claimed invention in the application; and (iii) the inventor acknowledges the duty to disclose to the United States Patent and Trademark Office all information known to be material to patentability as defined in 37 CFR 1.56. The inventor further declares that all statements made herein of the inventor's own knowledge are true, that all statements made herein on information and belief are believed to be true, and that these statements were made with the knowledge that willful false statements and the like are punishable by fine or imprisonment, or both, under 18 U.S.C. 1001.
-  </p>
+    <p class="para">
+      Each undersigned inventor hereby declares that: (i) the above-identified application was made or authorized to be made by the inventor; (ii) the inventor believes himself or herself to be the original inventor or an original joint inventor of a claimed invention in the application; and (iii) the inventor acknowledges the duty to disclose to the United States Patent and Trademark Office all information known to be material to patentability as defined in 37 CFR 1.56. The inventor further declares that all statements made herein of the inventor's own knowledge are true, that all statements made herein on information and belief are believed to be true, and that these statements were made with the knowledge that willful false statements and the like are punishable by fine or imprisonment, or both, under 18 U.S.C. 1001.
+    </p>
 
-  <table class="ref-table" style="margin-top:24pt;">
-    <tr>
-      <th style="width:40%;">Inventor Name (print)</th>
-      <th style="width:35%;">Signature</th>
-      <th>Date</th>
-    </tr>
-    <tr>
-      <td style="height:42pt; text-align:left; font-weight:400;">_______________________________</td>
-      <td style="text-align:left;">_______________________________</td>
-      <td style="text-align:left;">_______________</td>
-    </tr>
-    <tr>
-      <td style="height:42pt; text-align:left; font-weight:400;">_______________________________</td>
-      <td style="text-align:left;">_______________________________</td>
-      <td style="text-align:left;">_______________</td>
-    </tr>
-  </table>
+    <table class="ref-table" style="margin-top:24pt;">
+      <tr>
+        <th style="width:40%;">Inventor Name (print)</th>
+        <th style="width:35%;">Signature</th>
+        <th>Date</th>
+      </tr>
+      <tr>
+        <td style="height:42pt; text-align:left; font-weight:400;">_______________________________</td>
+        <td style="text-align:left;">_______________________________</td>
+        <td style="text-align:left;">_______________</td>
+      </tr>
+      <tr>
+        <td style="height:42pt; text-align:left; font-weight:400;">_______________________________</td>
+        <td style="text-align:left;">_______________________________</td>
+        <td style="text-align:left;">_______________</td>
+      </tr>
+    </table>
+  </div>
 
   <p class="para" style="margin-top:24pt; font-style:italic; font-size:10pt; text-align:center;">
-    &mdash; End of Provisional Patent Application &mdash;<br>
+    &mdash; End of Provisional Patent Application Specification &mdash;<br>
     Attorney Docket No. VITR-001-PROV
   </p>
 
