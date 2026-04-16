@@ -151,42 +151,24 @@ nav {
   align-items: center;
 }
 
-/* Hero logo centerpiece — Modulor Man silhouette (1:2 aspect) */
+/* Hero mark — kinetic SVG, inline */
 .hero-logo-wrap {
-  position: relative;
-  width: 200px;
-  height: 360px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.hero-mark {
+  width: 120px;
+  height: auto;
+  color: rgba(243, 240, 232, 0.72);
+  display: block;
 }
 
 .hero-wordmark {
-  width: 220px;
+  width: 200px;
   height: auto;
   filter: invert(1);
   mix-blend-mode: screen;
   margin-bottom: 40px;
-}
-
-.hero-logo-img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  filter: invert(1);
-  animation: logo-glow 4s ease-in-out infinite alternate;
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.hero-logo-wrap:hover .hero-logo-img {
-  transform: scale(1.06);
-  filter: invert(1) brightness(1.2);
-}
-
-@keyframes logo-glow {
-  from { filter: invert(1) drop-shadow(0 0 24px rgba(17,59,44,0.15)) brightness(1.0); }
-  to   { filter: invert(1) drop-shadow(0 0 50px rgba(17,59,44,0.30)) brightness(1.08); }
 }
 
 /* Hero typography */
