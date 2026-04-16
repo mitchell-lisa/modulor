@@ -5,15 +5,17 @@
 
 :root {
   --ink: #e0e0e0;
-  --ink-bright: #fff;
+  --ink-bright: #F3F1EA;
   --ink-dim: #888;
   --ink-faint: #555;
-  --bg: #1a1d23;
-  --bg-card: #22262e;
-  --bg-elev: #2a2e37;
+  --bg: #111315;
+  --bg-card: #2A2F33;
+  --bg-elev: #353a3e;
   --rule: rgba(255,255,255,0.08);
   --rule-bright: rgba(255,255,255,0.18);
   --danger: #ef4444;
+  --teal: #2E6F73;
+  --blue: #5A7FA3;
   --maxw: 1080px;
 }
 
@@ -35,7 +37,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(26, 29, 35, 0.92);
+  background: rgba(17, 19, 21, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--rule);
@@ -183,8 +185,8 @@ img { max-width: 100%; display: block; }
   transition: background 0.2s, transform 0.15s;
 }
 .ui-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-1px); }
-.ui-btn-primary { background: #fff; color: #111; border-color: #fff; }
-.ui-btn-primary:hover { background: #ddd; }
+.ui-btn-primary { background: #F3F1EA; color: #111315; border-color: #F3F1EA; }
+.ui-btn-primary:hover { background: #C8C5BC; }
 
 /* ---------- FOOTER ---------- */
 .ui-footer {
