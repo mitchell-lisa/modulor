@@ -91,6 +91,7 @@ nav {
   height: 32px;
   width: auto;
   object-fit: contain;
+  filter: invert(1);
 }
 
 .nav-links {
@@ -174,12 +175,12 @@ nav {
 
 .hero-logo-wrap:hover .hero-logo-img {
   transform: scale(1.06);
-  filter: brightness(1.2);
+  filter: invert(1) brightness(1.2);
 }
 
 @keyframes logo-glow {
-  from { filter: drop-shadow(0 0 24px rgba(200,220,240,0.12)) brightness(1.0); }
-  to   { filter: drop-shadow(0 0 50px rgba(200,220,240,0.30)) brightness(1.08); }
+  from { filter: invert(1) drop-shadow(0 0 24px rgba(200,220,240,0.12)) brightness(1.0); }
+  to   { filter: invert(1) drop-shadow(0 0 50px rgba(200,220,240,0.30)) brightness(1.08); }
 }
 
 /* Hero typography */
@@ -1805,6 +1806,7 @@ footer {
   height: 26px;
   width: auto;
   object-fit: contain;
+  filter: invert(1);
 }
 
 .copyright {
