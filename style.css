@@ -1537,15 +1537,15 @@ nav {
 }
 
 .readiness-status.green {
-  color: #3D7A5A;
-  background: rgba(46,111,115,0.12);
-  border: 1px solid rgba(17,59,44,0.30);
+  color: #F3F0E8;
+  background: #113B2C;
+  border: 1px solid rgba(17,59,44,0.8);
 }
 
 .readiness-status.yellow {
-  color: #5E7485;
-  background: rgba(90,127,163,0.12);
-  border: 1px solid rgba(90,127,163,0.25);
+  color: #8BA5B8;
+  background: rgba(94,116,133,0.12);
+  border: 1px solid rgba(94,116,133,0.28);
 }
 
 .readiness-status.red {
