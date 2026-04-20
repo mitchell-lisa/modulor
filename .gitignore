@@ -1,6 +1,12 @@
 # Personal identifying information — NEVER commit
 private/.founder-private.md
 private/formation-docs/
+
+# OAuth / API credentials — NEVER commit
+private/google-credentials.json
+private/google-token.json
+private/*credentials*.json
+private/*token*.json
 *.pem
 *.key
 .env
