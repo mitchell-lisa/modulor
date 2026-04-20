@@ -6,22 +6,23 @@ Running ledger of company expenses, recurring costs, and the $3M seed budget. Up
 
 ## One-Time Formation Costs
 
-| Date | Item | Cost | Notes |
-|---|---|---|---|
-| Apr 20, 2026 | Stripe Atlas formation | **$500.00** | Incl. incorporation, state filing, EIN, $2,500 Stripe credits, $50K partner discounts |
-| *pending* | Modulor.bio domain (Vercel) | ~$80 | Annual renewal |
+| Date | Item | Cost | Status | Notes |
+|---|---|---|---|---|
+| Apr 20, 2026 | Stripe Atlas formation | **$500.00** | ✅ Paid | Incl. incorporation, state filing, EIN, $2,500 Stripe credits, $50K partner discounts |
+| Apr 20, 2026 | Stable virtual address (Grow, annual) | **$588.00** | ✅ Paid | Dover, DE — covers year 1; renews Apr 2027 |
+| *pending* | Modulor.bio domain (Vercel) | ~$80 | — | Annual renewal |
 | *pending* | Google Workspace seat (Mitchell) | $7–14/mo | Monthly or $84–168/yr annually |
 | *pending* | USPTO trademark filing ("Modulor") | $350/class × 2–3 classes = $700–1,050 | Self-file via TEAS Plus; +$1K–1.5K if using attorney |
 | *pending* | VITR-001 non-provisional conversion | $5K–15K | Due within 12 months of provisional filing date — hard deadline |
 | *pending* | D&O insurance (first year) | $1.5K–3K | Required before taking investor money |
 
-**Formation total to date: $500.00**
+**Formation total to date: $1,088.00**
 
 ## Annual Recurring Costs
 
 | Item | Cost | Billing | Due |
 |---|---|---|---|
-| Stable virtual address (Grow, annual) | **$588.00** | Yearly | Renews on signup anniversary |
+| Stable virtual address (Grow, annual) | $588.00 | Yearly | ✅ Paid Apr 20, 2026 — next renewal Apr 2027 |
 | Delaware franchise tax | ~$400 (minimum) | Yearly | March 1 — first filing March 2027 |
 | Delaware registered agent | $0 year 1, $100/yr after | Yearly | Free via Atlas year 1 |
 | NJ foreign qualification (if operating there) | $125 initial + $75/yr | Yearly | Only if Modulor operates from NJ |
