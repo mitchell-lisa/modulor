@@ -141,12 +141,12 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 - **D&O insurance:** Not purchased. Required before first investor check. ~$1.5–3K year 1.
 
 ### Team
-- **Luke:** On board. Role memo drafted (`private/luke-role-memo.md`), not yet countersigned. **Needs `luke@modulor.bio` email provisioned in Google Workspace.** RSPA must issue within 30 days of countersign.
-- **Adam Evans:** Call scheduled (tomorrow, Apr 22 2026). Role/equity TBD post-call. FAST Gold 0.5% is the default if advisor path confirmed.
-- **Andrew Lisa:** Joining as Head of Finance. Needs role memo + equity decision + photo on team slide.
+- **Luke:** On board. Text summary of role memo sent Apr 21 2026 ahead of official RSPA. Official RSPA issues once EIN arrives (expected EOW). Luke invited to flag edits before final draft. **Needs `luke@modulor.bio` email provisioned in Google Workspace.**
+- **Adam Evans:** Call scheduled **Tue Apr 22 2026 @ 2:30 PM EST**. Role/equity TBD post-call. FAST Gold 0.5% is the default if advisor path confirmed.
+- **Andrew Lisa:** Joining as Head of Finance. Photo uploaded to repo root (`Andrew Lisa.jpg`). Still needs: role memo + equity decision + addition to `pitch.html` team slide.
 
 ### Fundraise
-- **Deck:** Live at `modulor.bio/pitch`. Team slide has Mitchell + Luke. **Missing:** Andrew. Needs final review + distribution.
+- **Deck:** Live at `modulor.bio/pitch`. Team slide has Mitchell + Luke. **Missing:** Andrew (photo ready in repo, not yet added to slide). Needs final review + distribution.
 - **Investor outreach:** Not yet started in earnest. Outreach playbook in `private/outreach.md`.
 
 ### Infrastructure & ops
