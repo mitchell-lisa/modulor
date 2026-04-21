@@ -1,6 +1,17 @@
 # Personal identifying information — NEVER commit
 private/.founder-private.md
 private/formation-docs/
+
+# OAuth / API credentials — NEVER commit
+private/google-credentials.json
+private/google-token.json
+private/*credentials*.json
+private/*token*.json
+
+# Local data (ledger, logs) — stays on your machine
+private/ledger.csv
+private/*.log
+.venv/
 *.pem
 *.key
 .env
