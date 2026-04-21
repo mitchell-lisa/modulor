@@ -39,9 +39,9 @@ Move the company forward at maximum velocity. Identify the highest-leverage acti
 ## Team
 
 ### Confirmed
-- **Mitchell Lisa** — founder/CEO. 88% common (→83% after Luke RSPA). Based NJ.
+- **Mitchell Lisa** — founder/CEO. 88% common (→83% post-Luke RSPA →78% post-Andrew RSPA). Based NJ.
 - **Matthew "Luke" Lisa** — co-founder, Head of Engineering Operations. 5% common, 4-yr vest, 1-yr cliff. USAF 18+ years. Owns DoD/SOF access and engineering ops. Mitchell's cousin.
-- **Andrew Lisa** — Head of Finance (title TBD, CFO track). Mitchell's brother. UPenn Wharton BA Economics 2016 (Management + Entrepreneurship concentration); UPenn Football. Equity TBD — draft role memo after first working session. LinkedIn: https://www.linkedin.com/in/andrew-lisa-11072098/
+- **Andrew Lisa** — co-founder, Head of Finance (CFO track). 5% common, 4-yr vest, 1-yr cliff. UBS Executive Director, Real Estate Finance (9 years). UPenn Wharton Economics '16. Mitchell's brother. LinkedIn: https://www.linkedin.com/in/andrew-lisa-11072098/
 - **Adam H. Evans** — advisor (FAST Gold 0.5% pending). Special Ops Massage founder. SOF community intros. Call scheduled — role/equity TBD post-call.
 
 ### Ideas only (no urgency, park until team capacity forces a decision)
@@ -121,6 +121,7 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 | `private/company-formation.md` | Entity, cap table, officer roles, legal checklist |
 | `private/finances.md` | Formation costs, recurring, $3M seed budget, burn |
 | `private/luke-role-memo.md` | Luke's title, equity, vesting |
+| `private/andrew-role-memo.md` | Andrew's title, equity, vesting |
 | `private/outreach.md` | Investor/partner outreach playbook |
 | `private/atlas-ip-share-consideration.md` | IP-at-formation record |
 | `private/.founder-private.md` | PII (gitignored, never read into outputs) |
@@ -143,7 +144,7 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 ### Team
 - **Luke:** On board. Text summary of role memo sent Apr 21 2026 ahead of official RSPA. Official RSPA issues once EIN arrives (expected EOW). Luke invited to flag edits before final draft. **Needs `luke@modulor.bio` email provisioned in Google Workspace.**
 - **Adam Evans:** Call scheduled **Tue Apr 22 2026 @ 2:30 PM EST**. Role/equity TBD post-call. FAST Gold 0.5% is the default if advisor path confirmed.
-- **Andrew Lisa:** Joining as Head of Finance. Photo uploaded to repo root (`Andrew Lisa.jpg`). Still needs: role memo + equity decision + addition to `pitch.html` team slide.
+- **Andrew Lisa:** Co-Founder · Head of Finance (CFO track). 5% common, terms parallel to Luke. Role memo drafted (`private/andrew-role-memo.md`); text summary going to Andrew tonight. Official RSPA issues once EIN arrives EOW. Photo + bullets live on pitch.html team slide.
 
 ### Fundraise
 - **Deck:** Live at `modulor.bio/pitch`. Team slide has Mitchell + Luke. **Missing:** Andrew (photo ready in repo, not yet added to slide). Needs final review + distribution.
