@@ -40,8 +40,8 @@ Move the company forward at maximum velocity. Identify the highest-leverage acti
 
 ### Confirmed
 - **Mitchell Lisa** — founder/CEO. 88% common (→83% post-Luke RSPA →78% post-Andrew RSPA). Based NJ.
-- **Matthew "Luke" Lisa** — co-founder, Head of Engineering Operations. 5% common, 4-yr vest, 1-yr cliff. USAF 18+ years. Owns DoD/SOF access and engineering ops. Mitchell's cousin.
-- **Andrew Lisa** — co-founder, Head of Finance (CFO track). 5% common, 4-yr vest, 1-yr cliff. UBS Executive Director, Real Estate Finance (9 years). UPenn Wharton Economics '16. Mitchell's brother. LinkedIn: https://www.linkedin.com/in/andrew-lisa-11072098/
+- **Matthew "Luke" Lisa** — co-founder, CTO. 5% common, 4-yr vest, 1-yr cliff. USAF 18+ years. Owns engineering, hardware, and the physical product lifecycle; DoD/SOF relationships inform strategy. While active duty, Mitchell runs investor calls and DoD BD directly — Luke's CTO title is external branding until status shifts. Mitchell's cousin.
+- **Andrew Lisa** — co-founder, CFO. 5% common, 4-yr vest, 1-yr cliff. UBS Executive Director, Real Estate Finance (9 years). UPenn Wharton Economics '16. Mitchell's brother. LinkedIn: https://www.linkedin.com/in/andrew-lisa-11072098/
 - **Adam H. Evans, PhD, LMT, CPCT** — Strategic Advisor · SOF + DoD. **1.0% common stock options (FAST Platinum), 2-yr vest, no cliff — verbally accepted Apr 22 2026.** Former Chair of Entrepreneurship, U Kentucky (2018–2022, built the MBA Entrepreneurship concentration); CSO, InstantHandz (Phoenix, 2020–2021 — $1M valuation, $250K+ revenue for Armed Forces families); AFWERX/SOFWERX judge; Harvard NPLI fellow; USAF Master Resilience Trainer; FSMTB-MBLEX EDC (writes the national massage therapy licensing exam); Founder & Executive Director, Special O.P.S. Inc. (Colorado Springs). Capella PhD (Organizational Management & Leadership, 4.0 Summa Cum Laude); Case Western MBA. LinkedIn: https://www.linkedin.com/in/adamhevans/ · https://www.specialopsmassage.com/about2
 
 ### Ideas only (no urgency, park until team capacity forces a decision)
@@ -159,7 +159,7 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 ### Infrastructure & ops
 - **Spend to date:** $1,088 on founder Amex Gold ($500 Atlas + $588 Stable). Both ✅ paid. Reimburse from Modulor bank after Mercury opens.
 - **Website:** `modulor.bio` on Vercel. Google Workspace + DNS configured.
-- **Email:** `mitchell@modulor.bio` alias live on Mitchell's account (primary of record remains `mitchell.lisa@modulor.bio` — don't touch). `hello@modulor.bio` Google Group live for public inbound (investors/partners/press) — this is the deck/feedback-form address. `mitchell@` reserved for warm intros and one-to-one relationships. `luke@`, `andrew@` TBD when their users are provisioned.
+- **Email:** `mitchell@modulor.bio` alias live on Mitchell's account (primary of record remains `mitchell.lisa@modulor.bio` — don't touch). `hello@modulor.bio` Google Group live for public inbound (investors/partners/press) — this is the deck/feedback-form address; Luke + Andrew added as group members so investor inbound distributes to all three founders. `mitchell@` reserved for warm intros and one-to-one relationships. Luke's user to be provisioned as `luke@modulor.bio` primary (short-form directly, matching Grok's input that everyone calls him Luke); `matthew.luke@` silent alias for legal-name edge cases. Andrew's user similarly `andrew@modulor.bio` primary.
 - **Google Cloud:** `modulor-ops` project created under `modulor.bio` org. Gmail/Calendar/Drive APIs enabled. OAuth credentials saved locally (gitignored).
 - **Slack:** Not yet set up. Defer until 3+ confirmed team members active (likely after Luke + Andrew countersign).
 

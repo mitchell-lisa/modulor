@@ -16,7 +16,7 @@ push back on anything that feels off, and we'll adjust.
 
 ## Role
 
-**Title:** Co-Founder · Head of Finance (CFO track)
+**Title:** Co-Founder · CFO
 
 **Scope.** You own the money function end-to-end — not staff accounting, but
 the financial discipline that turns a seed-stage entity into an investable,
