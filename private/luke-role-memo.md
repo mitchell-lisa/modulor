@@ -17,11 +17,15 @@ we'll adjust.
 
 ## Role
 
-**Title:** Co-Founder · Head of Engineering Operations
+**Title:** Co-Founder · CTO
 
-**Scope.** You own the engineering pipeline end-to-end — not bench engineering,
-but the operational leadership that turns product requirements into built
-hardware:
+**Scope.** You own engineering, hardware, and the full physical product
+lifecycle — not bench engineering, but the technical leadership and
+operational authority that turns product requirements into built hardware.
+CTO title reads correctly on the deck: hardware + ML seed, named technical
+co-founder. While on active duty, the title is external branding — Mitchell
+runs investor calls and DoD business development directly until your status
+shifts:
 
 - Source, vet, and manage external design firms, mechanical/electrical
   engineers, CNC shops, and 3D-printing / prototyping partners
