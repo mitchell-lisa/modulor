@@ -135,7 +135,7 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 ## Current state snapshot (update weekly)
 
 ### Formation & legal
-- **C-corp:** Filed via Stripe Atlas Apr 20, 2026. EIN pending (1–2 biz days). 83(b) mailed by Atlas within 30 days.
+- **C-corp:** Filed via Stripe Atlas Apr 20, 2026. Application review complete; incorporation docs expected Apr 21–22. **EIN projected EOD Apr 22** (per Atlas dashboard). 83(b) filing window opens within 10 biz days.
 - **Bank:** Mercury / Brex — blocked on EIN. Open immediately once EIN arrives.
 - **Patent:** VITR-001 provisional filed. 12-month non-provisional conversion clock running. **Must reassign from Mitchell to Modulor, Inc. once EIN is live** (before taking investor money).
 - **NDA:** Not drafted. Needed for investor conversations and vendor/contractor relationships. **TODO.**
@@ -143,7 +143,7 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 - **D&O insurance:** Not purchased. Required before first investor check. ~$1.5–3K year 1.
 
 ### Team
-- **Luke:** On board. Text summary of role memo sent Apr 21 2026; Luke replied with feedback Apr 21. Agreed on 4-yr vest, 1-yr cliff; 83(b) explained. **Scope refined: Luke's military access = advisor/strategy/contacts only while active duty — direct customer negotiations and contracting led by Mitchell.** Correct venues: **711 HPW (AFRL), Special Warfare training wings, operator squadrons** (not AFWERX/SOFWERX as personal access channels — those remain valid GTM pathways). SBIR grant workstream added (Luke prior AFRL administrator). Luke checking with military-side lawyers this week on permitted founder activities while active duty. Official RSPA issues once EIN arrives (expected EOW). **Needs `luke@modulor.bio` email provisioned in Google Workspace.**
+- **Luke:** On board. Text summary of role memo sent Apr 21 2026; Luke replied with feedback Apr 21. Agreed on 4-yr vest, 1-yr cliff; 83(b) explained. **Scope refined: Luke's military access = advisor/strategy/contacts only while active duty — direct customer negotiations and contracting led by Mitchell.** Correct venues: **711 HPW (AFRL), Special Warfare training wings, operator squadrons** (not AFWERX/SOFWERX as personal access channels — those remain valid GTM pathways). SBIR grant workstream added (Luke prior AFRL administrator). **USAF off-duty employment form (Apr 22 2026):** filled out using Modulor, Inc. / 1111B S Governors Ave STE 27384, Dover DE 19904 / (609) 760-1238. EIN left as "pending." Meeting being set with CO base/mil-side lawyer this week for formal blessing on scope. Luke's initial read: cleared to pursue as long as he's not "the direct face to government" — consistent with CLAUDE.md scope; awaiting lawyer confirmation. Official RSPA issues once EIN arrives (expected EOD Apr 22). **Needs `luke@modulor.bio` email provisioned in Google Workspace.**
 - **Adam Evans:** **Call completed Tue Apr 22 2026 @ 2:30 PM EST. Advisor role verbally accepted.** Upgraded from FAST Gold (0.5%) to **FAST Platinum (1.0% common options, 2-yr vest, no cliff)** on strength of call: PhD, 25 yrs teaching entrepreneurship (U Kentucky Chair), 8 yrs Chief Strategy Officer at DoD-serving mil-tech startup, AFWERX/SOFWERX judge, FSMTB-MBLEX EDC national board seat. Role memo drafted (`private/adam-role-memo.md`). Photo + bullets live on pitch.html team slide. FAST Platinum + NDA to send post-EIN. Adam gave substantive deck feedback (see below). **Flagged Luke-as-advisor-vs-co-founder strategic question** based on his 8 yrs of mil-tech experience — needs separate conversation with Luke. **Recap text sent to Luke Apr 22 2026** looping him in on Adam's yes + teasing bigger strategic items for live call this week.
 - **Andrew Lisa:** Co-Founder · Head of Finance (CFO track). **5% common, 4-yr vest, 1-yr cliff — verbally accepted Apr 21 2026.** Role memo drafted (`private/andrew-role-memo.md`). Official RSPA issues once EIN arrives EOW. Photo + bullets live on pitch.html team slide.
 
@@ -153,8 +153,12 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 3. Reframed 5-buyer market slide as sequenced optionality: "seed-stage focus is Teams + DoD; Insurance/Leagues/Strategic unlock as corpus compounds." No longer reads as 5 simultaneous sales motions.
 
 ### Fundraise
-- **Deck:** Live at `modulor.bio/pitch`. Team slide: Mitchell + Luke + Andrew + Adam (advisor). Family photo removed. Adam's deck fixes applied. Needs final review + distribution.
-- **Investor outreach:** Not yet started in earnest. Outreach playbook in `private/outreach.md`.
+- **Deck:** Live at `modulor.bio/pitch`. Team slide: Mitchell + Luke + Andrew + Adam (advisor). Family photo removed. Adam's deck fixes applied.
+- **Investor outreach — first sends out Apr 22 2026:**
+  - **KAS Venture Partners** (analyst contact) — positioned as most-aligned for **first seed check**. kasventurepartners.com.
+  - **Companyon Ventures** (director contact) — Series A–focused (Boston/NY/LA, software + AI). Positioned for **feedback + relationship-building, target engagement for Series B**. companyon.vc.
+  - *Both contact names TBD — log in `private/outreach.md` as responses come in.*
+- Outreach playbook in `private/outreach.md` (currently coach/athlete-focused — VC track needs its own section).
 
 ### Infrastructure & ops
 - **Spend to date:** $1,088 on founder Amex Gold ($500 Atlas + $588 Stable). Both ✅ paid. Reimburse from Modulor bank after Mercury opens.
