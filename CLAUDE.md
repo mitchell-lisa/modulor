@@ -148,9 +148,18 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 - **Andrew Lisa:** Co-Founder · Head of Finance (CFO track). **5% common, 4-yr vest, 1-yr cliff — verbally accepted Apr 21 2026.** Role memo drafted (`private/andrew-role-memo.md`). Official RSPA issues once EIN arrives EOW. Photo + bullets live on pitch.html team slide.
 
 ### Adam's deck feedback — all applied Apr 22 2026
+**Round 1 (from verbal call, applied AM Apr 22):**
 1. Killed "injury prediction 4–6 weeks out" claim → reframed as "MSK injury risk" with dataset-driven hazard-ratio language (no pre-claimed predictive window).
 2. Softened "Modulor is the only platform that combines motorized stretching with real-time measurement" → positioned against VALD, Tracer, Hyperice; claim is now integration of all three, not monopoly.
 3. Reframed 5-buyer market slide as sequenced optionality: "seed-stage focus is Teams + DoD; Insurance/Leagues/Strategic unlock as corpus compounds." No longer reads as 5 simultaneous sales motions.
+
+**Round 2 — Adam's written followup email arrived 2:46 PM Apr 22; reply sent same day; deck v2.1 edits applied PM Apr 22:**
+4. **Compliance beat added (Slide 4).** Adam's insight reframed: "0% home PT compliance, 100% when clinician present → the machine is the present clinician." Now explicit in product slide.
+5. **Competitive frame broadened (Slide 8).** Extended from stretch-focused competitors (VALD/Tracer/Hyperice/StretchLab/Normatec) to full injury-risk measurement ecosystem — force plates (VALD, Hawkin), motion capture (Theia, Sparta), stretch hardware. Headline reframed; two new competitor cards added.
+6. **Military repositioned (Slide 9).** Explicit line now reads: "seed-stage commercial wedge is pro + collegiate Teams; DoD is the non-dilutive capital channel, not the first-pilot source." Addresses Adam's "military-is-last-resort-for-pilot-data" and "pick one wedge" notes simultaneously — we held two tracks (commercial + non-dilutive) but clarified their roles.
+7. **Insurance downgraded to long-term (Slide 9).** Buyer 2 card restyled grey (deferred tier), copy now reads "long-term roadmap — unlocks after peer-reviewed clinical validation + 10K+ athlete-months in corpus." No longer reads as a seed-stage revenue line.
+
+**Pushed back on:** Adam's "pick ONE wedge" ask. Response: DoD is the non-dilutive capital engine he himself called "a major competitive advantage." Holding Teams+DoD parallel; clarified DoD's role as funding not pilot data. Mitchell's reply sent same day.
 
 ### Fundraise
 - **Deck:** Live at `modulor.bio/pitch`. Team slide: Mitchell + Luke + Andrew + Adam (advisor). Family photo removed. Adam's deck fixes applied.
