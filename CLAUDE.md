@@ -164,10 +164,9 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 ### Fundraise
 - **Deck:** Live at `modulor.bio/pitch`. Team slide: Mitchell + Luke + Andrew + Adam (advisor). Family photo removed. Adam's deck fixes applied.
 - **Investor outreach — first sends out Apr 22 2026:**
-  - **KAS Venture Partners** (analyst contact) — positioned as most-aligned for **first seed check**. kasventurepartners.com.
-  - **Companyon Ventures** (director contact) — Series A–focused (Boston/NY/LA, software + AI). Positioned for **feedback + relationship-building, target engagement for Series B**. companyon.vc.
-  - *Both contact names TBD — log in `private/outreach.md` as responses come in.*
-- Outreach playbook in `private/outreach.md` (currently coach/athlete-focused — VC track needs its own section).
+  - **KAS Venture Partners — Richard Xie** (warm iMessage, ~3:55 PM Apr 22). First-seed-check target. Richard acknowledged same afternoon: "will look thru in the next few days, a little slammed." Explicitly invited a bump "by top of next week." **Bump trigger: Tue Apr 28 AM.** kasventurepartners.com.
+  - **Companyon Ventures** (director contact — name TBD) — Series A–focused (Boston/NY/LA, software + AI). Positioned for **feedback + relationship-building, target engagement for Series B**. companyon.vc.
+- Full VC log + handling notes in `private/outreach.md` (new "VC Outreach Log — Seed" section).
 
 ### Infrastructure & ops
 - **Spend to date:** $1,088 on founder Amex Gold ($500 Atlas + $588 Stable). Both ✅ paid. Reimburse from Modulor bank after Mercury opens.

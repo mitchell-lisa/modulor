@@ -160,3 +160,31 @@ Don't follow up sooner than 7 days. If no reply at 14 days, send a one-line nudg
 - **Papale yes** → Eagles alumni side-door to Pederson + a quotable public voice when we launch. Not a pilot &mdash; a narrative and network asset.
 
 A single yes from any of them is worth more than a cold-pitched buyer call. Six for six gets you a multi-sport, multi-league validation story *and* a Philly-football story arc before you've sold a unit.
+
+---
+
+# VC Outreach Log — Seed
+
+First sends went out **Tue Apr 22 2026.** Both contacts are warm (existing relationships, not cold). Deck distributed as NDA-gated link to `modulor.bio/pitch`.
+
+| Firm | Contact | Role | Channel | Sent | Status | Bump trigger | Positioning |
+|---|---|---|---|---|---|---|---|
+| **KAS Venture Partners** | **Richard Xie** | (role TBD) | iMessage | Apr 22, ~3:55 PM | Acknowledged; "will look thru in the next few days, a little slammed" | **Tue Apr 28 AM** — Richard explicitly invited a bump "by top of next week" if he hasn't replied | First-seed-check target. Most aligned for initial investment. |
+| **Companyon Ventures** | (director — name TBD) | Director | (channel TBD) | Apr 22 | Sent | +7 days if silent | Series A–focused (Boston/NY/LA, software+AI). Target engagement: feedback + relationship-building for Series B. |
+
+## Richard Xie · KAS — context & handling
+
+- **Warm channel:** personal iMessage. Not a firm contact form. Protect relationship quality over process.
+- **Positioning sent:** "had ai organize my thoughts above" + `modulor.bio` link. Richard knows the deck is Mitchell's thinking, AI-structured. Good — sets expectation that Mitchell has a viewpoint, not boilerplate.
+- **What he sees:** NDA gate first (name/org/email capture via Supabase), then full deck v2.1.
+- **Bump plan Tue Apr 28 AM** (one-line, friendly, no ask repeat): *"Hey Richard — bumping as offered. No rush if still slammed. Happy to jump on a call when it's easier."*
+- **What each outcome unlocks:**
+  - *Interested →* 30-min call. Goal: qualify check size + timing, surface diligence requirements.
+  - *Pass with feedback →* gold. Feed into deck v2.2 + ask for 1–2 intros to better-fit funds.
+  - *Pass with silence →* one more nudge at 14 days, then let it rest.
+
+## Companyon — context & handling
+
+- **Goal is NOT a check now.** Companyon writes Series A; we're in the feedback + relationship phase for Series B.
+- **Frame the follow-up as:** "Not asking for a Series A check — asking for the read from someone who'll see us at Series B, so I can build toward your bar."
+- **Bump plan +7 days** if silent.
