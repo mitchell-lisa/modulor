@@ -136,7 +136,7 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 ## Current state snapshot (update weekly)
 
 ### Formation & legal
-- **C-corp:** Filed via Stripe Atlas Apr 20, 2026. Application review complete; incorporation docs expected Apr 21–22. **EIN projected EOD Apr 22** (per Atlas dashboard). 83(b) filing window opens within 10 biz days.
+- **C-corp:** **Incorporated Apr 20, 2026** via Stripe Atlas (Delaware Certificate of Incorporation filed same day; confirmed in Atlas dashboard Apr 23). **EIN expected Apr 24–27** (Atlas revised timeline). **Mitchell's 83(b) election on founder stock** being mailed by Atlas via USPS Certified, **postmark by May 6**. Luke/Andrew/Adam each need separate 83(b) filings when their RSPAs/options execute post-EIN.
 - **Bank:** Mercury / Brex — blocked on EIN. Open immediately once EIN arrives.
 - **Patent:** VITR-001 provisional filed. 12-month non-provisional conversion clock running. **Must reassign from Mitchell to Modulor, Inc. once EIN is live** (before taking investor money).
 - **NDA:** Not drafted. Needed for investor conversations and vendor/contractor relationships. **TODO.**

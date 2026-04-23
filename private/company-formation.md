@@ -11,8 +11,9 @@
 | Legal name | Modulor, Inc. |
 | Structure | Delaware C Corporation |
 | State of incorporation | Delaware |
-| Formation date | April 20, 2026 |
-| EIN | *(pending — expected 1–2 business days post-filing)* |
+| Formation date | April 20, 2026 (Delaware Certificate of Incorporation filed via Atlas same day; confirmed in Atlas dashboard Apr 23) |
+| EIN | *(pending IRS — expected Apr 24–27 per Atlas dashboard)* |
+| 83(b) (Mitchell founder stock) | Atlas mailing via USPS Certified; postmark by May 6 |
 
 ## Business Contact
 
