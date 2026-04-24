@@ -40,7 +40,7 @@ Move the company forward at maximum velocity. Identify the highest-leverage acti
 
 ### Confirmed
 - **Mitchell Lisa** — founder/CEO. 88% common (→83% post-Luke RSPA →78% post-Andrew RSPA). Based NJ.
-- **Matthew "Luke" Lisa** — co-founder, CTO. 5% common, 4-yr vest, 1-yr cliff. USAF 18+ years. Owns engineering, hardware, and the physical product lifecycle; DoD/SOF relationships inform strategy. While active duty, Mitchell runs investor calls and DoD BD directly — Luke's CTO title is external branding until status shifts. Mitchell's cousin.
+- **Matthew Lucas Lisa ("Luke")** — co-founder, CTO. Legal name on ID = **Matthew Lucas Lisa** (confirmed by Luke Apr 24 2026 — use on RSPA, 83(b), stock cert, board consents; "Luke" is first-name-as-known for day-to-day). 5% common, 4-yr vest, 1-yr cliff. USAF 18+ years. Owns engineering, hardware, and the physical product lifecycle; DoD/SOF relationships inform strategy. While active duty, Mitchell runs investor calls and DoD BD directly — Luke's CTO title is external branding until status shifts. Mitchell's cousin.
 - **Andrew Lisa** — co-founder, CFO. 5% common, 4-yr vest, 1-yr cliff. UBS Executive Director, Real Estate Finance (9 years). UPenn Wharton Economics '16. Mitchell's brother. LinkedIn: https://www.linkedin.com/in/andrew-lisa-11072098/
 - **Adam H. Evans, PhD, LMT, CPCT** — Strategic Advisor · DoD + Mil-Tech. **1.0% common stock options (FAST Platinum), 2-yr vest, no cliff — verbally accepted Apr 22 2026.** **Military background (per Adam's own BLUF, Apr 22 2026 email):** 6+ years (maybe 8 unofficially) Intel & Comms for Air Force / Space Forces; brief year + dual role US Army Education Program; Pentagon-adjacent during Space Force stand-up. **Not SOF** — works alongside SOF operators, Veterans, first responders (police/fire/healthcare), and US Olympic athletes through his current manual-therapy practice. Former Chair of Entrepreneurship, U Kentucky (2018–2022, built the MBA Entrepreneurship concentration); CSO, InstantHandz (Phoenix, 2020–2021 — $1M valuation, $250K+ revenue for Armed Forces families); AFWERX/SOFWERX judge (deck reviewer role); Harvard NPLI fellow; USAF Master Resilience Trainer; FSMTB-MBLEX EDC (writes the national massage therapy licensing exam); Founder & Executive Director, Special O.P.S. Inc. (Colorado Springs). Capella PhD (Organizational Management & Leadership, 4.0 Summa Cum Laude); Case Western MBA. LinkedIn: https://www.linkedin.com/in/adamhevans/ · https://www.specialopsmassage.com/about2
 
@@ -120,6 +120,8 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 |---|---|
 | `README.md` | Public site map |
 | `private/company-formation.md` | Entity, cap table, officer roles, legal checklist |
+| `private/execution-tracker.md` | Who's on paper vs. not — RSPA/83(b)/NDA/SAFE execution state + T-minus deadlines |
+| `private/legal-templates/README.md` | Source-of-truth index for RSPA/FAST/NDA/SAFE templates (Clerky, YC, FI) |
 | `private/finances.md` | Formation costs, recurring, $3M seed budget, burn |
 | `private/luke-role-memo.md` | Luke's title, equity, vesting |
 | `private/andrew-role-memo.md` | Andrew's title, equity, vesting |
@@ -140,7 +142,10 @@ When drafting emails on his behalf: short paragraphs, plain language, no corpora
 - **83(b) election (Mitchell):** Queued by Stripe Atlas. Expected postmark **May 4, 2026** (dashboard buffer to May 6). 30-day window from formation closes **May 20, 2026**. File stamped copy to `private/formation-docs/` when Atlas returns it.
 - **Bank:** Mercury / Brex — **UNBLOCKED.** Mercury application submitted Apr 24. Reimburse $1,088 Amex once account funded.
 - **Patent:** VITR-001 provisional filed. 12-month non-provisional conversion clock running. **Assignment from Mitchell → Modulor, Inc. now unblocked — execute before first investor check.**
-- **NDA:** Not drafted. Needed for investor conversations and vendor/contractor relationships. **TODO.**
+- **NDA:** Click-wrap live on `/pitch` (one-way). **Mutual NDA template pending** for vendors, Adam pre-FAST disclosure, and 1:1 investor diligence — source from YC docs or Atlas Plus.
+- **RSPAs (Luke, Andrew):** **Atlas does not have a post-formation founder-addition flow** (confirmed Apr 24 2026 — Atlas dashboard shows RSPA for Mitchell only, $88 for 8.8M shares at par). Path: Clerky (~$500/RSPA) or Atlas Plus partner firm ($2–5K). Mechanism = company repurchase of 1M shares from Mitchell at par + contemporaneous reissuance with vesting to Luke (500K) + Andrew (500K). Preserves Mitchell QSBS clock; fresh clocks for Luke + Andrew. See `private/execution-tracker.md`.
+- **Advisor agreement (Adam):** FAST Platinum template from `fi.co/fast`. Strike at par/de minimis pre-409A; document board good-faith determination. Sequence: mutual NDA first, FAST Platinum second, board consent third.
+- **Investor agreements:** YC post-money SAFE from `ycombinator.com/documents`. Andrew (CFO) red-lines every instance before Mitchell signs.
 - **Trademark:** Not filed. USPTO Classes 9, 10, 41. ~$700–1,050 self-file. Now fileable under Modulor, Inc. / EIN.
 - **D&O insurance:** Not purchased. Required before first investor check. ~$1.5–3K year 1. Now quotable with EIN.
 
