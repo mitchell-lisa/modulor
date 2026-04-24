@@ -4,6 +4,15 @@ Single source of truth for who's on paper vs. who's not. Cross-reference with `c
 
 **Last updated:** Apr 24, 2026
 
+## Cap table platform decision
+
+| Platform | Pricing early-stage | Accepts Atlas entity | VC familiarity | Status |
+|---|---|---|---|---|
+| **Pulley** | Free <25 stakeholders | ✅ Yes | Medium (rising) | **Lean here Apr 24** — investigate RSPA flow capability |
+| **Carta** | Free tier then $$$ | ✅ Yes (Atlas auto-onboards) | ✅ Standard | Fallback if Pulley lacks RSPA flow |
+| **AngelList Stack** | Free | ✅ Yes | Low (newer) | Skip unless strong reason |
+| **Clerky** | N/A | ❌ No | Medium | **Dead path** — won't onboard Atlas entities |
+
 ---
 
 ## Cap table execution status
@@ -18,12 +27,13 @@ Single source of truth for who's on paper vs. who's not. Cross-reference with `c
 ### Mechanism notes
 
 - **Luke + Andrew RSPAs = founder-to-founder transfer.** Company repurchases 1M shares from Mitchell at par ($10), reissues as two 500K RSPAs with vesting. Preserves Mitchell's QSBS on remaining 7.8M (clock from Apr 20, 2026). Luke + Andrew get fresh QSBS clocks from grant date.
-- **No self-serve path exists.** Atlas self-serve is single-founder-at-formation only. **Clerky won't onboard Atlas-formed entities** (they only manage equity for companies they incorporated). The only path is outside counsel. Ranked options (Apr 24):
-  1. ~~Richard Xie / KAS portfolio counsel~~ — **dead path**. Confirmed Apr 24: KAS is hands-off, no portfolio counsel referrals.
-  2. ~~Dad's lawyer (Kirk Pavoni, D'Elia Law Firm LLC)~~ — **dead path**. Confirmed Apr 24: D'Elia is general civil / real estate / commercial litigation / land use / municipal court — South Jersey practice. Not corporate/securities. Wrong tool for Delaware C-corp founder equity issuances.
-  3. **Atlas Plus ($500/yr) → partner firm** (Cooley / Orrick / Gunderson), $2–5K, 1–2 week turnaround. **Default path — execute Monday Apr 27 AM.**
-  4. **Direct outside startup counsel** — Lowenstein Sandler (NJ-local) or Founders Legal (remote, fixed-fee) — $1.5–3K. Only if Atlas Plus partners decline or quote above budget.
-  5. **NOT recommended: DIY from Cooley GO / Orrick Total Access forms** — cheap to get right with counsel, expensive to fix later (QSBS + 83(b) + securities compliance).
+- **No self-serve path exists at Atlas or Clerky.** Atlas self-serve is single-founder-at-formation only. **Clerky won't onboard Atlas-formed entities** (they only manage equity for companies they incorporated). **Pulley DOES accept Atlas-formed entities** — worth investigating whether their RSPA flow handles post-formation founder-to-founder transfers with QSBS preservation. Outside counsel is the safe default. Ranked options (Apr 24):
+  1. ~~Richard Xie / KAS portfolio counsel~~ — **dead path**. Apr 24: KAS is hands-off, no portfolio counsel referrals.
+  2. ~~Dad's lawyer (Kirk Pavoni, D'Elia Law Firm LLC)~~ — **email sent Apr 24 asking for referral to corporate counsel in his network.** Awaiting reply.
+  3. **Pulley — investigate Apr 25–27.** Question to Pulley sales: *"Does your RSPA flow handle post-formation founder-to-founder transfer with QSBS preservation on remaining founder shares?"* If yes, Pulley may replace outside counsel for this transaction.
+  4. **Atlas Plus ($500/yr) → partner firm** (Cooley / Orrick / Gunderson), $2–5K, 1–2 week turnaround. **Execute Monday Apr 27 AM** regardless — either primary counsel path or second-opinion review on Pulley templates.
+  5. **Direct outside startup counsel** — Lowenstein Sandler (NJ-local) or Founders Legal (remote, fixed-fee) — $1.5–3K. Fallback if Atlas Plus partners decline or quote above budget.
+  6. **NOT recommended: DIY from Cooley GO / Orrick Total Access forms** — cheap to get right with counsel, expensive to fix later (QSBS + 83(b) + securities compliance).
 - **Adam = options from the 12% pool.** No 83(b). Strike = FMV at grant; pre-409A the board documents a good-faith determination at par or de minimis. Re-up with 409A before first priced round.
 
 ### Luke's legal name (for all paper)
