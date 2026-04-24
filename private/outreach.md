@@ -255,6 +255,7 @@ First sends went out **Tue Apr 22 2026.** Both contacts are warm (existing relat
 | Apr 22, ~6:00 PM | Richard opened the deck (clocked Andrew's face on team slide). Asked "family biz?" Offered a **meeting over phone or beer** once he's read + sent questions. Candidly flagged wheelhouse uncertainty. |
 | Apr 22, ~6:08 PM | Richard: beer meeting pushes to **May** (busy next two weekends). **Questions coming ahead of time.** Personal add: "we should go out next time you're back lmao." |
 | Apr 22, ~6:08 PM | Mitchell reset availability cleanly: "phone works zero notice always of course too." |
+| Apr 24, ~3:20 PM | Mitchell asked Richard for KAS portfolio counsel rec for post-incorp founder-add RSPAs. Richard: **"our founders usually have their own lawyers. We're pretty hands off. Don't have an ops team or anything and generally don't tell our founders what to do."** Mitchell closed clean: "appreciate that — will def just go to my own lawyers then — thank you sir." |
 
 ### Current status
 **Meeting: May (beer). Questions: inbound ahead of meeting.** Cadence is Richard-driven. No proactive outreach until questions arrive. Original Apr 28 bump trigger obsolete.
@@ -273,6 +274,12 @@ Richard already flagged the family concentration. Two brothers + one cousin on c
 
 ### Availability reset — ✅ handled live
 Mitchell snuck "phone works zero notice always of course too" into the personal-catch-up reply at 6:08 PM. Clean recovery. No further reset needed.
+
+### Investor-style read (Apr 24)
+Richard confirmed on Apr 24 that KAS is hands-off: **no ops team, no portfolio counsel, doesn't tell founders what to do.** Useful color for diligence + what a KAS check unlocks:
+- **Pros:** autonomy-respecting, won't micromanage, won't try to steer product or team decisions
+- **Implication:** can't lean on KAS for operational scaffolding (no vendor intros, no shared counsel, no backchannel to other portfolio co's). Money + occasional gut-check, not an ops team.
+- **Board expectation:** if Richard takes a board seat or observer role, expect low-frequency high-leverage engagement — not weekly touchpoints.
 
 ## Andrew Berg · Companyon — context & handling
 

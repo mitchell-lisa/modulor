@@ -8,13 +8,14 @@ Index of where each standard document comes from. **Downloaded templates themsel
 
 **No self-serve platform works here.** Both Atlas and Clerky gate equity management to companies they incorporated. Atlas was the formation vehicle — so Clerky won't onboard us, and Atlas's own RSPA flow is single-founder-at-formation only. The only path is outside counsel.
 
-### Ranked options
+### Ranked options (Apr 24)
 
-1. **Ask Richard Xie (KAS) for portfolio counsel rec.** Free, warm referral. KAS portfolio firms default to Cooley / Orrick / Gunderson tier. Doubles as a concrete touch before the May beer meeting. Suggested text in `CLAUDE.md` state snapshot.
-2. **Stripe Atlas Plus** — $500/yr unlocks 30–50% partner-firm discount at Cooley, Orrick, Gunderson. Post-formation founder-add runs $2–5K. 1–2 week turnaround. Safe + vetted.
-3. **Lowenstein Sandler (Roseland NJ)** — NJ-local startup practice. Direct fixed-fee quote. $1.5–3K range. Good if Mitchell wants local-NJ counsel relationship.
-4. **Founders Legal (Atlanta, fully remote)** — transparent fixed-fee packages, seed-stage focused. Fastest if Richard's rec doesn't land.
-5. **NOT recommended: DIY from Cooley GO (`cooleygo.com/documents`) or Orrick Total Access (`orrick.com/totalaccess`).** Free form libraries exist but equity issuances + vesting + 83(b) + board consents touching founder stock are too consequential for DIY. Cheap to get right with counsel; expensive to fix later.
+1. ~~Richard Xie / KAS portfolio counsel rec~~ — **dead path.** Confirmed Apr 24: KAS is hands-off, no portfolio counsel referrals, doesn't tell founders what to do. Path closed.
+2. **Dad's lawyer (IF corporate/startup/securities practice).** Pre-gate: confirm name/firm/practice area. If corporate/startup → engage for self-draft + review ($1–2K) or full-draft ($3–5K). If not corporate → skip.
+3. **Stripe Atlas Plus — default fallback.** $500/yr unlocks 30–50% partner-firm discount at Cooley, Orrick, Gunderson. Post-formation founder-add runs $2–5K. 1–2 week turnaround. Safe + vetted.
+4. **Lowenstein Sandler (Roseland NJ)** — NJ-local startup practice. Only if 2 + 3 both fail.
+5. **Founders Legal (Atlanta, fully remote)** — transparent fixed-fee packages, seed-stage focused. Only if 2 + 3 both fail.
+6. **NOT recommended: DIY from Cooley GO (`cooleygo.com/documents`) or Orrick Total Access (`orrick.com/totalaccess`).** Free form libraries exist but equity issuances + vesting + 83(b) + board consents touching founder stock are too consequential for DIY. Cheap to get right with counsel; expensive to fix later.
 
 ### Terms to plug into the template
 
