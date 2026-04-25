@@ -209,6 +209,99 @@ Copy-paste exactly. Parents send to Papale directly.
 
 ---
 
+## 7. Dave Klemic &mdash; Klemic Performance Method (former trainer)
+
+**Channel:** direct text or call. Mitchell's former speed/performance trainer growing up &mdash; warm personal channel, no intermediary needed.
+**Ask:** 20-min call. Read on whether this clears the bar for a serious performance practice. Pilot-site conversation if he leans in. NFL Alumni / ISA Football network warm intros where natural.
+**Attachment:** `modulor.bio/pitch` (NDA-gated deck) + 1-page brief printed to PDF.
+
+### Why he matters
+
+- **Personal warm relationship** — trained Mitchell as a youth athlete. He has direct embodied knowledge of what Modulor measures.
+- **Owns/operates a performance facility** &mdash; klemicperformancemethod.com. Real candidate for a VITR-001 prototype pilot deployment.
+- **NFL Alumni Association + International Sports Advisors (ISA Football) affiliations** &mdash; agent-side / network access.
+- **Vince Papale connection already public** &mdash; Vince's son trained with Klemic; the testimonial sits on Klemic's homepage. Reinforces the Papale outreach already in motion via Mom/Dad.
+
+### Strategic value
+
+- One of the most direct paths to a **collegiate or pro performance pilot site** (priority #5 LOI).
+- Compressed sales cycle from existing trust.
+- Network effect: each pro/college performance contact via Klemic = candidate deck send.
+
+### Potential role (do NOT lead with — let him see the product first)
+
+- **Strategic Advisor &mdash; Performance & Pilot Site** if formal scope emerges
+  - Tier: FAST Gold (0.5% common options, 2-yr vest, no cliff) &mdash; revisit Platinum only if engagement > Adam-level
+  - Scope: monthly call, ad-hoc red-flag calls, 3 specific intros in first 6 months, facility hosts VITR-001 prototype demo for partner conversations
+  - Sequence: see the deck → react → conversation → if ongoing value emerges, advisor offer
+- Equity is NOT in the opening message. It's the second or third conversation, only if he engages substantively.
+
+### Draft message (text)
+
+> Coach Klemic &mdash;
+>
+> Mitchell Lisa, your old trainee. Hope all good with the family.
+>
+> Quick context: I started a company called Modulor &mdash; designing measurement hardware + ML for performance staffs. Short version: every soft-tissue injury (hamstrings, hips, groins) traces back to range-of-motion + asymmetry data nobody currently captures. We capture it. Pro teams + collegiate programs are the wedge buyer.
+>
+> Three reasons I'm reaching out:
+> 1. Want your read on whether what we're building clears the bar for a serious performance practice &mdash; yours, or anyone you'd refer.
+> 2. Your facility is exactly the kind of place this prototype belongs in once we have hardware. Open to a pilot conversation when we're there.
+> 3. Saw Vince Papale's testimonial on your site &mdash; small world, my parents are about to forward him a deck. Wanted you to hear it from me first.
+>
+> 20 min whenever's good. Phone works zero notice.
+>
+> modulor.bio &middot; (609) 760-1238
+>
+> &mdash; Mitch
+
+---
+
+## 8. Dave Dudeck &mdash; Chicago Bears, Southwest Area Scout (former trainer)
+
+**Channel:** direct text or call. Mitchell's former trainer before he went NFL front office &mdash; warm personal channel.
+**Ask:** 20-min call. Read on whether this clears the bar for a serious performance staff. If yes &mdash; warm intro to whoever runs Performance / Athletic Training at the Bears.
+**Attachment:** `modulor.bio/pitch` (NDA-gated deck) + 1-page brief.
+
+### Why he matters
+
+- **Personal warm relationship** &mdash; trained Mitchell as a youth athlete.
+- **Currently NFL front office** (Bears, Southwest Area Scout) &mdash; internal credibility, internal connections.
+- **Scouting ≠ Performance** (different department), but a warm internal intro to the Bears' Performance Director is high-leverage and effectively impossible cold.
+- Bears = active **priority #1 buyer** (NFL pro team, GTM segment 1).
+
+### Strategic value
+
+- **Direct warm path to Bears Performance Director** &mdash; one of the three required LOIs (priority #5).
+- Industry pulse &mdash; even though scouts don't buy equipment, he hears what evaluation gaps GMs feel.
+- Personal trust = compressed channel.
+
+### Potential role (NOT equity-track at start)
+
+- **Likely just a key relationship + warm intro source.** Bears employment likely has conflict-of-interest restrictions on advising private companies; even if not, his role doesn't translate to ongoing advisory scope.
+- Mutual back-scratching: Mitchell texts him relevant news; Dudeck makes intros when right opportunities arise.
+- IF he ends up making 2+ substantive intros and engages on a regular cadence: revisit FAST Gold (0.5%) conversation. Default is "no equity, but a real relationship."
+
+### Draft message (text)
+
+> Coach Dudeck &mdash;
+>
+> Mitchell Lisa &mdash; long time. Hope Chicago is treating you well.
+>
+> Quick context, then a small ask. I started a company called Modulor &mdash; building measurement hardware + ML for NFL/college performance staffs. Pro teams are the wedge market for us. Hamstring strains alone have doubled in the NFL over twenty years; nobody is measuring the things that actually predict them. We do.
+>
+> Two asks if you've got 20 min:
+> 1. Your read &mdash; is what we're building real, and would the Bears performance staff care?
+> 2. If yes, would you make an intro to whoever runs performance for you guys?
+>
+> Not asking you to sell anything. Asking for your read and one warm intro if it clears the bar.
+>
+> modulor.bio &middot; (609) 760-1238
+>
+> &mdash; Mitch
+
+---
+
 # After You Send
 
 Track responses in a simple sheet. Suggested columns:
@@ -228,6 +321,33 @@ Don't follow up sooner than 7 days. If no reply at 14 days, send a one-line nudg
 - **Papale yes** → Eagles alumni side-door to Pederson + a quotable public voice when we launch. Not a pilot &mdash; a narrative and network asset.
 
 A single yes from any of them is worth more than a cold-pitched buyer call. Six for six gets you a multi-sport, multi-league validation story *and* a Philly-football story arc before you've sold a unit.
+
+---
+
+# Pro Team / Performance Pilot Pipeline
+
+Tracks warm-channel contacts who feed the **3-LOI priority** (one pro team, one D1 program, one SOF unit per CLAUDE.md priority #5). Personal/warm relationships only — cold pipeline tracked separately when it exists.
+
+| Contact | Role today | Modulor angle | Channel | Status | Next action |
+|---|---|---|---|---|---|
+| Doug Pederson | Ex-Eagles HC, SB winner | Coach-side validator + Eagles intros | Parent-forward (Mom/Dad) | Drafted, not yet sent | Trigger Mom/Dad forward |
+| Vince Papale | Eagles alum, "Invincible" | Story amplifier + Eagles alumni bridge | Parent-forward (Mom/Dad) | Drafted, not yet sent | Trigger Mom/Dad forward |
+| **Dave Klemic** | Founder, Klemic Performance Method | **Pilot-site candidate + advisor candidate** + NFL Alumni / ISA Football network | **Mitchell direct** (former trainer) | Draft ready (section 7) | Send when Mitchell has the bandwidth for a 20-min call follow-up |
+| **Dave Dudeck** | Bears Southwest Area Scout | **Internal Bears bridge** to Performance Director | **Mitchell direct** (former trainer) | Draft ready (section 8) | Send when Mitchell has the bandwidth for a 20-min call follow-up |
+| Josh Pearcy | CFL | Active player | Direct (existing relationship) | Drafted | TBD |
+| Brevin Jordan | NFL TE, UMiami | Active player + collegiate ties | Direct (existing relationship) | Drafted | TBD |
+| Harrison Rieger | Pro hoops | Cross-sport read | Direct (existing relationship) | Drafted | TBD |
+| Shane Knobloch | Pro lacrosse | Cross-sport read | Direct (existing relationship) | Drafted | TBD |
+
+## Sequencing
+
+**Don't fire all eight at once.** Order by leverage + relationship density:
+
+1. **Klemic + Dudeck first** — direct warm channel, no parent intermediary, both feed pro/college LOI track immediately. Send same week.
+2. **Pederson + Papale second** — parent-forward; trigger after Mitchell has an investor-side update worth pairing with the ask (e.g., a Richard-type yes-or-no).
+3. **Pearcy / Jordan / Rieger / Knobloch** — staggered as the prototype gets closer to demo-able.
+
+Avoid: cluster-firing all eight in one week and getting overwhelmed when 3+ respond at once. Pacing is a feature.
 
 ---
 
